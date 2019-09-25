@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Button startButton;
+    public Button settingsButton;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(startButton.enabled)
+        {
+            SceneManager.LoadScene("GameScene");
+        }
+        if (settingsButton.enabled)
+        {
+            SceneManager.LoadScene("SettingsScene");
+        }
     }
 }
