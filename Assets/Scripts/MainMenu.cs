@@ -9,15 +9,19 @@ public class MainMenu : MonoBehaviour
     public Button startButton;
     public Button settingsButton;
 
-    void Update()
+    void Start()
     {
-        if(startButton.enabled)
-        {
-            SceneManager.LoadScene("GameScene");
-        }
-        if (settingsButton.enabled)
-        {
-            SceneManager.LoadScene("SettingsScene");
-        }
+        startButton.onClick.AddListener(StartButtonClicked);
+        settingsButton.onClick.AddListener(SettingsButtonClicked);
+    }
+
+    void StartButtonClicked()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    void SettingsButtonClicked()
+    {
+        SceneManager.LoadScene("SettingsScene");
     }
 }
