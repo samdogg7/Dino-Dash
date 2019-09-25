@@ -13,7 +13,6 @@ public class DinoAnimator : Animator
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        RunningAnimation();
     }
 
     public void IdleAnimation()
