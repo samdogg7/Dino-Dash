@@ -2306,6 +2306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedCharacter: {fileID: 1746191022}
+  isAlive: 1
 --- !u!4 &2126211938
 Transform:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class DinoAnimator : Animator
 {
     public Sprite[] idleSprites;
     public Sprite[] runningSprites;
+    public Sprite[] crouchSprites;
     public float framesPerSecond = 20;
 
     private SpriteRenderer spriteRenderer;
@@ -23,5 +24,10 @@ public class DinoAnimator : Animator
     public void RunningAnimation()
     {
         Animate(runningSprites, spriteRenderer, runningSprites.Length / framesPerSecond);
+    }
+
+    public void CrouchAnimation()
+    {
+        Animate(crouchSprites, spriteRenderer, runningSprites.Length / framesPerSecond);
     }
 }
