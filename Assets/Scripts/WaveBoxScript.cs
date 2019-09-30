@@ -12,13 +12,13 @@ public class WaveBoxScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        collision.gameObject.layer = 8;
         SpriteRenderer col = collision.gameObject.GetComponent<SpriteRenderer>();
         col.color = new Color(1f, 1f, 1f, 0f);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-
+        collision.gameObject.layer = 9;
         SpriteRenderer col = collision.gameObject.GetComponent<SpriteRenderer>();
         col.color = new Color(1f, 1f, 1f, 1f);
 

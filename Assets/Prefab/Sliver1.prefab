@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7100939402879372739}
   - component: {fileID: 3085723947317548410}
   - component: {fileID: 8368976062387442993}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Sliver1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2897129748757843999}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a4962ffaff9403342b204125c7fe066c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!114 &8368976062387442993
 MonoBehaviour:
   m_ObjectHideFlags: 0
