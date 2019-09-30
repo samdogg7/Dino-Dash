@@ -11,6 +11,7 @@ public class Generator : MonoBehaviour
     public GameObject TileSpriteStart;
     public GameObject TileSpriteDip;
     public GameObject Grass;
+    public GameObject TileSpriteBump;
     public BoxCollider2D wavespot;
     public GameObject dipbox;
     private int tick = 0;
@@ -75,6 +76,19 @@ public class Generator : MonoBehaviour
                     grassPos.y += -.375f;
                     grassPos.z += -1;
                     Instantiate(TileSpriteDip, grassPos, Quaternion.identity);
+                    Instantiate(dipbox, grassPos, Quaternion.identity);
+                    timer = time;
+                }
+            }
+
+        if (Input.GetKeyDown(KeyCode.W))
+            if (timer < 0) // This prevents player from spamming the wave
+            {
+                {
+                    Vector3 grassPos = transform.position;
+                    grassPos.y += .375f;
+                    grassPos.z += -1;
+                    Instantiate(TileSpriteBump, grassPos, Quaternion.identity);
                     Instantiate(dipbox, grassPos, Quaternion.identity);
                     timer = time;
                 }
