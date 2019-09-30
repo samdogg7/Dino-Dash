@@ -16,6 +16,8 @@ public class Generator : MonoBehaviour
     private int tick = 0;
     private bool holetile = false;
     // Start is called before the first frame update
+    public float time;
+    public float timer;
     void Start()
     {
         /*
@@ -26,12 +28,13 @@ public class Generator : MonoBehaviour
             Instantiate(TileSprite1, pos, Quaternion.identity);
         }
         */
-        StartCoroutine(test());
+        StartCoroutine(Test());
         //Generate();
-
+        time = .9f;
+        timer = time;
     }
 
-    IEnumerator test()
+    IEnumerator Test()
     {
         yield return new WaitForSeconds(.01f);
         if (tick == 16)
@@ -40,9 +43,10 @@ public class Generator : MonoBehaviour
         }
         Instantiate(Tiles[tick], transform.position, Quaternion.identity);
         tick += 1;
-        StartCoroutine(test());
+        StartCoroutine(Test());
     }
 
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         /*
@@ -57,14 +61,19 @@ public class Generator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.S))
-        {
-            Vector3 grassPos = transform.position;
-            grassPos.y += -.375f;
-            grassPos.z += -1;
-            Instantiate(TileSpriteDip, grassPos, Quaternion.identity);
-            Instantiate(dipbox, grassPos, Quaternion.identity);
-        }
+            if (timer < 0) // This prevents player from spamming the wave
+            {
+                {
+                    Vector3 grassPos = transform.position;
+                    grassPos.y += -.375f;
+                    grassPos.z += -1;
+                    Instantiate(TileSpriteDip, grassPos, Quaternion.identity);
+                    Instantiate(dipbox, grassPos, Quaternion.identity);
+                    timer = time;
+                }
+            }
     }
     /*
     void Generate()
