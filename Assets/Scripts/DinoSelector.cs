@@ -10,7 +10,7 @@ public class DinoSelector : MonoBehaviour
     {
         foreach (GameObject dino in dinos)
         {
-            if (dino != GameManager.Instance.selectedCharacter)
+            if (dino != GameManager.instance.selectedCharacter)
             {
                 dino.GetComponent<DinoAnimator>().IdleAnimation();
             }
@@ -46,6 +46,6 @@ public class DinoSelector : MonoBehaviour
                 dino.GetComponent<DinoAnimator>().RunningAnimation();
             }
         }
-        GameManager.Instance.selectedCharacter = character;
+        GameManager.instance.selectedCharacter = character;
     }
 }

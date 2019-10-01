@@ -2,39 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Tutorial: https://www.youtube.com/watch?v=zit45k6CUMk
+//Tutorial for looping background (not parallax effect): https://learn.unity.com/tutorial/live-session-making-a-flappy-bird-style-game#5c7f8528edbc2a002053b6a7
 public class ParallaxBackground : MonoBehaviour
 {
     public float parallaxEffect;
-    public GameObject cam;
-    public float constantSpeed = 10;
 
-    private Vector2 startPositionVector;
-    private float length;
-    private float startPos;
+    private float constantSpeed = 2;
+    private float backgroundHorizontalLength;        //Length of the background horizontally
+
+    private void Awake()
+    {
+        backgroundHorizontalLength = GetComponent<BoxCollider2D>().size.x;
+    }
 
     void Start()
     {
-        startPositionVector = transform.position;
-        startPos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        if(GameManager.instance != null)
+        {
+            constantSpeed = GameManager.instance.tileMovementSpeed;
+        }
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(-constantSpeed / parallaxEffect, 0);
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        Vector2 testPos = Vector2.Lerp(new Vector2(startPositionVector.x + 10, startPositionVector.y), new Vector2(startPositionVector.x - 10, startPositionVector.y), (Mathf.Sin(constantSpeed * Time.time) + 1.0f) / 2.0f);
-
-        float temp = testPos.x * (1 - parallaxEffect);
-        float distance = testPos.x * parallaxEffect;
-
-        transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
-
-        if(temp > startPos + length)
+        if (transform.position.x < -backgroundHorizontalLength)
         {
-            startPos += length;
-        } else if (temp < startPos - length)
-        {
-            startPos -= length;
+            LoopPosition();
         }
+    }
+
+    private void LoopPosition()
+    {
+        //This is how far to the right we will move our background object, in this case, twice its length. This will position it directly to the right of the currently visible background object.
+        Vector2 groundOffSet = new Vector2(backgroundHorizontalLength * 2f, 0);
+
+        //Move this object from it's position offscreen, behind the player, to the new position off-camera in front of the player.
+        transform.position = (Vector2)transform.position + groundOffSet;
     }
 }
