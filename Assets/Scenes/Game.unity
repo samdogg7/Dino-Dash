@@ -212,12 +212,12 @@ PrefabInstance:
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8345228910105071259, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
@@ -227,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 6754236308500744523, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6754236308500744523, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
@@ -241,6 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: a4962ffaff9403342b204125c7fe066c, type: 2}
     m_RemovedComponents:
     - {fileID: 8345228910105071259, guid: c81eb91679d9046a0a00478c350c8fbc, type: 3}
+    - {fileID: 3599435104661685554, guid: c81eb91679d9046a0a00478c350c8fbc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c81eb91679d9046a0a00478c350c8fbc, type: 3}
 --- !u!1 &1212654313
 GameObject:
@@ -395,6 +396,8 @@ MonoBehaviour:
   TileSpriteDip: {fileID: 4908413950689328144, guid: 626ac696df89bb9438b689c30cd061f9,
     type: 3}
   Grass: {fileID: 2017998941137095585, guid: 78c2442868604f54c8e6a8bc2d455f22, type: 3}
+  TileSpriteBump: {fileID: 3263954244150262544, guid: 2423c701900e631449981caa1adc1bb3,
+    type: 3}
   wavespot: {fileID: 0}
   dipbox: {fileID: 4650880003025128795, guid: 2195a8c464167804fb7a000f7bc4cdeb, type: 3}
   time: 0
