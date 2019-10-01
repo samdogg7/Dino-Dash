@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager instance;
     public GameObject selectedCharacter;
     public bool isAlive = true;
+    public float tileMovementSpeed = 2f;
 
     private void Awake()
     {
-        Instance = this;
-
+        instance = this;
     }
 }
