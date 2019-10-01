@@ -41,7 +41,7 @@ public class GenerateScript : MonoBehaviour
 
     IEnumerator WaveDelay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         wait = false;
     }
 
