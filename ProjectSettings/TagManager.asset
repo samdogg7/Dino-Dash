@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dino
   - wave
+  - Ground
   layers:
   - Default
   - TransparentFX
