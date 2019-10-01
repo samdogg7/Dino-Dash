@@ -522,7 +522,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.75}
+  m_Size: {x: 0.75, y: 3}
   m_EdgeRadius: 0
 --- !u!114 &1971120321
 MonoBehaviour:
@@ -540,6 +540,7 @@ MonoBehaviour:
   DownTile: {fileID: 8138342934693577564, guid: 0166aaffd9b23dd43983cd2dbd3a7da9,
     type: 3}
   UpTile: {fileID: 7100355535862256898, guid: 1e2072a87bb841a4184a401590ef24ff, type: 3}
+  BumpBox: {fileID: 5820823940746250263, guid: d7945c478b988e742af90472e3af3b75, type: 3}
 --- !u!1 &1994679310
 GameObject:
   m_ObjectHideFlags: 0
