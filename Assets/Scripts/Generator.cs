@@ -14,6 +14,7 @@ public class Generator : MonoBehaviour
     public GameObject TileSpriteBump;
     public BoxCollider2D wavespot;
     public GameObject dipbox;
+    public GameObject bumpbox;
     private int tick = 0;
     private bool holetile = false;
     // Start is called before the first frame update
@@ -90,46 +91,9 @@ public class Generator : MonoBehaviour
                     grassPos.z += -1;
                     Instantiate(TileSpriteBump, grassPos, Quaternion.identity);
                     Instantiate(dipbox, grassPos, Quaternion.identity);
+                    Instantiate(bumpbox, grassPos, Quaternion.identity);
                     timer = time;
                 }
             }
     }
-    /*
-    void Generate()
-    {
-        if (!holetile)
-        {
-            if (Random.Range(0, 10) == 11)
-            {
-                Instantiate(TileSpriteEnd, transform.position, Quaternion.identity);
-                StartCoroutine(hole());
-                holetile = true;
-
-            }
-            else
-            {
-                if(tick == 17)
-                {
-                    tick = 0;
-                }
-                Instantiate(Tiles[tick], transform.position, Quaternion.identity);
-                tick += 1;
-                Vector3 grassPos = transform.position;
-                grassPos.y += -.375f;
-                grassPos.z += -1;
-                if (Random.Range(0, 5) == 1) { }
-                    //Instantiate(TileSpriteDip, grassPos, Quaternion.identity);
-            }
-            
-        }
-    }
-
-    IEnumerator hole()
-    {
-        yield return new WaitForSeconds(2f);
-        Instantiate(TileSpriteStart, transform.position, Quaternion.identity);
-        holetile = false;
-    }
-}
-*/
 }

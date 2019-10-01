@@ -337,7 +337,8 @@ GameObject:
   - component: {fileID: 1971120318}
   - component: {fileID: 1971120319}
   - component: {fileID: 1971120320}
-  m_Layer: 10
+  - component: {fileID: 1971120321}
+  m_Layer: 11
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +366,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971120317}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85c128d68a2e3264983741fc3889f211, type: 3}
   m_Name: 
@@ -400,6 +401,7 @@ MonoBehaviour:
     type: 3}
   wavespot: {fileID: 0}
   dipbox: {fileID: 4650880003025128795, guid: 2195a8c464167804fb7a000f7bc4cdeb, type: 3}
+  bumpbox: {fileID: 5820823940746250263, guid: d7945c478b988e742af90472e3af3b75, type: 3}
   time: 0
   timer: 0
 --- !u!61 &1971120320
@@ -428,3 +430,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
+--- !u!114 &1971120321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971120317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87235e1204c611b4a984e38e03d30218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tile: {fileID: 4069465705349242287, guid: 918c6cd09c712c343b73cda4075a8397, type: 3}
+  DownTile: {fileID: 8138342934693577564, guid: 0166aaffd9b23dd43983cd2dbd3a7da9,
+    type: 3}
+  UpTile: {fileID: 7100355535862256898, guid: 1e2072a87bb841a4184a401590ef24ff, type: 3}
