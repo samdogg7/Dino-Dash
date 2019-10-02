@@ -27,8 +27,8 @@ Transform:
   m_LocalPosition: {x: -1.6211312, y: -3.7652655, z: 5.0225773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8831102500105769136}
   - {fileID: 8831102499864946682}
+  - {fileID: 8831102500105769136}
   - {fileID: 8831102500050295684}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ Transform:
   - {fileID: 8831102500291224664}
   - {fileID: 8831102500656423276}
   m_Father: {fileID: 1479426792145350495}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8831102500050295685
 GameObject:
@@ -127,7 +127,7 @@ Transform:
   - {fileID: 8831102500193513819}
   - {fileID: 8831102500268519937}
   m_Father: {fileID: 1479426792145350495}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8831102500193513764
 GameObject:
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 8831102500193513817}
   - component: {fileID: 8831102500193513816}
   - component: {fileID: 8831102500193513823}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Mountains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 16, y: 10.4}
+  m_Size: {x: 32, y: 10.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -243,13 +243,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8, y: 10.4}
-    newSize: {x: 16, y: 10.4}
+    newSize: {x: 32, y: 10.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 10.4}
+  m_Size: {x: 32, y: 10.4}
   m_EdgeRadius: 0
 --- !u!50 &8831102500193513823
 Rigidbody2D:
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 8831102500268519942}
   - component: {fileID: 8831102500268519943}
   - component: {fileID: 8831102500268519936}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Mountains (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8831102500268519938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16, y: 0, z: 0}
+  m_LocalPosition: {x: 32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8831102500105769136}
@@ -349,7 +349,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 16, y: 10.4}
+  m_Size: {x: 32, y: 10.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -386,13 +386,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8, y: 10.4}
-    newSize: {x: 16, y: 10.4}
+    newSize: {x: 32, y: 10.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 10.4}
+  m_Size: {x: 32, y: 10.4}
   m_EdgeRadius: 0
 --- !u!50 &8831102500268519936
 Rigidbody2D:
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 8831102500291224669}
   - component: {fileID: 8831102500291224670}
   - component: {fileID: 8831102500291224671}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 16, y: 10}
+  m_Size: {x: 32, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -529,13 +529,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8, y: 10.4}
-    newSize: {x: 16, y: 10}
+    newSize: {x: 32, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 10}
+  m_Size: {x: 32, y: 10}
   m_EdgeRadius: 0
 --- !u!50 &8831102500291224671
 Rigidbody2D:
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 8831102500361168089}
   - component: {fileID: 8831102500361168088}
   - component: {fileID: 8831102500361168095}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 16, y: 10.4}
+  m_Size: {x: 32, y: 10.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba4789ded72d4e72be455d84edd7d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.2
+  parallaxEffect: 0.5
 --- !u!61 &8831102500361168088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -672,13 +672,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8, y: 10.4}
-    newSize: {x: 16, y: 10.4}
+    newSize: {x: 32, y: 10.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 10.4}
+  m_Size: {x: 32, y: 10.4}
   m_EdgeRadius: 0
 --- !u!50 &8831102500361168095
 Rigidbody2D:
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 8831102500549500229}
   - component: {fileID: 8831102500549500230}
   - component: {fileID: 8831102500549500231}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Trees (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8831102500549500225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16, y: 0, z: 10}
+  m_LocalPosition: {x: 32, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8831102500050295684}
@@ -778,7 +778,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 16, y: 10.4}
+  m_Size: {x: 32, y: 10.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba4789ded72d4e72be455d84edd7d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.2
+  parallaxEffect: 0.5
 --- !u!61 &8831102500549500230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -815,13 +815,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8, y: 10.4}
-    newSize: {x: 16, y: 10.4}
+    newSize: {x: 32, y: 10.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 10.4}
+  m_Size: {x: 32, y: 10.4}
   m_EdgeRadius: 0
 --- !u!50 &8831102500549500231
 Rigidbody2D:
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 8831102500656423265}
   - component: {fileID: 8831102500656423266}
   - component: {fileID: 8831102500656423267}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Clouds (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8831102500656423277}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16, y: 0, z: 0}
+  m_LocalPosition: {x: 32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8831102499864946682}
@@ -921,7 +921,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 16, y: 10}
+  m_Size: {x: 32, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -958,13 +958,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8, y: 10.4}
-    newSize: {x: 16, y: 10}
+    newSize: {x: 32, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 10}
+  m_Size: {x: 32, y: 10}
   m_EdgeRadius: 0
 --- !u!50 &8831102500656423267
 Rigidbody2D:

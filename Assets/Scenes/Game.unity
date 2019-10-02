@@ -162,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.88
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
@@ -255,25 +255,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parallax Background
       objectReference: {fileID: 0}
-    - target: {fileID: 4406709653860316209, guid: 4055685164ff54a9f84abe0154ecf203,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1479426792145350495, guid: 4055685164ff54a9f84abe0154ecf203,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6211312
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 1479426792145350495, guid: 4055685164ff54a9f84abe0154ecf203,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7652655
+      value: -2.9
       objectReference: {fileID: 0}
     - target: {fileID: 1479426792145350495, guid: 4055685164ff54a9f84abe0154ecf203,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 15.54
       objectReference: {fileID: 0}
     - target: {fileID: 1479426792145350495, guid: 4055685164ff54a9f84abe0154ecf203,
         type: 3}
@@ -315,26 +310,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8831102500193513816, guid: 4055685164ff54a9f84abe0154ecf203,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8831102500268519943, guid: 4055685164ff54a9f84abe0154ecf203,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8831102500291224670, guid: 4055685164ff54a9f84abe0154ecf203,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8831102500656423266, guid: 4055685164ff54a9f84abe0154ecf203,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4055685164ff54a9f84abe0154ecf203, type: 3}
 --- !u!1 &1212654313
@@ -373,7 +348,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.3254902, b: 0.49411768, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -447,7 +422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971120317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -2, z: 0}
+  m_LocalPosition: {x: 10, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
