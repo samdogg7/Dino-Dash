@@ -7,7 +7,7 @@ public class ParallaxBackground : MonoBehaviour
 {
     public float parallaxEffect;
 
-    private float constantSpeed = 2;
+    private float constantSpeed = 0.1f;
     private float backgroundHorizontalLength;        //Length of the background horizontally
 
     private void Awake()
@@ -22,7 +22,8 @@ public class ParallaxBackground : MonoBehaviour
             constantSpeed = GameManager.instance.tileMovementSpeed;
         }
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(-constantSpeed / parallaxEffect, 0);
+        float horizontalSpeed = -(constantSpeed / parallaxEffect);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(horizontalSpeed, 0);
     }
 
     private void Update()

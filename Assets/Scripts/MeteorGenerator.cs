@@ -7,9 +7,7 @@ public class MeteorGenerator : MonoBehaviour
 
     public float meteorTime = 1;
     public float range = 10;
-    public Vector2 target;
-    public Vector3 target3;
-
+    public GameObject targetObj;
     public GameObject meteorPre;
     // Start is called before the first frame update
     void Start()
@@ -22,19 +20,12 @@ public class MeteorGenerator : MonoBehaviour
         bool check = true;
 
         while (check == true){
-
-            GameObject clone;
-            GameObject targetObj = GameObject.Find("meteorTarget" );
-            Debug.Log(targetObj.transform.position);
-
             yield return new WaitForSeconds(meteorTime);
+            GameObject clone;
             Vector3 spawnPosition = transform.position;
             spawnPosition += new Vector3(Random.Range(-range, range), 0, 0);
 
             clone = Instantiate(meteorPre, spawnPosition, Quaternion.identity);
-            //LookRotation(targetObj.transform.position - spawnPosition, Vector3.forward)
-            //clone.transform.Rotate(0, 0, 90, Space.World);
-
 
             Vector3 targ = targetObj.transform.position;
             targ.z = 0f;
@@ -47,21 +38,13 @@ public class MeteorGenerator : MonoBehaviour
             clone.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             clone.transform.Rotate(0, 0, 90, Space.World);
 
-
-
             Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();
-            Vector2 meteorVector = targetObj.GetComponent<Rigidbody2D>().position - rb.position;
-            rb.AddForce(meteorVector * 10f);
-            
-            //clone.transform.rotation = Quaternion.LookRotation(targetObj.transform.position);
-           // Debug.Log(clone.transform.rotation);
+
+            Vector2 meteorVector = (Vector2)targetObj.transform.position - rb.position;
+            meteorVector.Normalize();
+            rb.velocity = meteorVector * (GameManager.instance.tileMovementSpeed);
         }
 
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnDrawGizmos()
