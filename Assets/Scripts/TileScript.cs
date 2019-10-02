@@ -22,7 +22,7 @@ public class TileScript : MonoBehaviour
 
     IEnumerator trash()
     {
-        yield return new WaitForSeconds(17f);
+        yield return new WaitForSeconds(6f);
         Destroy(gameObject);
     }
 }
