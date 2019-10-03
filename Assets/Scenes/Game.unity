@@ -236,12 +236,12 @@ PrefabInstance:
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.45
+      value: -6.67
       objectReference: {fileID: 0}
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.15
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
@@ -639,6 +639,7 @@ MonoBehaviour:
     type: 3}
   UpTile: {fileID: 7100355535862256898, guid: 1e2072a87bb841a4184a401590ef24ff, type: 3}
   BumpBox: {fileID: 5820823940746250263, guid: d7945c478b988e742af90472e3af3b75, type: 3}
+  Bird: {fileID: 9025059022450722032, guid: f8792e8339d4747bb9b1dcbe45882517, type: 3}
 --- !u!1 &1994679310
 GameObject:
   m_ObjectHideFlags: 0

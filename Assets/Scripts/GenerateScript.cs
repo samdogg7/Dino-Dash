@@ -9,13 +9,16 @@ public class GenerateScript : MonoBehaviour
     public GameObject DownTile;
     public GameObject UpTile;
     public GameObject BumpBox;
+    public GameObject Bird;
 
     private bool wait = false;
     private bool WaveState = false;
     private Vector2 TempVec;
+    private float waitTime;
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(BirdGenerator());
         TempVec = transform.position;
         //TempVec.x -= .02f;
         for (int i = 0; i< 30; i++)
@@ -55,8 +58,9 @@ public class GenerateScript : MonoBehaviour
                 TempVec = transform.position;
                 TempVec.y += .49f;
                 TempVec.x += 2.375f;
-                Instantiate(BumpBox, TempVec, Quaternion.identity);
                 Instantiate(UpTile, TempVec, Quaternion.identity);
+                TempVec.x += 1f;
+                Instantiate(BumpBox, TempVec, Quaternion.identity);
                 WaveState = true;
                 wait = true;
                 StartCoroutine(WaveDelay());
@@ -72,5 +76,13 @@ public class GenerateScript : MonoBehaviour
                 StartCoroutine(WaveDelay());
             }
         }
+    }
+
+    IEnumerator BirdGenerator()
+    {
+        waitTime = Random.Range(5f, 8f);
+        yield return new WaitForSeconds(waitTime);
+        Instantiate(Bird, transform.position + new Vector3(0f, 1f, 1f), Quaternion.identity);
+        StartCoroutine(BirdGenerator());
     }
 }
