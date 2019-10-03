@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveBoxScript : MonoBehaviour
 {
-    private Vector3 velocity = new Vector3(-3.2f, 0f, 0f);
+    private Vector3 velocity = new Vector3(-1.6f, 0f, 0f);
     // Start is called before the first frame update
     void Start()
     {

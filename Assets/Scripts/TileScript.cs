@@ -10,7 +10,7 @@ public class TileScript : MonoBehaviour
     void Start()
     {
         Tile = GetComponent<Rigidbody2D>();
-        Tile.velocity = new Vector2(-1.6f, 0f);
+        Tile.velocity = new Vector2(-GameManager.instance.tileMovementSpeed, 0f);
         StartCoroutine(trash());
     }
 
@@ -22,7 +22,7 @@ public class TileScript : MonoBehaviour
 
     IEnumerator trash()
     {
-        yield return new WaitForSeconds(13f);
+        yield return new WaitForSeconds(15f);
         Destroy(gameObject);
     }
 }

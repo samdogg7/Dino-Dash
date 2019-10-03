@@ -10,7 +10,7 @@ public class WavesScript : MonoBehaviour
     void Start()
     {
         Tile = GetComponent<Rigidbody2D>();
-        Tile.velocity = new Vector2(-3.2f, 0f);
+        Tile.velocity = new Vector2(-1.6f, 0f);
         StartCoroutine(trash());
     }
 

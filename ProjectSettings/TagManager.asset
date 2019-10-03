@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dino
   - wave
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - tile
   - quake
   - hitbox
-  - 
-  - 
+  - bumpbox
+  - background
   - 
   - 
   - 

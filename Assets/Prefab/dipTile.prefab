@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3862709753102641567}
   - component: {fileID: -3403288995998508930}
   - component: {fileID: 1236148569594096281}
+  - component: {fileID: 3331287413507377482}
   m_Layer: 10
   m_Name: dipTile
   m_TagString: wave
@@ -173,3 +174,15 @@ EdgeCollider2D:
   - {x: 0.13435812, y: 0.046089005}
   - {x: 0.2526105, y: 0.15139838}
   - {x: 0.31491795, y: 0.15246454}
+--- !u!114 &3331287413507377482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908413950689328144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29db17e382e972c408197364cb8407f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
