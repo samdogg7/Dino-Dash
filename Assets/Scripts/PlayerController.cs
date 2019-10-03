@@ -20,12 +20,15 @@ public class PlayerController : MonoBehaviour
     private float colStartingSize;
 
     private float movementSpeed = 3f;
+    private AudioSource audioSource;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CircleCollider2D>();
         animator = GetComponent<DinoAnimator>();
+        audioSource = GetComponent<AudioSource>();
         animator.RunningAnimation();
         colStartingSize = col.radius;
     }
@@ -100,5 +103,12 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+        if (collision.gameObject.CompareTag("Bird"))
+        {
+            audioSource.Play();
+            Destroy(collision.gameObject);
+        }
     }
+
+    
 }

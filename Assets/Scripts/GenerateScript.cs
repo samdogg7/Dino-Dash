@@ -15,6 +15,7 @@ public class GenerateScript : MonoBehaviour
     private bool WaveState = false;
     private Vector2 TempVec;
     private float waitTime;
+    private float height;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,8 +82,9 @@ public class GenerateScript : MonoBehaviour
     IEnumerator BirdGenerator()
     {
         waitTime = Random.Range(5f, 8f);
+        height = Random.Range(0f, 10f)/2;
         yield return new WaitForSeconds(waitTime);
-        Instantiate(Bird, transform.position + new Vector3(0f, 1f, 1f), Quaternion.identity);
+        Instantiate(Bird, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
         StartCoroutine(BirdGenerator());
     }
 }

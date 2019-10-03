@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 9187272822593238624}
   - component: {fileID: 1880306163036968841}
   m_Layer: 0
-  m_Name: bird
-  m_TagString: Bird
+  m_Name: cooked burb
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingOrder: 4
   m_Sprite: {fileID: -1207841707077272702, guid: 4cf8229d96b6346bbae623417770288c,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9528302, g: 0.06741722, b: 0.06741722, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
