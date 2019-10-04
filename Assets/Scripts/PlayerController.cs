@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpVelocity = 100f;
     public int dinoHunger = 100;
     private bool jumping = false;
+    private bool grounded = false;
 
     private DinoAnimator animator;
     private Rigidbody2D rb;
@@ -36,6 +37,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(dinoHunger >= 0)
+        {
+            UIManager.instance.UpdateHunger(dinoHunger);
+        } else
+        {
+            GameManager.instance.isAlive = false;
+        }
+    }
+
+    private void FixedUpdate()
+    {
         //Touch input
         if (Input.touchCount > 0)
         {
@@ -58,29 +70,30 @@ public class PlayerController : MonoBehaviour
             animator.framesPerSecond = 20f;
             Move(false);
         }
-        if(dinoHunger >= 0)
-        {
-            UIManager.instance.UpdateHunger(dinoHunger);
-        } else
-        {
-            GameManager.instance.isAlive = false;
-        }
     }
 
     private void Move(bool moveForward)
     {
-        Vector2 movement = new Vector2(0,rb.velocity.y);
-
-        if (moveForward)
+        if(grounded)
         {
-            movement.x = movementSpeed;
-        }
-        else
-        {
-            movement.x = -movementSpeed;
-        }
+            Vector2 movement = new Vector2(0, 0);
 
-        rb.velocity = movement;
+            if (moveForward)
+            {
+                movement.x = movementSpeed;
+            }
+            else
+            {
+                movement.x = -movementSpeed;
+            }
+
+            if (jumping)
+            {
+                movement.y = jumpVelocity;
+            }
+
+            rb.velocity = movement;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -105,6 +118,11 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            grounded = true;
+        }
+
         if (collisionObject.CompareTag("fire"))
         {
             dinoHunger -= 15;
@@ -116,10 +134,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Bump")
+        if (other.CompareTag("Bump"))
         {
-            Debug.Log("Jump");
-            rb.AddForce(Vector2.up * jumpVelocity);
+            jumping = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            grounded = false;
         }
     }
 }

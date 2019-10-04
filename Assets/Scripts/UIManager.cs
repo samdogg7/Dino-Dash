@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        score.text = "Score: " + GameManager.instance.score;
+        inGameScore.text = "Score: " + GameManager.instance.score;
         scoreGameOver.text = "Score: " + GameManager.instance.score;
     }
 
