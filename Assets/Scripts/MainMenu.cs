@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     {
         startButton.onClick.AddListener(StartButtonClicked);
         settingsButton.onClick.AddListener(SettingsButtonClicked);
+        Time.timeScale = 1f;
     }
 
     void StartButtonClicked()

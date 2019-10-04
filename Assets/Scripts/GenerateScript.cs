@@ -68,7 +68,7 @@ public class GenerateScript : MonoBehaviour
     IEnumerator BirdGenerator()
     {
         waitTime = Random.Range(5f, 8f);
-        height = Random.Range(0f, 10f)/2;
+        height = Random.Range(3f, 10f)/2;
         yield return new WaitForSeconds(waitTime);
         Instantiate(Bird, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
         StartCoroutine(BirdGenerator());

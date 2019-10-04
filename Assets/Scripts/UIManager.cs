@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     public TextMeshProUGUI score;
+    public TextMeshProUGUI scoreGameOver;
     public TextMeshProUGUI hunger;
     public GameObject playButton;
     public GameObject pauseButton;
@@ -27,12 +28,13 @@ public class UIManager : MonoBehaviour
         pauseButton.GetComponent<Button>().onClick.AddListener(PauseClicked);
         playButton.GetComponent<Button>().onClick.AddListener(PlayClicked);
         mainMenuButtonGameOver.GetComponent<Button>().onClick.AddListener(MainMenuClicked);
-        restartButton.GetComponent<Button>().onClick.AddListener(PlayClicked);
+        restartButton.GetComponent<Button>().onClick.AddListener(RestartClicked);
     }
 
     void Update()
     {
         score.text = "Score: " + GameManager.instance.score;
+        scoreGameOver.text = "Score: " + GameManager.instance.score;
     }
 
     public void UpdateHunger(int hungerCount)
@@ -58,13 +60,11 @@ public class UIManager : MonoBehaviour
 
     void MainMenuClicked()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 
     void RestartClicked()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
