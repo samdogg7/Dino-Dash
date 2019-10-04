@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public GenerateScript generate;
     public float movementSpeed = 3f;
     public float jumpVelocity = 100f;
-    private float dinoHunger = 100f;
+    public int dinoHunger = 100;
     private bool jumping = false;
 
     private DinoAnimator animator;
@@ -19,17 +19,19 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();
-        animator.runningSprites = Settings.instance.GetRunningSprites();
+        if(Settings.instance != null)
+        {
+            animator.runningSprites = Settings.instance.GetRunningSprites();
+        }
         animator.RunningAnimation();
 
-        StartCoroutine(hungerEnumerator());
+        InvokeRepeating("HungerEnumerator", 0f, 0.5f);
     }
 
-    IEnumerator hungerEnumerator()
+    void HungerEnumerator()
     {
-        yield return new WaitForSeconds(0.1f);
-        dinoHunger -= 1f;
-        StartCoroutine(hungerEnumerator());
+        Debug.Log(dinoHunger);
+        dinoHunger -= 1;
     }
 
     void Update()
@@ -56,8 +58,13 @@ public class PlayerController : MonoBehaviour
             animator.framesPerSecond = 20f;
             Move(false);
         }
-
-        Settings.instance
+        if(dinoHunger >= 0)
+        {
+            UIManager.instance.UpdateHunger(dinoHunger);
+        } else
+        {
+            GameManager.instance.isAlive = false;
+        }
     }
 
     private void Move(bool moveForward)
@@ -87,20 +94,20 @@ public class PlayerController : MonoBehaviour
                 audioSource.Play();
                 Destroy(collision.gameObject);
                 GameManager.instance.score += 1;
-                dinoHunger += 25f;
+                dinoHunger += 25;
             }
             else
             {
                 audioSource.Play();
                 Destroy(collision.gameObject);
-                dinoHunger -= 5f;
+                dinoHunger -= 5;
             }
 
         }
 
         if (collisionObject.CompareTag("fire"))
         {
-            dinoHunger -= 15f;
+            dinoHunger -= 15;
             //play charring sound also here
             audioSource.Play();
         }

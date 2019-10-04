@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 8345228910105071258}
   - component: {fileID: 6754236308500744523}
   - component: {fileID: 7581826689610964056}
-  - component: {fileID: 318311080}
   - component: {fileID: 709734650776848741}
   m_Layer: 0
-  m_Name: Blue Dino
+  m_Name: Dino
   m_TagString: Dino
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,15 +107,8 @@ MonoBehaviour:
   - {fileID: -5594891616951461250, guid: 56cce5cca30a74817955650c34731322, type: 3}
   - {fileID: 2398275797733112376, guid: 56cce5cca30a74817955650c34731322, type: 3}
   - {fileID: -6865345740338609477, guid: 56cce5cca30a74817955650c34731322, type: 3}
-  crouchSprites:
-  - {fileID: -9111046860271459987, guid: 56cce5cca30a74817955650c34731322, type: 3}
-  - {fileID: -2502152054627867837, guid: 56cce5cca30a74817955650c34731322, type: 3}
-  - {fileID: 6538706784403912789, guid: 56cce5cca30a74817955650c34731322, type: 3}
-  - {fileID: 1760784323390296859, guid: 56cce5cca30a74817955650c34731322, type: 3}
-  - {fileID: -4442351845777215166, guid: 56cce5cca30a74817955650c34731322, type: 3}
-  - {fileID: -8237024526970820776, guid: 56cce5cca30a74817955650c34731322, type: 3}
-  - {fileID: 9151943686912766832, guid: 56cce5cca30a74817955650c34731322, type: 3}
   framesPerSecond: 0.5
+  dinoColor: 0
 --- !u!50 &6754236308500744523
 Rigidbody2D:
   serializedVersion: 4
@@ -150,23 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c178428f395354d72be7aa6bc6be5c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generate: {fileID: 0}
+  movementSpeed: 3
   jumpVelocity: 2
---- !u!58 &318311080
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8345228910105071255}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!82 &709734650776848741
 AudioSource:
   m_ObjectHideFlags: 0

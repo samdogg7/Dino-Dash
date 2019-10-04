@@ -18,6 +18,16 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        InvokeRepeating("AddOneScore", 0f, 1f);
+    }
+
+    private void AddOneScore()
+    {
+        score += 1;
+    }
+
     private void Update()
     {
         if (!isAlive)

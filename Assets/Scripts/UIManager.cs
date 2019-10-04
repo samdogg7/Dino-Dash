@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     public TextMeshProUGUI score;
+    public TextMeshProUGUI hunger;
     public GameObject playButton;
     public GameObject pauseButton;
     public GameObject pauseOverlay;
@@ -34,9 +35,9 @@ public class UIManager : MonoBehaviour
         score.text = "Score: " + GameManager.instance.score;
     }
 
-    public void UpdateHunger()
+    public void UpdateHunger(int hungerCount)
     {
-
+        hunger.text = hungerCount.ToString();
     }
 
     void PauseClicked()
