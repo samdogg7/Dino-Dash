@@ -1479,7 +1479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -2.4888916, y: -251}
+  m_AnchoredPosition: {x: -2.4841309, y: -251}
   m_SizeDelta: {x: 12.628998, y: 0.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316996864
@@ -2227,6 +2227,8 @@ MonoBehaviour:
   UpTile: {fileID: 7100355535862256898, guid: 1e2072a87bb841a4184a401590ef24ff, type: 3}
   BumpBox: {fileID: 5820823940746250263, guid: d7945c478b988e742af90472e3af3b75, type: 3}
   Bird: {fileID: 9025059022450722032, guid: f8792e8339d4747bb9b1dcbe45882517, type: 3}
+  UnderTile: {fileID: 3456940280849599879, guid: 2524a0d17d9133742ae185bada324ae8,
+    type: 3}
 --- !u!1 &1994679310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,8 +2290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b0f3f33cba1416faf9e3a572173d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 1316996864}
+  inGameScore: {fileID: 0}
   scoreGameOver: {fileID: 193425126}
+  highscoreGameOver: {fileID: 0}
   hunger: {fileID: 436438373}
   playButton: {fileID: 1752590914}
   pauseButton: {fileID: 2069944029}
@@ -2423,7 +2426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -445.1111, y: -251}
+  m_AnchoredPosition: {x: -445.11588, y: -251}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069944031
@@ -2677,7 +2680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7764292596877048953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -461.0889, y: -251.76, z: 0}
+  m_LocalPosition: {x: -461.0841, y: -251.76, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 436438372}
