@@ -15,16 +15,10 @@ public class Settings : MonoBehaviour
 {
     public static Settings instance;
 
-    public Button musicOff;
-    public Button musicOn;
-    public Button soundEffectsOn;
-    public Button soundEffectsOff;
-
     public Sprite[] greenRunningSprites;
     public Sprite[] redRunningSprites;
     public Sprite[] yellowRunningSprites;
     public Sprite[] blueRunningSprites;
-
 
     public DinoColor dinoColor = DinoColor.Green;
 
@@ -35,20 +29,6 @@ public class Settings : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(transform.gameObject);
-    }
-
-    void Start()
-    {
-        //Make sure not on the main menu
-        if(musicOff != null)
-        {
-            musicOff.onClick.AddListener(MusicOffButtonClicked);
-        }
-    }
-
-    void MusicOffButtonClicked()
-    {
-       
     }
 
     public Sprite[] GetRunningSprites()
