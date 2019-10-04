@@ -20,6 +20,6 @@ public class Settings : MonoBehaviour
 
     void MusicOffButtonClicked()
     {
-        Music.Instance
+       
     }
 }
