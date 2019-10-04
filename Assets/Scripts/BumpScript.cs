@@ -16,7 +16,7 @@ public class BumpScript : MonoBehaviour
         if(collision.gameObject.CompareTag("Dino"))
         {
             body = collision.gameObject.GetComponent<Rigidbody2D>();
-            body.velocity = new Vector2(50f, 17f);
+            body.velocity = new Vector2(70f, 15f);
         }
     }
 
