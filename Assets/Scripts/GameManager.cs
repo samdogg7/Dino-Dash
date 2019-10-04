@@ -33,8 +33,20 @@ public class GameManager : MonoBehaviour
     {
         if (!isAlive)
         {
-            UIManager.instance.GameOver();
             Time.timeScale = 0f;
+            if(PlayerPrefs.HasKey("highscore"))
+            {
+                int oldHighScore = PlayerPrefs.GetInt("highscore");
+                if(oldHighScore < score)
+                {
+                    PlayerPrefs.SetInt("highscore", score);
+                }
+                UIManager.instance.GameOver(oldHighScore);
+            } else
+            {
+                UIManager.instance.GameOver(0);
+                PlayerPrefs.SetInt("highscore", score);
+            }
         }
     }
 }
