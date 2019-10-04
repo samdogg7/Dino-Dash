@@ -8,8 +8,9 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-    public TextMeshProUGUI score;
+    public TextMeshProUGUI inGameScore;
     public TextMeshProUGUI scoreGameOver;
+    public TextMeshProUGUI highscoreGameOver;
     public TextMeshProUGUI hunger;
     public GameObject playButton;
     public GameObject pauseButton;
@@ -68,8 +69,15 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void GameOver()
+    public void GameOver(int highscore)
     {
+        if(highscore > 0)
+        {
+            highscoreGameOver.text = "Your highscore: " + highscoreGameOver;
+        } else
+        {
+            highscoreGameOver.text = "";
+        }
         gameoverCanvas.SetActive(true);
     }
 }
