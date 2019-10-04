@@ -5,8 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
     public GameObject selectedCharacter;
+
     public bool isAlive = true;
+    public bool paused = true;
+
     public float tileMovementSpeed = 2f;
     public int score;
 
