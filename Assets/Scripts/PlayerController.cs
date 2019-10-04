@@ -103,11 +103,26 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
-        if (collision.gameObject.CompareTag("Bird"))
+        if (collision.gameObject.CompareTag("cookedBird"))
         {
+            //gain more health
             audioSource.Play();
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("Bird"))
+        {
+            //gain less health
+            audioSource.Play();
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("fire"))
+        {
+            //lose health
+            //play charring sound also here
+            audioSource.Play();
+            
+        }
+
     }
 
     

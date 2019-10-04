@@ -7,6 +7,9 @@ TagManager:
   - Dino
   - wave
   - Ground
+  - Bird
+  - cookedBird
+  - fire
   layers:
   - Default
   - TransparentFX

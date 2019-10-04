@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BirdScript : MonoBehaviour
 {
+    public bool cooked;
     private Rigidbody2D RB;
     // Start is called before the first frame update
     void Start()
@@ -12,9 +13,5 @@ public class BirdScript : MonoBehaviour
         RB.velocity = new Vector2(-GameManager.instance.tileMovementSpeed + 3f, 0f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
