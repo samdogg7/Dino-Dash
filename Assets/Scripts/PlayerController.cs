@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        generate.SpawnWave();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();

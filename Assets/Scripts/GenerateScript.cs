@@ -10,6 +10,7 @@ public class GenerateScript : MonoBehaviour
     public GameObject UpTile;
     public GameObject BumpBox;
     public GameObject Bird;
+    public GameObject UnderTile;
 
     private bool wait = false;
     private bool WaveState = false;
@@ -27,6 +28,7 @@ public class GenerateScript : MonoBehaviour
             
             TempVec.x -= .9f;
             Instantiate(Tile, TempVec, Quaternion.identity);
+            Instantiate(UnderTile, TempVec - new Vector2(0f, .914f), Quaternion.identity);
         }
         Generate();
     }
@@ -41,6 +43,10 @@ public class GenerateScript : MonoBehaviour
     {
         WaveState = false;
         Instantiate(Tile, transform.position, Quaternion.identity);
+        TempVec = transform.position;
+        TempVec.y -= .914f;
+        Instantiate(UnderTile, TempVec, Quaternion.identity);
+
     }
 
     IEnumerator WaveDelay()
@@ -59,6 +65,12 @@ public class GenerateScript : MonoBehaviour
             Instantiate(UpTile, TempVec, Quaternion.identity);
             //TempVec.x += 0f;
             Instantiate(BumpBox, TempVec, Quaternion.identity);
+            Instantiate(UnderTile, TempVec + new Vector2(2.4f, -1.4f), Quaternion.identity);
+            Instantiate(UnderTile, TempVec + new Vector2(2.181f, -1.4f), Quaternion.identity);
+            Instantiate(UnderTile, TempVec+ new Vector2(1.267f, -1.4f), Quaternion.identity);
+            Instantiate(UnderTile, TempVec + new Vector2(.353f,-1.4f), Quaternion.identity);
+            Instantiate(UnderTile, TempVec + new Vector2(-.561f, -1.4f), Quaternion.identity);
+            Instantiate(UnderTile, TempVec + new Vector2(-1.475f, -1.4f), Quaternion.identity);
             WaveState = true;
             wait = true;
             StartCoroutine(WaveDelay());
