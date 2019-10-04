@@ -91,6 +91,7 @@ public class Generator : MonoBehaviour
                     grassPos.z += -1;
                     Instantiate(TileSpriteBump, grassPos, Quaternion.identity);
                     Instantiate(dipbox, grassPos, Quaternion.identity);
+
                     Instantiate(bumpbox, grassPos, Quaternion.identity);
                     timer = time;
                 }
