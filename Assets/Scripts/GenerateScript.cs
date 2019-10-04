@@ -60,7 +60,7 @@ public class GenerateScript : MonoBehaviour
                 TempVec.y += .49f;
                 TempVec.x += 2.375f;
                 Instantiate(UpTile, TempVec, Quaternion.identity);
-                TempVec.x += 1f;
+                //TempVec.x += 0f;
                 Instantiate(BumpBox, TempVec, Quaternion.identity);
                 WaveState = true;
                 wait = true;
