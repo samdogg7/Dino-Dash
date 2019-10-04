@@ -15,20 +15,28 @@ public class Obstacle : MonoBehaviour
         }
         rb = GetComponent<Rigidbody2D>();
     }
+  
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("yuh");
         GameObject collidedObject = collision.gameObject;
-
-        if(collidedObject.CompareTag("Dino"))
+        if (collidedObject.CompareTag("Dino"))
         {
+            //player lose health
+            //play charring sound
             gameManager.isAlive = false;
             rb.velocity = Vector2.zero;
-            Destroy(gameObject);
-        } else
-        {
-            //If we want to add explosion animation, do here...
-            Destroy(gameObject);
+            
         }
+        else if (collidedObject.CompareTag("Bird"))
+        {
+
+            collidedObject.GetComponent<SpriteRenderer>().color = Color.red;
+            collidedObject.tag = "cookedBird";
+            //play a charring sound effect here
+        }
+        Destroy(gameObject);
     }
+
 }

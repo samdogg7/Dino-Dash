@@ -68,9 +68,30 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bird") && collision.gameObject.GetComponent<BirdScript>())
         {
             audioSource.Play();
+        }
+
+        if (collision.gameObject.CompareTag("cookedBird"))
+        {
+            //gain more health
+            audioSource.Play();
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Bird"))
+        {
+            //gain less health
+            audioSource.Play();
             Destroy(collision.gameObject);
             GameManager.instance.score += 1;
         }
+
+        if (collision.gameObject.CompareTag("fire"))
+        {
+            //lose health
+            //play charring sound also here
+            audioSource.Play();
+            
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

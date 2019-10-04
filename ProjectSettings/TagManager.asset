@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Dino
-  - wave
-  - Ground
-  - Bird
-  - Bump
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - hidden
-  - tile
-  - quake
-  - hitbox
-  - bumpbox
-  - background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
