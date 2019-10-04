@@ -1350,7 +1350,7 @@ PrefabInstance:
     - target: {fileID: 7581826689610964056, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: dinoHunger
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8345228910105071259, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
