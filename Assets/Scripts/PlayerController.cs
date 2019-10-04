@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private DinoAnimator animator;
     private Rigidbody2D rb;
     private AudioSource audioSource;
-    private Vector2 movement;
+    private bool jumping = false;
 
     private void Start()
     {
@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();
         animator.RunningAnimation();
-        movement = new Vector2(0, rb.velocity.y);
     }
 
     void Update()
@@ -32,7 +31,7 @@ public class PlayerController : MonoBehaviour
                 if (touch.position.x < Screen.width / 2)
                 {
                     //Touch left side of screen
-                    movement.x = movementSpeed;
+                    Move(true);
                     animator.framesPerSecond = 30f;
                 }
                 else if (touch.position.x > Screen.width / 2)
@@ -44,7 +43,7 @@ public class PlayerController : MonoBehaviour
         } else
         {
             animator.framesPerSecond = 20f;
-            movement.x = -movementSpeed;
+            Move(false);
         }
 
         //Keyboard input
@@ -58,8 +57,19 @@ public class PlayerController : MonoBehaviour
         //}
     }
 
-    private void FixedUpdate()
+    private void Move(bool moveForward)
     {
+        Vector2 movement = new Vector2(0,rb.velocity.y);
+
+        if (moveForward)
+        {
+            movement.x = movementSpeed;
+        }
+        else
+        {
+            movement.x = -movementSpeed;
+        }
+
         rb.velocity = movement;
     }
 
@@ -96,10 +106,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
-        if (other.name == "bumpbox")
+        if (other.tag == "Bump")
         {
-            movement.y = jumpVelocity;
+            Debug.Log("Jump");
+            rb.AddForce(Vector2.up * jumpVelocity);
         }
     }
 }

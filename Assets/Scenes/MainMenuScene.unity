@@ -566,7 +566,7 @@ Transform:
   m_GameObject: {fileID: 100496058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.008, y: 0.016, z: 1}
-  m_LocalScale: {x: 0.84568, y: 1.929906, z: 1}
+  m_LocalScale: {x: 0.87725437, y: 1.929906, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1517,6 +1517,10 @@ MonoBehaviour:
   score: {fileID: 0}
   playButton: {fileID: 0}
   pauseButton: {fileID: 0}
+  pauseOverlay: {fileID: 0}
+  gameoverCanvas: {fileID: 0}
+  mainMenuButtonGameOver: {fileID: 0}
+  restartButton: {fileID: 0}
 --- !u!114 &884428360
 MonoBehaviour:
   m_ObjectHideFlags: 0

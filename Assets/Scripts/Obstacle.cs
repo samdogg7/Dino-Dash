@@ -19,7 +19,6 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("yuh");
         GameObject collidedObject = collision.gameObject;
         if (collidedObject.CompareTag("Dino"))
         {

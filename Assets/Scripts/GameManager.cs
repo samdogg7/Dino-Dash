@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         if (!isAlive)
         {
             UIManager.instance.GameOver();
+            Time.timeScale = 0f;
         }
     }
 }
