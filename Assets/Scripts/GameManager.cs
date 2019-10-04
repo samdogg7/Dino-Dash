@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject selectedCharacter;
     public bool isAlive = true;
     public float tileMovementSpeed = 2f;
+    public int score;
 
     private void Awake()
     {
