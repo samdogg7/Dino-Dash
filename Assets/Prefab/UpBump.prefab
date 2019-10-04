@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1697630174805491843}
   m_Layer: 10
   m_Name: UpBump
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,8 +120,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.7428572, y: 0}
-  - {x: -1.7957888, y: -0.013974369}
+  - {x: -2.753686, y: -0.086628616}
+  - {x: -1.8367004, y: 0.011595607}
   - {x: -0.89766884, y: 0.5840017}
   - {x: -0.384876, y: 0.8585669}
   - {x: -0.0035316944, y: 0.95171326}

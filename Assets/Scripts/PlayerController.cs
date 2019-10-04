@@ -5,11 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GenerateScript generate;
-    public float movementSpeed = 3f;
+    public float movementSpeed = 10f;
     public float jumpVelocity = 100f;
     public int dinoHunger = 100;
     private bool jumping = false;
-    private bool grounded = false;
 
     private DinoAnimator animator;
     private Rigidbody2D rb;
@@ -32,7 +31,6 @@ public class PlayerController : MonoBehaviour
 
     void HungerEnumerator()
     {
-        Debug.Log(dinoHunger);
         dinoHunger -= 1;
     }
 
@@ -75,26 +73,27 @@ public class PlayerController : MonoBehaviour
 
     private void Move(bool moveForward)
     {
-        if(grounded)
+        Vector2 movement = new Vector2(0, rb.velocity.y);
+
+        if (moveForward)
         {
-            Vector2 movement = new Vector2(0, 0);
-
-            if (moveForward)
-            {
-                movement.x = movementSpeed;
-            }
-            else
-            {
-                movement.x = -movementSpeed;
-            }
-
-            if (jumping)
-            {
-                movement.y = jumpVelocity;
-            }
-
-            rb.velocity = movement;
+            movement.x = movementSpeed;
         }
+        else
+        {
+            movement.x = -movementSpeed;
+        }
+
+        if (jumping)
+        {
+            movement.y = Mathf.Sqrt(2 * jumpVelocity * Mathf.Abs(Physics2D.gravity.y));
+            jumping = false;
+            //movement.y = jumpVelocity;
+        }
+
+        Debug.Log(movement.y);
+        movement.y += Physics2D.gravity.y * Time.deltaTime;
+        rb.velocity = movement;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -103,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
         if (collisionObject.CompareTag("Bird"))
         {
-            if(collisionObject.GetComponent<Obstacle>().cooked)
+            if(collisionObject.GetComponent<SpriteRenderer>().color == Color.red)
             {
                 audioSource.Play();
                 Destroy(collision.gameObject);
@@ -119,9 +118,9 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collisionObject.CompareTag("Ground"))
         {
-            grounded = true;
+            jumping = false;
         }
 
         if (collisionObject.CompareTag("fire"))
@@ -138,14 +137,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Bump"))
         {
             jumping = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Ground"))
-        {
-            grounded = false;
+            Debug.Log("Grounded false");
         }
     }
 }

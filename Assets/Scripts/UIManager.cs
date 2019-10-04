@@ -73,7 +73,7 @@ public class UIManager : MonoBehaviour
     {
         if(highscore > 0)
         {
-            highscoreGameOver.text = "Your highscore: " + highscoreGameOver;
+            highscoreGameOver.text = "Your highscore: " + highscore;
         } else
         {
             highscoreGameOver.text = "";

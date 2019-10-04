@@ -22,8 +22,8 @@ public class Settings : MonoBehaviour
 
     public DinoColor dinoColor = DinoColor.Green;
 
-    private bool music = true;
-    private bool soundEffects = true;
+    public bool music = true;
+    public bool soundEffects = true;
 
     private void Awake()
     {
