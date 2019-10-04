@@ -7,18 +7,29 @@ public class PlayerController : MonoBehaviour
     public GenerateScript generate;
     public float movementSpeed = 3f;
     public float jumpVelocity = 100f;
+    private float dinoHunger = 100f;
+    private bool jumping = false;
 
     private DinoAnimator animator;
     private Rigidbody2D rb;
     private AudioSource audioSource;
-    private bool jumping = false;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();
+        animator.runningSprites = Settings.instance.GetRunningSprites();
         animator.RunningAnimation();
+
+        StartCoroutine(hungerEnumerator());
+    }
+
+    IEnumerator hungerEnumerator()
+    {
+        yield return new WaitForSeconds(0.1f);
+        dinoHunger -= 1f;
+        StartCoroutine(hungerEnumerator());
     }
 
     void Update()
@@ -46,15 +57,7 @@ public class PlayerController : MonoBehaviour
             Move(false);
         }
 
-        //Keyboard input
-        //if (Input.GetKey(KeyCode.D) && transform.position.x >= -7f && transform.position.x <= 7f)
-        //{
-        //    rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
-        //}
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    generate.SpawnWave();
-        //}
+        Settings.instance
     }
 
     private void Move(bool moveForward)
@@ -75,31 +78,31 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Bird") && collision.gameObject.GetComponent<BirdScript>())
+        GameObject collisionObject = collision.gameObject;
+
+        if (collisionObject.CompareTag("Bird"))
         {
-            audioSource.Play();
+            if(collisionObject.GetComponent<Obstacle>().cooked)
+            {
+                audioSource.Play();
+                Destroy(collision.gameObject);
+                GameManager.instance.score += 1;
+                dinoHunger += 25f;
+            }
+            else
+            {
+                audioSource.Play();
+                Destroy(collision.gameObject);
+                dinoHunger -= 5f;
+            }
+
         }
 
-        if (collision.gameObject.CompareTag("cookedBird"))
+        if (collisionObject.CompareTag("fire"))
         {
-            //gain more health
-            audioSource.Play();
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("Bird"))
-        {
-            //gain less health
-            audioSource.Play();
-            Destroy(collision.gameObject);
-            GameManager.instance.score += 1;
-        }
-
-        if (collision.gameObject.CompareTag("fire"))
-        {
-            //lose health
+            dinoHunger -= 15f;
             //play charring sound also here
             audioSource.Play();
-            
         }
 
     }

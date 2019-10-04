@@ -10,15 +10,9 @@ public class DinoSelector : MonoBehaviour
     {
         foreach (GameObject dino in dinos)
         {
-            if (dino != GameManager.instance.selectedCharacter)
-            {
-                dino.GetComponent<DinoAnimator>().IdleAnimation();
-            }
-            else
-            {
-                dino.GetComponent<DinoAnimator>().RunningAnimation();
-            }
+            dino.GetComponent<DinoAnimator>().IdleAnimation();
         }
+        UpdateCharacter(dinos[Random.Range(0, dinos.Length)]);
     }
 
     void Update()
@@ -46,6 +40,7 @@ public class DinoSelector : MonoBehaviour
                 dino.GetComponent<DinoAnimator>().RunningAnimation();
             }
         }
-        GameManager.instance.selectedCharacter = character;
+
+        Settings.instance.dinoColor = character.GetComponent<DinoAnimator>().dinoColor;
     }
 }

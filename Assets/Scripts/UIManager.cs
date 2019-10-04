@@ -34,6 +34,11 @@ public class UIManager : MonoBehaviour
         score.text = "Score: " + GameManager.instance.score;
     }
 
+    public void UpdateHunger()
+    {
+
+    }
+
     void PauseClicked()
     {
         playButton.SetActive(true);

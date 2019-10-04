@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    public bool cooked = false;
+
     private GameManager gameManager;
     private Rigidbody2D rb;
 
@@ -32,8 +34,8 @@ public class Obstacle : MonoBehaviour
         {
 
             collidedObject.GetComponent<SpriteRenderer>().color = Color.red;
-            collidedObject.tag = "cookedBird";
             //play a charring sound effect here
+            cooked = true;
         }
         Destroy(gameObject);
     }

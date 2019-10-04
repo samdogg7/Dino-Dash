@@ -1026,6 +1026,7 @@ MonoBehaviour:
   musicOn: {fileID: 0}
   soundEffectsOn: {fileID: 0}
   soundEffectsOff: {fileID: 0}
+  dinoColor: 0
 --- !u!1 &1455300282
 GameObject:
   m_ObjectHideFlags: 0
