@@ -6,12 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     public GenerateScript generate;
     public float movementSpeed = 3f;
-    public float jumpVelocity = 15f;
+    public float jumpVelocity = 100f;
 
     private DinoAnimator animator;
     private Rigidbody2D rb;
     private AudioSource audioSource;
-    private Vector2 movement = new Vector2(0, 0);
+    private Vector2 movement;
 
     private void Start()
     {
@@ -19,12 +19,11 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();
         animator.RunningAnimation();
+        movement = new Vector2(0, rb.velocity.y);
     }
 
     void Update()
     {
-        movement.y = rb.velocity.y;
-
         //Touch input
         if (Input.touchCount > 0)
         {
@@ -48,8 +47,6 @@ public class PlayerController : MonoBehaviour
             movement.x = -movementSpeed;
         }
 
-        rb.velocity = movement;
-
         //Keyboard input
         //if (Input.GetKey(KeyCode.D) && transform.position.x >= -7f && transform.position.x <= 7f)
         //{
@@ -61,13 +58,13 @@ public class PlayerController : MonoBehaviour
         //}
     }
 
-    //Prevent double jump from occuring
+    private void FixedUpdate()
+    {
+        rb.velocity = movement;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Bump"))
-        {
-            movement.y = jumpVelocity;
-        }
         if (collision.gameObject.CompareTag("Bird") && collision.gameObject.GetComponent<BirdScript>())
         {
             audioSource.Play();
@@ -76,5 +73,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log(other.name);
+        if (other.name == "bumpbox")
+        {
+            movement.y = jumpVelocity;
+        }
+    }
 }
