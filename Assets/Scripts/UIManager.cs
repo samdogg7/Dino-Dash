@@ -43,4 +43,9 @@ public class UIManager : MonoBehaviour
         pauseOverlay.SetActive(false);
         Time.timeScale = 1f;
     }
+
+    public void GameOver()
+    {
+
+    }
 }

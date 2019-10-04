@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2098746887471725393}
   m_Layer: 12
   m_Name: bumpbox
-  m_TagString: Untagged
+  m_TagString: Bump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

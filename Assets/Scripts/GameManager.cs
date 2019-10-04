@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public GameObject selectedCharacter;
 
     public bool isAlive = true;
-    public bool paused = true;
 
     public float tileMovementSpeed = 2f;
     public int score;
@@ -17,5 +16,13 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+        if (!isAlive)
+        {
+            UIManager.instance.GameOver();
+        }
     }
 }

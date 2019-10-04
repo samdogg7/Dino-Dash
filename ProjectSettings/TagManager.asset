@@ -8,6 +8,7 @@ TagManager:
   - wave
   - Ground
   - Bird
+  - Bump
   layers:
   - Default
   - TransparentFX

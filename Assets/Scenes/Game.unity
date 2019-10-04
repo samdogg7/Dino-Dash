@@ -489,12 +489,12 @@ PrefabInstance:
     - target: {fileID: 8345228910105071255, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: m_Name
-      value: Blue Dino
+      value: Dino
       objectReference: {fileID: 0}
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.67
+      value: 5.16
       objectReference: {fileID: 0}
     - target: {fileID: 8345228910105071257, guid: c81eb91679d9046a0a00478c350c8fbc,
         type: 3}
@@ -580,9 +580,20 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7581826689610964056, guid: c81eb91679d9046a0a00478c350c8fbc,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1212654315}
+    - target: {fileID: 7581826689610964056, guid: c81eb91679d9046a0a00478c350c8fbc,
+        type: 3}
+      propertyPath: generate
+      value: 
+      objectReference: {fileID: 1971120321}
     m_RemovedComponents:
     - {fileID: 8345228910105071259, guid: c81eb91679d9046a0a00478c350c8fbc, type: 3}
     - {fileID: 3599435104661685554, guid: c81eb91679d9046a0a00478c350c8fbc, type: 3}
+    - {fileID: 318311080, guid: c81eb91679d9046a0a00478c350c8fbc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c81eb91679d9046a0a00478c350c8fbc, type: 3}
 --- !u!1001 &1175859569
 PrefabInstance:
@@ -828,7 +839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -2.1467896, y: -251}
+  m_AnchoredPosition: {x: 2.9014587, y: -251}
   m_SizeDelta: {x: 12.628998, y: 0.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316996864
@@ -1211,9 +1222,8 @@ MonoBehaviour:
   selectedCharacter: {fileID: 8345228910105071255, guid: c81eb91679d9046a0a00478c350c8fbc,
     type: 3}
   isAlive: 1
-  paused: 1
   tileMovementSpeed: 4
-  score: 69
+  score: 0
 --- !u!4 &1994679312
 Transform:
   m_ObjectHideFlags: 0
@@ -1280,7 +1290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -445.1032, y: -251}
+  m_AnchoredPosition: {x: -450.15146, y: -251}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069944031

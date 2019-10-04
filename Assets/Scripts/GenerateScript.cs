@@ -49,33 +49,19 @@ public class GenerateScript : MonoBehaviour
         wait = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnWave()
     {
         if (!wait)
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                TempVec = transform.position;
-                TempVec.y += .49f;
-                TempVec.x += 2.375f;
-                Instantiate(UpTile, TempVec, Quaternion.identity);
-                //TempVec.x += 0f;
-                Instantiate(BumpBox, TempVec, Quaternion.identity);
-                WaveState = true;
-                wait = true;
-                StartCoroutine(WaveDelay());
-            }
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                TempVec = transform.position;
-                TempVec.y -= .48f;
-                TempVec.x += 2.5f;
-                Instantiate(DownTile, TempVec, Quaternion.identity);
-                WaveState = true;
-                wait = true;
-                StartCoroutine(WaveDelay());
-            }
+            TempVec = transform.position;
+            TempVec.y += .49f;
+            TempVec.x += 2.375f;
+            Instantiate(UpTile, TempVec, Quaternion.identity);
+            //TempVec.x += 0f;
+            Instantiate(BumpBox, TempVec, Quaternion.identity);
+            WaveState = true;
+            wait = true;
+            StartCoroutine(WaveDelay());
         }
     }
 
