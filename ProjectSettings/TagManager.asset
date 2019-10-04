@@ -7,6 +7,7 @@ TagManager:
   - Dino
   - wave
   - Ground
+  - Bird
   layers:
   - Default
   - TransparentFX
