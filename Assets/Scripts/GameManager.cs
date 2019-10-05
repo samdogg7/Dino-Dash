@@ -5,19 +5,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     public GameObject selectedCharacter;
-
     public bool isAlive = true;
-
+    //Tile movement speed
     public float tileMovementSpeed = 2f;
+    //Score is located in game manager because it is easily accesible for all game objects
     public int score;
 
     private void Awake()
     {
         instance = this;
     }
-
+    //Make sure time scale is at 1f
     private void Start()
     {
         InvokeRepeating("AddOneScore", 0f, 1f);
@@ -29,6 +28,7 @@ public class GameManager : MonoBehaviour
         score += 1;
     }
 
+    //Handle player !isAlive, update player prefs with high score and update UI
     private void Update()
     {
         if (!isAlive)

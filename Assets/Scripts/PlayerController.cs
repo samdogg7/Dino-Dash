@@ -79,11 +79,12 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movement = new Vector2(0, rb.velocity.y);
 
+        //Move forward horizontally 
         if (moveForward)
         {
             movement.x = movementSpeed;
         }
-        else
+        else //Move backward horizontally
         {
             movement.x = -movementSpeed;
         }
@@ -109,6 +110,7 @@ public class PlayerController : MonoBehaviour
 
         if (collisionObject.CompareTag("Bird"))
         {
+            //If the bird is red, it is cooked. Gives a bigger hunger boost
             if(collisionObject.GetComponent<SpriteRenderer>().color == Color.red)
             {
                 audioSource.Play();
@@ -116,32 +118,29 @@ public class PlayerController : MonoBehaviour
                 GameManager.instance.score += 1;
                 dinoHunger += 25;
             }
-            else
+            else //If you eat a normal bird, you gain a smaller amount of hunger
             {
                 audioSource.Play();
                 Destroy(collision.gameObject);
                 dinoHunger += 5;
             }
-
         }
-
-        
-
     }
 
+    //Check if the player is running up a bump, or has fallen back into the fire
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //If the player hits the fire on screen left, the dino dies
         if (other.CompareTag("fire"))
         {
             dinoHunger = 0;
             //play charring sound also here
             audioSource.Play();
         }
-
+        //If the player triggers a bump, jump!
         if (other.CompareTag("Bump"))
         {
             jumping = true;
-            Debug.Log("Grounded false");
         }
     }
 }

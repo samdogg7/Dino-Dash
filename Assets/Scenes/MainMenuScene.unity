@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 24785515}
   - component: {fileID: 24785513}
   - component: {fileID: 24785514}
+  - component: {fileID: 24785516}
   m_Layer: 0
   m_Name: Red Dino
   m_TagString: Dino
@@ -269,6 +270,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorType: 0
   anchorOffset: {x: 6.5, y: 2.2, z: 0}
+--- !u!114 &24785516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24785510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d3dcc81622548b7bcc367e7152ba75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadow: {fileID: 21300000, guid: c993ce618d1da4defb0440fb81b687a6, type: 3}
+  selectedShadow: {fileID: 21300000, guid: f2f298233b3d24a21b7a3f5f57288409, type: 3}
+  shadowSpriteRender: {fileID: 1848899302}
 --- !u!1 &43426830
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,8 +702,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287795858
-  m_fontColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+    rgba: 4281479730
+  m_fontColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1109,6 +1125,7 @@ MonoBehaviour:
   - {fileID: 1746191022}
   - {fileID: 24785510}
   - {fileID: 1266333808}
+  dinoShadows: []
 --- !u!4 &618472431
 Transform:
   m_ObjectHideFlags: 0
@@ -1306,8 +1323,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287795858
-  m_fontColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+    rgba: 4281479730
+  m_fontColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1410,6 +1427,7 @@ GameObject:
   - component: {fileID: 853140938}
   - component: {fileID: 853140940}
   - component: {fileID: 853140939}
+  - component: {fileID: 853140941}
   m_Layer: 0
   m_Name: Blue Dino
   m_TagString: Dino
@@ -1546,6 +1564,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorType: 0
   anchorOffset: {x: 14.5, y: 2.2, z: 0}
+--- !u!114 &853140941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853140935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d3dcc81622548b7bcc367e7152ba75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadow: {fileID: 21300000, guid: c993ce618d1da4defb0440fb81b687a6, type: 3}
+  selectedShadow: {fileID: 21300000, guid: f2f298233b3d24a21b7a3f5f57288409, type: 3}
+  shadowSpriteRender: {fileID: 43426831}
 --- !u!1 &1140065147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1658,7 @@ GameObject:
   - component: {fileID: 1266333813}
   - component: {fileID: 1266333811}
   - component: {fileID: 1266333812}
+  - component: {fileID: 1266333814}
   m_Layer: 0
   m_Name: Yellow Dino
   m_TagString: Dino
@@ -1761,6 +1795,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorType: 0
   anchorOffset: {x: 10.52, y: 2.2, z: 0}
+--- !u!114 &1266333814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266333808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d3dcc81622548b7bcc367e7152ba75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadow: {fileID: 21300000, guid: c993ce618d1da4defb0440fb81b687a6, type: 3}
+  selectedShadow: {fileID: 21300000, guid: f2f298233b3d24a21b7a3f5f57288409, type: 3}
+  shadowSpriteRender: {fileID: 574738476}
 --- !u!1 &1616624036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,6 +2100,7 @@ GameObject:
   - component: {fileID: 1746191027}
   - component: {fileID: 1746191025}
   - component: {fileID: 1746191026}
+  - component: {fileID: 1746191028}
   m_Layer: 0
   m_Name: Green Dino
   m_TagString: Dino
@@ -2187,6 +2237,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorType: 0
   anchorOffset: {x: 2.5, y: 2.2, z: 0}
+--- !u!114 &1746191028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746191022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d3dcc81622548b7bcc367e7152ba75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadow: {fileID: 21300000, guid: c993ce618d1da4defb0440fb81b687a6, type: 3}
+  selectedShadow: {fileID: 21300000, guid: f2f298233b3d24a21b7a3f5f57288409, type: 3}
+  shadowSpriteRender: {fileID: 306887158}
 --- !u!1 &1799583036
 GameObject:
   m_ObjectHideFlags: 0

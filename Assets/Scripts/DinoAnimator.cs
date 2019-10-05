@@ -11,16 +11,18 @@ public class DinoAnimator : Animator
 
     private SpriteRenderer spriteRenderer;
 
+    //Get the sprite render
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    //Helper method
     public void IdleAnimation()
     {
         Animate(idleSprites, spriteRenderer, idleSprites.Length / framesPerSecond);
     }
-
+    //Helper method
     public void RunningAnimation()
     {
         Animate(runningSprites, spriteRenderer, runningSprites.Length / framesPerSecond);

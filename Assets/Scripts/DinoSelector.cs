@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DinoSelector : MonoBehaviour
 {
+    //Array of selectable dinos
     public GameObject[] dinos;
+    public SpriteRenderer[] dinoShadows;
 
+    //Set all of the dinos to the idle animation, and randomly select a dino
     void Start()
     {
         foreach (GameObject dino in dinos)
@@ -15,6 +18,7 @@ public class DinoSelector : MonoBehaviour
         UpdateCharacter(dinos[Random.Range(0, dinos.Length)]);
     }
 
+    //Check for user input selecting the dino
     void Update()
     {
         if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
@@ -28,6 +32,7 @@ public class DinoSelector : MonoBehaviour
         }
     }
 
+    //Changes the selected dino to the running animation to help highlight which dino is selected. It will also update the settings instance so that this transfers to other scenes
     private void UpdateCharacter(GameObject character)
     {
         foreach (GameObject dino in dinos)
@@ -35,12 +40,15 @@ public class DinoSelector : MonoBehaviour
             if(dino != character)
             {
                 dino.GetComponent<DinoAnimator>().IdleAnimation();
-            } else
+                dino.GetComponent<SelectedDinoShadow>().UpdateShadow(false);
+            }
+            else
             {
                 dino.GetComponent<DinoAnimator>().RunningAnimation();
+                dino.GetComponent<SelectedDinoShadow>().UpdateShadow(true);
             }
         }
-
+        
         Settings.instance.dinoColor = character.GetComponent<DinoAnimator>().dinoColor;
     }
 }
