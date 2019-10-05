@@ -1786,7 +1786,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 135.74016}
-  m_SizeDelta: {x: 2091.8, y: 456.2}
+  m_SizeDelta: {x: 2135.9, y: 456.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357457680
 MonoBehaviour:
@@ -1808,9 +1808,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "The game is survival. \nEat     to maintain health, cooked ones taste even
-    better. Avoid any   danger  you may encounter.\nPress the left side of the screen
-    to run forward and the right to generate a "
+  m_text: "How long can you last? \nEat     to maintain hunger, cooked birds taste
+    even better. Avoid any   danger  you may encounter.\nPress the left side of the
+    screen to run forward and the right to generate a        bump to Jump."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bee1b562f68f4793b6828758dc9f5d3, type: 2}
   m_sharedMaterial: {fileID: -69697028863175166, guid: 9bee1b562f68f4793b6828758dc9f5d3,
@@ -1856,7 +1856,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 158
+  m_firstOverflowCharacterIndex: 160
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1880,10 +1880,10 @@ MonoBehaviour:
   m_margin: {x: -9.365557, y: 0, z: -9.365494, w: 0}
   m_textInfo:
     textComponent: {fileID: 1357457680}
-    characterCount: 198
+    characterCount: 220
     spriteCount: 0
-    spaceCount: 43
-    wordCount: 35
+    spaceCount: 53
+    wordCount: 39
     linkCount: 0
     lineCount: 7
     pageCount: 1
@@ -2204,12 +2204,12 @@ PrefabInstance:
     - target: {fileID: 6793889567420361742, guid: 1e2072a87bb841a4184a401590ef24ff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 442
+      value: -314
       objectReference: {fileID: 0}
     - target: {fileID: 6793889567420361742, guid: 1e2072a87bb841a4184a401590ef24ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -351.03293
+      value: -340
       objectReference: {fileID: 0}
     - target: {fileID: 6793889567420361742, guid: 1e2072a87bb841a4184a401590ef24ff,
         type: 3}
