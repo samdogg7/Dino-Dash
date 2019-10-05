@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private AudioSource audioSource;
 
+    //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
     {
         generate.SpawnWave();
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
         dinoHunger -= 1;
     }
 
+    //Check if dino isAlive
     void Update()
     {
         if(dinoHunger >= 0)
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //Handle player touch input
     private void FixedUpdate()
     {
         //Touch input
@@ -71,6 +74,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //Handles dino movement
     private void Move(bool moveForward)
     {
         Vector2 movement = new Vector2(0, rb.velocity.y);
@@ -84,18 +88,21 @@ public class PlayerController : MonoBehaviour
             movement.x = -movementSpeed;
         }
 
+        //If the player runs over a bump, they will hit a trigger that sets jumping to be true
         if (jumping)
         {
             movement.y = Mathf.Sqrt(2 * jumpVelocity * Mathf.Abs(Physics2D.gravity.y));
             jumping = false;
-            //movement.y = jumpVelocity;
         }
 
-        Debug.Log(movement.y);
+        //Add gravity to the players y, otherwise the dino will float vertically indefintely
         movement.y += Physics2D.gravity.y * Time.deltaTime;
+
+        //Set the velocity to the players movement
         rb.velocity = movement;
     }
 
+    //Check for collisions with obstacles, and the ground
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject collisionObject = collision.gameObject;
@@ -113,27 +120,24 @@ public class PlayerController : MonoBehaviour
             {
                 audioSource.Play();
                 Destroy(collision.gameObject);
-                dinoHunger -= 5;
+                dinoHunger += 5;
             }
 
         }
 
-        if(collisionObject.CompareTag("Ground"))
-        {
-            jumping = false;
-        }
-
-        if (collisionObject.CompareTag("fire"))
-        {
-            dinoHunger -= 15;
-            //play charring sound also here
-            audioSource.Play();
-        }
+        
 
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("fire"))
+        {
+            dinoHunger = 0;
+            //play charring sound also here
+            audioSource.Play();
+        }
+
         if (other.CompareTag("Bump"))
         {
             jumping = true;

@@ -16,6 +16,8 @@ public class SettingsHandler : MonoBehaviour
     void Start()
     {
         mainMenuButton.onClick.AddListener(ReturnToMainMenu);
+        musicButton.onClick.AddListener(music);
+        soundEffectsButton.onClick.AddListener(soundEffects);
 
         if (Settings.instance != null)
         {
