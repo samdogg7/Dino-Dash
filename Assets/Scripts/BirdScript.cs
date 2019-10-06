@@ -11,7 +11,14 @@ public class BirdScript : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         RB.velocity = new Vector2(-GameManager.instance.tileMovementSpeed + 3f, 0f);
+        StartCoroutine(trash());
     }
 
-   
+    IEnumerator trash()
+    {
+        yield return new WaitForSeconds(30f);
+        Destroy(gameObject);
+    }
+
+
 }
