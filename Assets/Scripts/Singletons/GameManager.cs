@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
     public GameObject selectedCharacter;
     public bool isAlive = true;
     //Tile movement speed
@@ -12,10 +11,22 @@ public class GameManager : MonoBehaviour
     //Score is located in game manager because it is easily accesible for all game objects
     public int score;
 
+    private static GameManager _instance;
+    public static GameManager instance { get { return _instance; } }
+
+    //instance variable
     private void Awake()
     {
-        instance = this;
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
     }
+
     //Make sure time scale is at 1f
     private void Start()
     {

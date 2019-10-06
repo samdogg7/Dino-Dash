@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     //Start game scene
     void StartButtonClicked()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("GameScene");
     }
     //Goto settings scene
     void SettingsButtonClicked()

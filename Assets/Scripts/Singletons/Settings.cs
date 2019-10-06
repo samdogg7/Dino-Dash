@@ -14,7 +14,8 @@ public enum DinoColor
 
 public class Settings : MonoBehaviour
 {
-    public static Settings instance;
+    private static Settings _instance;
+    public static Settings instance { get { return _instance; } }
 
     //Each array of sprites for varying colors
     public Sprite[] greenRunningSprites;
@@ -27,11 +28,17 @@ public class Settings : MonoBehaviour
     public bool music = true;
     public bool soundEffects = true;
 
-    //Make sure settings exists in all scenes
     private void Awake()
     {
-        instance = this;
-        DontDestroyOnLoad(transform.gameObject);
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(transform.gameObject);
+        }
     }
 
     //Return the selected set of sprites, used to update game character

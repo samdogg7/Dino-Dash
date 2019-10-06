@@ -7,9 +7,21 @@ public class Music : MonoBehaviour
 {
     public AudioSource musicAudioSource;
 
-    private void Awake()
+	private static Music _instance;
+	public static Music instance { get { return _instance; } }
+
+	//instance variable
+	private void Awake()
 	{
-		DontDestroyOnLoad(this.gameObject);
+		if (_instance != null && _instance != this)
+		{
+			Destroy(this.gameObject);
+		}
+		else
+		{
+			_instance = this;
+			DontDestroyOnLoad(this.gameObject);
+		}
 	}
 
     private void Update()

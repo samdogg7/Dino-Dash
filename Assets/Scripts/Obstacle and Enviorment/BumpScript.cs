@@ -5,11 +5,6 @@ using UnityEngine;
 public class BumpScript : MonoBehaviour
 {
     private Rigidbody2D body;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,13 +13,5 @@ public class BumpScript : MonoBehaviour
             body = collision.gameObject.GetComponent<Rigidbody2D>();
             body.velocity = new Vector2(70f, 15f);
         }
-    }
-
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -10,8 +10,7 @@ using TMPro;
 //variable states.
 public class UIManager : MonoBehaviour
 {
-    public static UIManager instance;
-    public SpriteRenderer healthSpriteRender;
+	public SpriteRenderer healthSpriteRender;
     public TextMeshProUGUI inGameScore;
     public TextMeshProUGUI scoreGameOver;
     public TextMeshProUGUI highscoreGameOver;
@@ -24,14 +23,24 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenuButtonGameOver;
     public GameObject restartButtonGameOver;
 
-    //instance variable
-    private void Awake()
-    {
-        instance = this;
-    }
+	private static UIManager _instance;
+	public static UIManager instance { get { return _instance; } }
 
-    //Setup game buttons for gameover and pause
-    void Start()
+	//instance variable
+	private void Awake()
+	{
+		if (_instance != null && _instance != this)
+		{
+			Destroy(this.gameObject);
+		}
+		else
+		{
+			_instance = this;
+		}
+	}
+
+	//Setup game buttons for gameover and pause
+	void Start()
     {
         pauseButton.GetComponent<Button>().onClick.AddListener(PauseClicked);
         playButton.GetComponent<Button>().onClick.AddListener(PlayClicked);
@@ -65,7 +74,6 @@ public class UIManager : MonoBehaviour
     //Time.timeScale can be used for slow motion and freezing a scene. Rather than checking every moving object with a bool, we use this instead
     void PauseClicked()
     {
-        playButton.SetActive(true);
         pauseButton.SetActive(false);
         pauseScreen.SetActive(true);
         Time.timeScale = 0f;
@@ -75,7 +83,7 @@ public class UIManager : MonoBehaviour
     //Time.timeScale can be used for slow motion and freezing a scene. Rather than checking every moving object with a bool, we use this instead
     void PlayClicked()
     {
-        playButton.SetActive(false);
+		pauseScreen.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
     }

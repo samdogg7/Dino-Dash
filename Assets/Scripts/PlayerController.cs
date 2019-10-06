@@ -18,13 +18,10 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioSource;
     private string spriteName;
 
-
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
     {
-        startingHunger = dinoHunger;
-        
-        rb = GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();
         if(Settings.instance != null)
@@ -60,7 +57,7 @@ public class PlayerController : MonoBehaviour
         {
             foreach (Touch touch in Input.touches)
             {
-                if (touch.position.x < Screen.width / 2)
+                if ((touch.position.x < Screen.width / 2))
                 {
                     //Touch left side of screen
                     Move(true);
