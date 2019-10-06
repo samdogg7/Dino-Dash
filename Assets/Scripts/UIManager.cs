@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+
+//This Script Manages all the UI in the game keeping track of scores and different
+//variable states.
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;

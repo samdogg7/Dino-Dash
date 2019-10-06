@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//This Script Controls the Dinosaur and his movements/interactions. This allows
+//the dinosaur to be controlled by touch interaction.
 public class PlayerController : MonoBehaviour
 {
     public GenerateScript generate;
@@ -52,7 +55,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Touch input
-        /*
+        
         if (Input.touchCount > 0)
         {
             foreach (Touch touch in Input.touches)
@@ -74,26 +77,6 @@ public class PlayerController : MonoBehaviour
             animator.framesPerSecond = 20f;
             Move(false);
         }
-        */
-        //end
-
-        //start2
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            generate.SpawnWave();
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            Move(true);
-            animator.framesPerSecond = 30f;
-        }
-
-        else
-        {
-            animator.framesPerSecond = 20f;
-            Move(false);
-        }
-        //end2
     }
 
     //Handles dino movement
