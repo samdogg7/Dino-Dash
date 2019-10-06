@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed = 10f;
     public float jumpVelocity = 100f;
     public int dinoHunger = 50;
+    private int startingHunger;
     private bool jumping = false;
     private DinoAnimator animator;
     private Rigidbody2D rb;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
     {
+        startingHunger = dinoHunger;
         generate.SpawnWave();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<DinoAnimator>();
@@ -33,17 +35,14 @@ public class PlayerController : MonoBehaviour
 
     void HungerEnumerator()
     {
-        UIManager.instance.UpdateHunger(dinoHunger);
+        UIManager.instance.UpdateHunger(dinoHunger, startingHunger);
         dinoHunger -= 1;
     }
 
     //Check if dino isAlive
     void Update()
     {
-        if(dinoHunger >= 0)
-        {
-            UIManager.instance.UpdateHunger(dinoHunger);
-        } else
+        if(dinoHunger <= 0)
         {
             GameManager.instance.isAlive = false;
         }

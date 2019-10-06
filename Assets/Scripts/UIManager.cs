@@ -43,15 +43,12 @@ public class UIManager : MonoBehaviour
     }
 
     //Update the hunger int on screen
-    public void UpdateHunger(int dinoHunger)
+    public void UpdateHunger(int dinoHunger, int totalHunger)
     {
         hunger.text = dinoHunger.ToString();
         if(dinoHunger >= 0)
         {
-            //string spriteName = "hp bar " + Mathf.Abs(dinoHunger - 50).ToString() + " of 50";
-            int difference = 50 - dinoHunger;
-
-            Debug.Log(difference.ToString());
+            int difference = totalHunger - dinoHunger;
             string spriteName = "hp bar " + difference.ToString() + " of 50";
             healthSpriteRender.sprite = Resources.Load<Sprite>("50 HP bar/" + spriteName);
         }
