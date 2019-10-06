@@ -15,13 +15,14 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI inGameScore;
     public TextMeshProUGUI scoreGameOver;
     public TextMeshProUGUI highscoreGameOver;
-    public TextMeshProUGUI hunger;
+    public GameObject pauseScreen;
     public GameObject playButton;
     public GameObject pauseButton;
-    public GameObject pauseOverlay;
     public GameObject gameoverCanvas;
+    public GameObject mainMenuButtonPause;
+    public GameObject restartButtonPause;
     public GameObject mainMenuButtonGameOver;
-    public GameObject restartButton;
+    public GameObject restartButtonGameOver;
 
     //instance variable
     private void Awake()
@@ -34,8 +35,10 @@ public class UIManager : MonoBehaviour
     {
         pauseButton.GetComponent<Button>().onClick.AddListener(PauseClicked);
         playButton.GetComponent<Button>().onClick.AddListener(PlayClicked);
+        mainMenuButtonPause.GetComponent<Button>().onClick.AddListener(MainMenuClicked);
+        restartButtonPause.GetComponent<Button>().onClick.AddListener(RestartClicked);
         mainMenuButtonGameOver.GetComponent<Button>().onClick.AddListener(MainMenuClicked);
-        restartButton.GetComponent<Button>().onClick.AddListener(RestartClicked);
+        restartButtonGameOver.GetComponent<Button>().onClick.AddListener(RestartClicked);
     }
 
     //Update score every frame
@@ -64,7 +67,7 @@ public class UIManager : MonoBehaviour
     {
         playButton.SetActive(true);
         pauseButton.SetActive(false);
-        pauseOverlay.SetActive(true);
+        pauseScreen.SetActive(true);
         Time.timeScale = 0f;
     }
 
@@ -74,7 +77,6 @@ public class UIManager : MonoBehaviour
     {
         playButton.SetActive(false);
         pauseButton.SetActive(true);
-        pauseOverlay.SetActive(false);
         Time.timeScale = 1f;
     }
 
