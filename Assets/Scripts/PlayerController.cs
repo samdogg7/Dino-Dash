@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//This Script Controls the Dinosaur and his movements/interactions. This allows
+//the dinosaur to be controlled by touch interaction.
 public class PlayerController : MonoBehaviour
 {
     public GenerateScript generate;
@@ -20,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         startingHunger = dinoHunger;
-        generate.SpawnWave();
+        
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();
@@ -30,7 +33,7 @@ public class PlayerController : MonoBehaviour
         }
         animator.RunningAnimation();
 
-        InvokeRepeating("HungerEnumerator", 0f, 0.5f);
+        InvokeRepeating("HungerEnumerator", 0f, 0.25f);
     }
 
     void HungerEnumerator()
@@ -52,6 +55,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Touch input
+        
         if (Input.touchCount > 0)
         {
             foreach (Touch touch in Input.touches)
@@ -81,7 +85,7 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(0, rb.velocity.y);
 
         //Move forward horizontally 
-        if (moveForward)
+        if (moveForward && transform.position.x < 10)
         {
             movement.x = movementSpeed;
         }
@@ -120,7 +124,16 @@ public class PlayerController : MonoBehaviour
                 }
                 Destroy(collision.gameObject);
                 GameManager.instance.score += 1;
-                dinoHunger += 25;
+                if (dinoHunger + 35 > 100)
+                {
+                    dinoHunger = 100;
+                }
+                else
+                {
+                    dinoHunger += 35;
+                }
+                
+               
             }
             else //If you eat a normal bird, you gain a smaller amount of hunger
             {
@@ -129,7 +142,17 @@ public class PlayerController : MonoBehaviour
                     audioSource.Play();
                 }
                 Destroy(collision.gameObject);
-                dinoHunger += 5;
+                print(dinoHunger);
+                if (dinoHunger + 10 > 100)
+                {
+                    dinoHunger = 100;
+                }
+                else
+                {
+                    dinoHunger += 10;
+                }
+                
+                
             }
         }
     }
