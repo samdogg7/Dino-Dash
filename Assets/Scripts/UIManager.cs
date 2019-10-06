@@ -42,10 +42,9 @@ public class UIManager : MonoBehaviour
         scoreGameOver.text = "Score: " + GameManager.instance.score;
     }
 
-    //Update the hunger int on screen
+    //Update the hunger on screen
     public void UpdateHunger(int dinoHunger, int totalHunger)
     {
-        hunger.text = dinoHunger.ToString();
         if(dinoHunger >= 0)
         {
             //difference will take whatever the total hunger is and find the multiple that will make the hunger fit within 50 (there are 50 health bar sprites)
