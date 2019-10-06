@@ -1319,7 +1319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -2.4888916, y: -251}
+  m_AnchoredPosition: {x: -3.5706787, y: -251}
   m_SizeDelta: {x: 12.628998, y: 0.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316996864
@@ -1532,7 +1532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470847320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -459.3889, y: -251.75, z: 0}
+  m_LocalPosition: {x: -460.47067, y: -251.75, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_Children:
   - {fileID: 4777415817422314463}
@@ -2147,7 +2147,7 @@ PrefabInstance:
     - target: {fileID: 1581378729283926862, guid: f3bedbbda3aeb410cb907f82a1a1d5f9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.308889
+      value: -9.390675
       objectReference: {fileID: 0}
     - target: {fileID: 1581378729283926862, guid: f3bedbbda3aeb410cb907f82a1a1d5f9,
         type: 3}
@@ -2366,7 +2366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971120317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -4, z: 0}
+  m_LocalPosition: {x: 11, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2411,8 +2411,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tile: {fileID: 4069465705349242287, guid: 918c6cd09c712c343b73cda4075a8397, type: 3}
-  DownTile: {fileID: 8138342934693577564, guid: 0166aaffd9b23dd43983cd2dbd3a7da9,
-    type: 3}
   UpTile: {fileID: 7100355535862256898, guid: 1e2072a87bb841a4184a401590ef24ff, type: 3}
   BumpBox: {fileID: 5820823940746250263, guid: d7945c478b988e742af90472e3af3b75, type: 3}
   Bird: {fileID: 9025059022450722032, guid: f8792e8339d4747bb9b1dcbe45882517, type: 3}
@@ -2616,7 +2614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -445.1111, y: -251}
+  m_AnchoredPosition: {x: -444.02933, y: -251}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069944031
@@ -2852,7 +2850,7 @@ SpriteRenderer:
   m_SortingOrder: 4
   m_Sprite: {fileID: -1207841707077272702, guid: 4cf8229d96b6346bbae623417770288c,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2870,7 +2868,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7764292596877048953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.47, y: 0.094, z: 0}
+  m_LocalPosition: {x: 3.2500076, y: 0.05000305, z: 0}
   m_LocalScale: {x: 0.75, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 1470847322}
@@ -2923,6 +2921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4777415817422314463}
   - component: {fileID: 4217380722203466425}
+  - component: {fileID: 7764292596877048954}
   m_Layer: 0
   m_Name: Hunger Bird
   m_TagString: Bird
@@ -2930,6 +2929,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7764292596877048954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764292596877048953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3122a9d98bd434db51943bcb2d0f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorType: 0
+  anchorOffset: {x: 5.1, y: 8.3, z: 0}
 --- !u!114 &8345228911142975921
 MonoBehaviour:
   m_ObjectHideFlags: 0

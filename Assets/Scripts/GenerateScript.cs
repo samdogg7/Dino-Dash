@@ -6,7 +6,6 @@ public class GenerateScript : MonoBehaviour
 {
     //Defining public variables
     public GameObject Tile;
-    public GameObject DownTile;
     public GameObject UpTile;
     public GameObject BumpBox;
     public GameObject Bird;
@@ -20,12 +19,13 @@ public class GenerateScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        height = Random.Range(5f, 10f) / 2;
+        Instantiate(Bird, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
         StartCoroutine(BirdGenerator());
         TempVec = transform.position;
         //TempVec.x -= .02f;
         for (int i = 0; i< 30; i++)
         {
-            
             TempVec.x -= .9f;
             Instantiate(Tile, TempVec, Quaternion.identity);
             Instantiate(UnderTile, TempVec - new Vector2(0f, .914f), Quaternion.identity);
@@ -61,7 +61,7 @@ public class GenerateScript : MonoBehaviour
         {
             TempVec = transform.position;
             TempVec.y += .49f;
-            TempVec.x += 2.375f;
+            TempVec.x += 2.3f;
             Instantiate(UpTile, TempVec, Quaternion.identity);
             //TempVec.x += 0f;
             Instantiate(BumpBox, TempVec, Quaternion.identity);
@@ -71,6 +71,7 @@ public class GenerateScript : MonoBehaviour
             Instantiate(UnderTile, TempVec + new Vector2(.353f,-1.4f), Quaternion.identity);
             Instantiate(UnderTile, TempVec + new Vector2(-.561f, -1.4f), Quaternion.identity);
             Instantiate(UnderTile, TempVec + new Vector2(-1.475f, -1.4f), Quaternion.identity);
+            Instantiate(UnderTile, TempVec + new Vector2(-2.389f, -1.4f), Quaternion.identity);
             WaveState = true;
             wait = true;
             StartCoroutine(WaveDelay());
@@ -80,7 +81,7 @@ public class GenerateScript : MonoBehaviour
     IEnumerator BirdGenerator()
     {
         waitTime = Random.Range(5f, 8f);
-        height = Random.Range(3f, 10f)/2;
+        height = Random.Range(5f, 10f)/2;
         yield return new WaitForSeconds(waitTime);
         Instantiate(Bird, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
         StartCoroutine(BirdGenerator());
