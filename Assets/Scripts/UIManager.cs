@@ -8,6 +8,7 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
+    public SpriteRenderer healthSpriteRender;
     public TextMeshProUGUI inGameScore;
     public TextMeshProUGUI scoreGameOver;
     public TextMeshProUGUI highscoreGameOver;
@@ -42,9 +43,18 @@ public class UIManager : MonoBehaviour
     }
 
     //Update the hunger int on screen
-    public void UpdateHunger(int hungerCount)
+    public void UpdateHunger(int dinoHunger)
     {
-        hunger.text = hungerCount.ToString();
+        hunger.text = dinoHunger.ToString();
+        if(dinoHunger >= 0)
+        {
+            //string spriteName = "hp bar " + Mathf.Abs(dinoHunger - 50).ToString() + " of 50";
+            int difference = 50 - dinoHunger;
+
+            Debug.Log(difference.ToString());
+            string spriteName = "hp bar " + difference.ToString() + " of 50";
+            healthSpriteRender.sprite = Resources.Load<Sprite>("50 HP bar/" + spriteName);
+        }
     }
 
     //Handle pause being clicked, the pause overlay causes the screen to get alittle darker to indicate to the user that they are paused

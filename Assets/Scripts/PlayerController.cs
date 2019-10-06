@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public float jumpVelocity = 100f;
     public int dinoHunger = 50;
     private bool jumping = false;
-    public SpriteRenderer Health;
     private DinoAnimator animator;
     private Rigidbody2D rb;
     private AudioSource audioSource;
@@ -34,12 +33,8 @@ public class PlayerController : MonoBehaviour
 
     void HungerEnumerator()
     {
+        UIManager.instance.UpdateHunger(dinoHunger);
         dinoHunger -= 1;
-        Debug.Log(dinoHunger);
-        Debug.Log(dinoHunger - 50);
-        spriteName = "hp bar " + Mathf.Abs(dinoHunger-50).ToString() +" of 50";
-        Health.sprite = Resources.Load<Sprite>("50 HP bar/" + spriteName);
-
     }
 
     //Check if dino isAlive
