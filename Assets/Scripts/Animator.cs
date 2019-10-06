@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Animator : MonoBehaviour
 {
     //This is a helper method that will cancel the existing animation and start the next.
