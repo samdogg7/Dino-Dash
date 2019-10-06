@@ -48,8 +48,10 @@ public class UIManager : MonoBehaviour
         hunger.text = dinoHunger.ToString();
         if(dinoHunger >= 0)
         {
-            int difference = totalHunger - dinoHunger;
-            string spriteName = "hp bar " + difference.ToString() + " of 50";
+            //difference will take whatever the total hunger is and find the multiple that will make the hunger fit within 50 (there are 50 health bar sprites)
+            int difference = totalHunger / 50;
+            int healthBarSpriteIndex = (totalHunger / difference) - (dinoHunger/ difference);
+            string spriteName = "hp bar " + healthBarSpriteIndex.ToString() + " of 50";
             healthSpriteRender.sprite = Resources.Load<Sprite>("50 HP bar/" + spriteName);
         }
     }
