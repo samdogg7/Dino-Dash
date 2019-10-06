@@ -114,14 +114,20 @@ public class PlayerController : MonoBehaviour
             //If the bird is red, it is cooked. Gives a bigger hunger boost
             if(collisionObject.GetComponent<SpriteRenderer>().color == Color.red)
             {
-                audioSource.Play();
+                if (Settings.instance.soundEffects)
+                {
+                    audioSource.Play();
+                }
                 Destroy(collision.gameObject);
                 GameManager.instance.score += 1;
                 dinoHunger += 25;
             }
             else //If you eat a normal bird, you gain a smaller amount of hunger
             {
-                audioSource.Play();
+                if (Settings.instance.soundEffects)
+                {
+                    audioSource.Play();
+                }
                 Destroy(collision.gameObject);
                 dinoHunger += 5;
             }
@@ -136,7 +142,10 @@ public class PlayerController : MonoBehaviour
         {
             dinoHunger = 0;
             //play charring sound also here
-            audioSource.Play();
+            if(Settings.instance.soundEffects)
+            {
+                audioSource.Play();
+            }
         }
         //If the player triggers a bump, jump!
         if (other.CompareTag("Bump"))

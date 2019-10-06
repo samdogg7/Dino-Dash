@@ -5,23 +5,21 @@ using UnityEngine;
 
 public class Music : MonoBehaviour
 {
-	private static Music audioSource = null;
-    public static Music Instance
-	{
-        get { return audioSource; }
-	}
+    public AudioSource musicAudioSource;
 
     private void Awake()
 	{
-		if (audioSource != null && audioSource != this) {
-			Destroy(this.gameObject);
-			return;
-		}
-		else
-		{
-			audioSource = this;
-		}
-
 		DontDestroyOnLoad(this.gameObject);
 	}
+
+    private void Update()
+    {
+        if(Settings.instance.music && !musicAudioSource.isPlaying)
+        {
+            musicAudioSource.Play();
+        } else if(!Settings.instance.music && musicAudioSource.isPlaying)
+        {
+            musicAudioSource.Stop();
+        }
+    }
 }
