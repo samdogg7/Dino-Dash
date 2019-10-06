@@ -16,8 +16,8 @@ public class SettingsHandler : MonoBehaviour
     void Start()
     {
         mainMenuButton.onClick.AddListener(ReturnToMainMenu);
-        musicButton.onClick.AddListener(music);
-        soundEffectsButton.onClick.AddListener(soundEffects);
+        musicButton.onClick.AddListener(Music);
+        soundEffectsButton.onClick.AddListener(SoundEffects);
 
         if (Settings.instance != null)
         {
@@ -26,7 +26,7 @@ public class SettingsHandler : MonoBehaviour
         }
     }
 
-    private void music()
+    private void Music()
     {
         if(Settings.instance != null)
         {
@@ -35,7 +35,7 @@ public class SettingsHandler : MonoBehaviour
         }
     }
 
-    private void soundEffects()
+    private void SoundEffects()
     {
         if (Settings.instance != null)
         {
@@ -46,7 +46,7 @@ public class SettingsHandler : MonoBehaviour
 
     private void ReturnToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenuScene");
     }
 
     private void UpdateMusic(bool isOn)
