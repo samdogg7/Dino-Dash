@@ -10,7 +10,6 @@ public class Music : MonoBehaviour
     private void Awake()
 	{
 		DontDestroyOnLoad(this.gameObject);
-
 	}
 
     private void Update()
@@ -21,6 +20,12 @@ public class Music : MonoBehaviour
         } else if(!Settings.instance.music && musicAudioSource.isPlaying)
         {
             musicAudioSource.Stop();
+        }
+
+        GameObject otherMusicPlayer = GameObject.FindGameObjectWithTag("Music");
+        if(otherMusicPlayer != gameObject)
+        {
+            Destroy(otherMusicPlayer);
         }
     }
 }
