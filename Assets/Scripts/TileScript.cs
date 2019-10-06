@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script gives the Tiles a velocity and destroys them when they leave the screen.
 public class TileScript : MonoBehaviour
 {
     private Rigidbody2D Tile;

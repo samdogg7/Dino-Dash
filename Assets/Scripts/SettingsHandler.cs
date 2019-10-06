@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+
 public class SettingsHandler : MonoBehaviour
 {
     public Button musicButton;
