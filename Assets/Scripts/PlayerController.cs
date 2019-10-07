@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         //Touch input
         
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && transform.position.x < 8f)
         {
             foreach (Touch touch in Input.touches)
             {

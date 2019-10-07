@@ -41,6 +41,33 @@ public class Settings : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if(PlayerPrefs.HasKey("Music"))
+        {
+            int musicVal = PlayerPrefs.GetInt("Music");
+            if (musicVal == 0)
+            {
+                music = false;
+            } else
+            {
+                music = true;
+            }
+        }
+
+        if(PlayerPrefs.HasKey("SoundEffects"))
+        {
+            int sfxVal = PlayerPrefs.GetInt("SoundEffects");
+            if(sfxVal == 0)
+            {
+                soundEffects = false;
+            } else
+            {
+                soundEffects = true;
+            }
+        }
+    }
+
     //Return the selected set of sprites, used to update game character
     public Sprite[] GetRunningSprites()
     {

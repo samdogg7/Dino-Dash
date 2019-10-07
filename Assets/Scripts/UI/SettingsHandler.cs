@@ -55,8 +55,10 @@ public class SettingsHandler : MonoBehaviour
         if(isOn)
         {
             musicText.text = "On";
+            PlayerPrefs.SetInt("Music", 1);
         } else
         {
+            PlayerPrefs.SetInt("Music", 0);
             musicText.text = "Off";
         }
     }
@@ -65,10 +67,12 @@ public class SettingsHandler : MonoBehaviour
     {
         if (isOn)
         {
+            PlayerPrefs.SetInt("SoundEffects", 1);
             soundEffectsText.text = "On";
         }
         else
         {
+            PlayerPrefs.SetInt("SoundEffects", 1);
             soundEffectsText.text = "Off";
         }
     }
