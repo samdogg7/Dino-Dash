@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireAnimation : Animator
+public class LavaAnimation : Animator
 {
     public Sprite[] sprites;
     public float framesPerSecond = 20;
