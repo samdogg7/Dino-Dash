@@ -27,6 +27,7 @@ public class Settings : MonoBehaviour
 
     public bool music = true;
     public bool soundEffects = true;
+    public bool isTutorial = false;
 
     private void Awake()
     {
@@ -65,6 +66,13 @@ public class Settings : MonoBehaviour
             {
                 soundEffects = true;
             }
+        }
+
+        if (!PlayerPrefs.HasKey("isTutorial"))
+        {
+            isTutorial = true;
+            //fill with anything to make a key
+            PlayerPrefs.SetString("isTutorial", "true");
         }
     }
 

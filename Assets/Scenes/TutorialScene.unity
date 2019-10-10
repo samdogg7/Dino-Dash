@@ -3387,22 +3387,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7581826690621074291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8345228911142975932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c178428f395354d72be7aa6bc6be5c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  generate: {fileID: 1971120321}
-  movementSpeed: 3
-  jumpVelocity: 14
-  dinoHunger: 100
 --- !u!1 &7764292596877048953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3452,7 +3436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8345228911142975932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -3.055315, z: -1}
+  m_LocalPosition: {x: 0, y: -3.055315, z: -1}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3520,7 +3504,7 @@ GameObject:
   - component: {fileID: 8345228911142975923}
   - component: {fileID: 8345228911142975921}
   - component: {fileID: 6754236309636038240}
-  - component: {fileID: 7581826690621074291}
+  - component: {fileID: 8345228911142975933}
   - component: {fileID: 709734651937832526}
   - component: {fileID: 318311080}
   m_Layer: 0
@@ -3530,6 +3514,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8345228911142975933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8345228911142975932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5317cb7082f9345fc8d0f0badfed9924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generate: {fileID: 1971120321}
+  movementSpeed: 10
+  jumpVelocity: 100
+  dinoHunger: 50
 --- !u!1 &8831102498997035456
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,12 +8,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GenerateScript generate;
-    public float movementSpeed = 10f;
-    public float jumpVelocity = 100f;
-    public int dinoHunger = 50;
+    public float movementSpeed = 3f;
+    public float jumpVelocity = 14f;
+    public int dinoHunger = 100;
     private int startingHunger;
     private bool jumping = false;
-    private DinoAnimator animator;
+    protected DinoAnimator animator;
     private Rigidbody2D rb;
     private AudioSource audioSource;
     private string spriteName;
@@ -21,11 +21,16 @@ public class PlayerController : MonoBehaviour
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
     {
-		startingHunger = dinoHunger;
-		rb = GetComponent<Rigidbody2D>();
+        SetupDino();
+    }
+
+    public void SetupDino()
+    {
+        startingHunger = dinoHunger;
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();
-        if(Settings.instance != null)
+        if (Settings.instance != null)
         {
             animator.runningSprites = Settings.instance.GetRunningSprites();
         }
@@ -34,14 +39,14 @@ public class PlayerController : MonoBehaviour
         InvokeRepeating("HungerEnumerator", 0f, 0.25f);
     }
 
-    void HungerEnumerator()
+    public void HungerEnumerator()
     {
         UIManager.instance.UpdateHunger(dinoHunger, startingHunger);
         dinoHunger -= 1;
     }
 
     //Check if dino isAlive
-    void Update()
+    private void Update()
     {
         if(dinoHunger <= 0)
         {
@@ -78,7 +83,7 @@ public class PlayerController : MonoBehaviour
     }
 
     //Handles dino movement
-    private void Move(bool moveForward)
+    public void Move(bool moveForward)
     {
         Vector2 movement = new Vector2(0, rb.velocity.y);
 
