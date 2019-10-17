@@ -11,12 +11,15 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed = 3f;
     public float jumpVelocity = 14f;
     public int dinoHunger = 100;
+    public Camera mainCam;
+
     private int startingHunger;
     private bool jumping = false;
     protected DinoAnimator animator;
     private Rigidbody2D rb;
     private AudioSource audioSource;
     private string spriteName;
+    public CameraShake cameraShake;
 
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
@@ -30,6 +33,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<DinoAnimator>();
         audioSource = GetComponent<AudioSource>();
+        cameraShake = mainCam.GetComponent<CameraShake>();
+
         if (Settings.instance != null)
         {
             animator.runningSprites = Settings.instance.GetRunningSprites();
@@ -52,13 +57,16 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.instance.isAlive = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            StartCoroutine(cameraShake.Shake(.1f, .1f));
+        }
     }
 
     //Handle player touch input
     private void FixedUpdate()
     {
-        //Touch input
-        
         if (Input.touchCount > 0 && transform.position.x < 8f)
         {
             foreach (Touch touch in Input.touches)
@@ -71,14 +79,14 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (touch.position.x > Screen.width / 2)
                 {
-                    //Touch right side of screen
+                    StartCoroutine(cameraShake.Shake(.1f, .1f));
                     generate.SpawnWave();
                 }
             }
         } else
         {
             animator.framesPerSecond = 20f;
-            Move(false);
+            //Move(false);
         }
     }
 

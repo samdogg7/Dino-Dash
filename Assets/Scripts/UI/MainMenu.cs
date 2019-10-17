@@ -18,14 +18,16 @@ public class MainMenu : MonoBehaviour
     //Start game scene
     void StartButtonClicked()
     {
-        if(Settings.instance.isTutorial)
-        {
-            SceneManager.LoadScene("TutorialScene");
-        }
-        else
-        {
-            SceneManager.LoadScene("GameScene");
-        }
+        //if(Settings.instance.isTutorial)
+        //{
+        //    SceneManager.LoadScene("TutorialScene");
+        //}
+        //else
+        //{
+        //    SceneManager.LoadScene("GameScene");
+        //}
+
+        SceneManager.LoadScene("GameScene");
     }
     //Goto settings scene
     void SettingsButtonClicked()
