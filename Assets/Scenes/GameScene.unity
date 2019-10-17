@@ -1830,7 +1830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212654313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.42684802, y: -0.9666196, z: 11.985625}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1996134286}
@@ -3059,7 +3059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996134285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.42684802, y: 0.9666196, z: -21.015625}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1212654316}
@@ -3570,6 +3570,8 @@ MonoBehaviour:
   movementSpeed: 3
   jumpVelocity: 14
   dinoHunger: 100
+  mainCam: {fileID: 1212654315}
+  cameraShake: {fileID: 0}
 --- !u!1 &7764292596877048953
 GameObject:
   m_ObjectHideFlags: 0
