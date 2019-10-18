@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     public GameObject restartButtonPause;
     public GameObject mainMenuButtonGameOver;
     public GameObject restartButtonGameOver;
+    public bool paused = false;
 
 	private static UIManager _instance;
 	public static UIManager instance { get { return _instance; } }
@@ -74,6 +75,7 @@ public class UIManager : MonoBehaviour
     //Time.timeScale can be used for slow motion and freezing a scene. Rather than checking every moving object with a bool, we use this instead
     void PauseClicked()
     {
+        paused = true;
         pauseButton.SetActive(false);
         pauseScreen.SetActive(true);
         Time.timeScale = 0f;
@@ -83,6 +85,7 @@ public class UIManager : MonoBehaviour
     //Time.timeScale can be used for slow motion and freezing a scene. Rather than checking every moving object with a bool, we use this instead
     void PlayClicked()
     {
+        paused = false;
 		pauseScreen.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;

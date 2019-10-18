@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
                     Move(true);
                     animator.framesPerSecond = 30f;
                 }
-                else if (touch.position.x > Screen.width / 2)
+                else if (touch.position.x > Screen.width / 2 && !UIManager.instance.paused)
                 {
                     StartCoroutine(cameraShake.Shake(.1f, .1f));
                     generate.SpawnWave();

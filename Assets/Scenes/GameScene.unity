@@ -6643,7 +6643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -2.4888916, y: -251}
+  m_AnchoredPosition: {x: -2.3888855, y: -251}
   m_SizeDelta: {x: 12.628998, y: 0.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316996864
@@ -6780,7 +6780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchorType: 6
-  anchorOffset: {x: 6.4, y: -1, z: 0}
+  anchorOffset: {x: 6.5, y: -1, z: 0}
 --- !u!1 &1470847320
 GameObject:
   m_ObjectHideFlags: 0
@@ -6856,7 +6856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470847320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -459.7089, y: -252.25, z: 0}
+  m_LocalPosition: {x: -459.6889, y: -252.25, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_Children:
   - {fileID: 4777415817422314463}
@@ -6877,7 +6877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchorType: 6
-  anchorOffset: {x: 2.18, y: -2.25, z: 0}
+  anchorOffset: {x: 2.2, y: -2.25, z: 0}
 --- !u!1 &1495185528
 GameObject:
   m_ObjectHideFlags: 0
@@ -7932,6 +7932,7 @@ MonoBehaviour:
   restartButtonPause: {fileID: 303549757}
   mainMenuButtonGameOver: {fileID: 375300202}
   restartButtonGameOver: {fileID: 1521766798}
+  paused: 0
 --- !u!1 &1996134285
 GameObject:
   m_ObjectHideFlags: 0
