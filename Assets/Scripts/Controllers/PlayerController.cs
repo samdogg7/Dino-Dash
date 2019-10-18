@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
                     Move(true);
                     animator.framesPerSecond = 30f;
                 }
-                else if (touch.position.x > Screen.width / 2 && !UIManager.instance.paused)
+                else if (touch.position.x > Screen.width / 2 && touch.position.y > 75f)
                 {
                     StartCoroutine(cameraShake.Shake(.1f, .1f));
                     generate.SpawnWave();
@@ -142,9 +142,7 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     dinoHunger += 35;
-                }
-                
-               
+                }              
             }
             else //If you eat a normal bird, you gain a smaller amount of hunger
             {

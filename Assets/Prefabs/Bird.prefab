@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9187272822593238624}
   - component: {fileID: 1880306163036968841}
   m_Layer: 9
-  m_Name: bird
+  m_Name: Bird
   m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 6
   m_Sprite: {fileID: -1207841707077272702, guid: 4cf8229d96b6346bbae623417770288c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
