@@ -1639,6 +1639,7 @@ MonoBehaviour:
   dinoColor: 0
   music: 1
   soundEffects: 1
+  isTutorial: 0
 --- !u!4 &884428361
 Transform:
   m_ObjectHideFlags: 0
@@ -2521,6 +2522,7 @@ GameObject:
   - component: {fileID: 1901364367}
   - component: {fileID: 1901364368}
   - component: {fileID: 1901364366}
+  - component: {fileID: 1901364369}
   m_Layer: 5
   m_Name: Title Text
   m_TagString: Untagged
@@ -2684,3 +2686,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorType: 7
   anchorOffset: {x: 0, y: -2, z: 0}
+--- !u!114 &1901364369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901364364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bafcacdd518c4a7fb7f46ed7d968ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startText: 150
+  minSize: 150
+  maxSize: 180
+  introBuild: 0
+  pongSpeed: 35
