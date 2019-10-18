@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         } else
         {
             animator.framesPerSecond = 20f;
-            //Move(false);
+            Move(false);
         }
     }
 
