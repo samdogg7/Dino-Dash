@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3487921592649373214}
   - component: {fileID: 1697630174805491843}
   m_Layer: 10
-  m_Name: UpBump
+  m_Name: Bump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: a6e18d59359009442a933336dca2f669, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
