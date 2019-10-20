@@ -120,6 +120,87 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &11991392 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1076064527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &21670899
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499093447536}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
+--- !u!4 &21670900 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 21670899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &53613111
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +449,93 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193425124}
   m_CullTransparentMesh: 0
+--- !u!4 &216450165 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562479040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &218491869 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 576518248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &236220120
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499093447536}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.34800005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
+--- !u!4 &236220121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 236220120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &245026879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1392,144 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556221278}
   m_CullTransparentMesh: 0
+--- !u!1001 &562479040
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499152658474}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.819
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.332
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
+--- !u!1001 &576518248
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499152658474}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.122
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.311
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
 --- !u!1 &596900158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1632,150 @@ RectTransform:
   m_AnchoredPosition: {x: 453, y: 255}
   m_SizeDelta: {x: 906, y: 510}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &904857432
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499152658474}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.974
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
+--- !u!1001 &919617863
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499093447536}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.974
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
+--- !u!4 &919617864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 919617863}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1001358000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,6 +2092,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040957402}
   m_CullTransparentMesh: 0
+--- !u!1001 &1076064527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499152658474}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.502
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
 --- !u!1 &1173768410
 GameObject:
   m_ObjectHideFlags: 0
@@ -6781,6 +7300,156 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorType: 6
   anchorOffset: {x: 6.5, y: -1, z: 0}
+--- !u!1001 &1374343283
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499093447536}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.50199986
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
+--- !u!4 &1374343284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1374343283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1410353823
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499093447536}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.122
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.31099987
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
+--- !u!4 &1410353824 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1410353823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1470847320
 GameObject:
   m_ObjectHideFlags: 0
@@ -7158,6 +7827,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521766798}
   m_CullTransparentMesh: 0
+--- !u!1001 &1545644437
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499152658474}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.348
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
 --- !u!1 &1621997985
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,6 +7950,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1626888515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2136351851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1634526439
 GameObject:
   m_ObjectHideFlags: 0
@@ -7528,6 +8272,12 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!4 &1679941644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 904857432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1712082349
 GameObject:
   m_ObjectHideFlags: 0
@@ -8196,6 +8946,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorType: 4
   anchorOffset: {x: 0, y: 0, z: 0}
+--- !u!4 &1921706322 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1545644437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1971120317
 GameObject:
   m_ObjectHideFlags: 0
@@ -8377,6 +9133,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2003477233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499093447536}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.819
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33199978
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
+--- !u!4 &2003477234 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2003477233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2046207881
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,6 +9434,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorType: 8
   anchorOffset: {x: -1, y: -1, z: 0}
+--- !u!1001 &2136351851
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8831102499152658474}
+    m_Modifications:
+    - target: {fileID: 7159735576213185409, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_Name
+      value: Volcano Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.78999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.392
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.240079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159735576213185414, guid: d4af654925c3a44bfbb81c257d017bdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4af654925c3a44bfbb81c257d017bdb, type: 3}
 --- !u!82 &709734651937832526
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9017,7 +9917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &8761847432840844356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9118,7 +10018,13 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 21670900}
+  - {fileID: 2003477234}
+  - {fileID: 919617864}
+  - {fileID: 236220121}
+  - {fileID: 1374343284}
+  - {fileID: 1410353824}
   m_Father: {fileID: 8831102498997035457}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9300,7 +10206,13 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1626888515}
+  - {fileID: 216450165}
+  - {fileID: 1679941644}
+  - {fileID: 1921706322}
+  - {fileID: 11991392}
+  - {fileID: 218491869}
   m_Father: {fileID: 8831102498997035457}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9484,7 +10396,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: d04fae3882bc54af48ec4a7e79948bca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9623,7 +10535,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 76cbb37b041f7458990d0a8c409fb717, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db76c8500174444ccaddf752a47f9044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9732,7 +10644,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 76cbb37b041f7458990d0a8c409fb717, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db76c8500174444ccaddf752a47f9044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9909,7 +10821,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: d04fae3882bc54af48ec4a7e79948bca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
