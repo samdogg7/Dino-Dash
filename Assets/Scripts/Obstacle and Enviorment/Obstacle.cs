@@ -5,9 +5,12 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public bool cooked = false;
+    public float shakeTime = 0.25f;
+    public float shakeMagnitude = 0.1f;
 
     private GameManager gameManager;
     private Rigidbody2D rb;
+    private CameraShake cameraShake;
 
     void Start()
     {
@@ -37,6 +40,7 @@ public class Obstacle : MonoBehaviour
             //play a charring sound effect here
             cooked = true;
         }
+        CameraShake.instance.Shake(shakeTime, shakeMagnitude);
         Destroy(gameObject);
     }
 

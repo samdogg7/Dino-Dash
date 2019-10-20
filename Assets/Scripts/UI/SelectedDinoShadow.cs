@@ -14,9 +14,12 @@ public class SelectedDinoShadow : MonoBehaviour
         if(selected)
         {
             shadowSpriteRender.sprite = selectedShadow;
-        } else
+            transform.localScale = transform.localScale * 1.25f;
+        }
+        else
         {
             shadowSpriteRender.sprite = shadow;
+            transform.localScale = new Vector3(1,1,1);
         }
     }
 }

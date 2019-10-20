@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2363383710030760463}
+  - component: {fileID: 537417198165304160}
   - component: {fileID: 537417198165304162}
   - component: {fileID: 537417198165304163}
-  - component: {fileID: 537417198165304160}
   m_Layer: 9
   m_Name: Asteroid
   m_TagString: Untagged
@@ -35,6 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &537417198165304160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537417198165304161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc47f7d36f8b4da99652dbe9e0b078a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooked: 0
+  shakeTime: 0.05
+  shakeMagnitude: 0.05
 --- !u!50 &537417198165304162
 Rigidbody2D:
   serializedVersion: 4
@@ -72,19 +87,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.018306077}
   serializedVersion: 2
   m_Radius: 0.44508255
---- !u!114 &537417198165304160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537417198165304161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc47f7d36f8b4da99652dbe9e0b078a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooked: 0
 --- !u!1 &3271369571970507833
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +952,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 75
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -3968,7 +3970,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4096,7 +4098,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.7
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4794,7 +4796,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

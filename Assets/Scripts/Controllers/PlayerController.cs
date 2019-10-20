@@ -57,11 +57,6 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.instance.isAlive = false;
         }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            StartCoroutine(cameraShake.Shake(.1f, .1f));
-        }
     }
 
     //Handle player touch input
@@ -79,7 +74,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (touch.position.x > Screen.width / 2 && touch.position.y > 75f)
                 {
-                    StartCoroutine(cameraShake.Shake(.1f, .1f));
+                    CameraShake.instance.Shake(.1f, .1f);
                     generate.SpawnWave();
                 }
             }
