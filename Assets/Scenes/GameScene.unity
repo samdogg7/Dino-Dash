@@ -7635,8 +7635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d732acfa3c93841e8bb1d4ad02bad572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 30
-  fadeRate: 1
+  fadeTime: 20
+  fadeRate: 0.25
 --- !u!212 &1712082355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7793,8 +7793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d732acfa3c93841e8bb1d4ad02bad572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 30
-  fadeRate: 1
+  fadeTime: 20
+  fadeRate: 0.25
 --- !u!212 &1739063522
 SpriteRenderer:
   m_ObjectHideFlags: 0

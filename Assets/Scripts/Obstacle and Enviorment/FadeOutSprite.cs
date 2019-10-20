@@ -5,7 +5,7 @@ using UnityEngine;
 public class FadeOutSprite : MonoBehaviour
 {
     public float fadeTime = 10f;
-    public float fadeRate = 1f;
+    public float fadeRate = 0.25f;
     private float fadeAmount;
     private SpriteRenderer spriteRenderer;
     private Color fadeColor;
@@ -14,7 +14,7 @@ public class FadeOutSprite : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         fadeColor = spriteRenderer.color;
-        fadeAmount = 1f / fadeTime;
+        fadeAmount = fadeRate/fadeTime;
         StartCoroutine(FadeOut());
     }
 
@@ -22,13 +22,11 @@ public class FadeOutSprite : MonoBehaviour
     {
         yield return new WaitForSeconds(fadeRate);
 
-        fadeTime = fadeTime - fadeRate;
-
         fadeColor.a = fadeColor.a - fadeAmount;
 
         spriteRenderer.color = fadeColor;
 
-        if (fadeTime >= 0)
+        if (fadeColor.a > 0)
         {
             StartCoroutine(FadeOut());
         }
