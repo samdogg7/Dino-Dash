@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EasyMobile;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
         if (!isAlive)
         {
             Time.timeScale = 0f;
+            //Save locally the users highscore
             if(PlayerPrefs.HasKey("highscore"))
             {
                 int oldHighScore = PlayerPrefs.GetInt("highscore");
@@ -58,6 +60,8 @@ public class GameManager : MonoBehaviour
                 UIManager.instance.GameOver(0);
                 PlayerPrefs.SetInt("highscore", score);
             }
+            //Push to GameServices the score
+            GameServices.ReportScore(score, EM_GameServicesConstants.Leaderboard_DDLeaderboard);
         }
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
+using EasyMobile;
 using TMPro;
 
 
@@ -112,6 +114,19 @@ public class UIManager : MonoBehaviour
         } else
         {
             highscoreGameOver.text = "";
+        }
+        GameServices.LoadScores(EM_GameServicesConstants.Leaderboard_DDLeaderboard, 1, 5, TimeScope.AllTime, UserScope.Global, OnScoresLoaded);
+    }
+
+    private void OnScoresLoaded(string leaderboardName, IScore[] scores)
+    {
+        if(scores != null && scores.Length > 0)
+        {
+            foreach(IScore score in scores)
+            {
+                highscoreGameOver.text = highscoreGameOver.text + score.value;
+            }
+            //Handle scores
         }
         gameoverCanvas.SetActive(true);
     }
