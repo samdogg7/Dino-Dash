@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    public bool cooked = false;
     public float shakeTime = 0.25f;
     public float shakeMagnitude = 0.1f;
 
@@ -35,10 +34,8 @@ public class Obstacle : MonoBehaviour
         }
         else if (collidedObject.CompareTag("Bird"))
         {
-
+            collidedObject.GetComponent<BirdScript>().SpawnFeathers(false);
             collidedObject.GetComponent<SpriteRenderer>().color = Color.red;
-            //play a charring sound effect here
-            cooked = true;
         }
         CameraShake.instance.Shake(shakeTime, shakeMagnitude);
         Destroy(gameObject);

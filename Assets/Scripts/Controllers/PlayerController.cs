@@ -158,6 +158,7 @@ public class PlayerController : MonoBehaviour
                 
                 
             }
+            collisionObject.GetComponent<BirdScript>().SpawnFeathers(true);
         }
     }
 

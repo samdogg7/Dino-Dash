@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BirdScript : MonoBehaviour
 {
-    public bool cooked;
+    public ParticleSystem featherParticles;
     private Rigidbody2D RB;
-    // Start is called before the first frame update
+
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
@@ -20,5 +20,14 @@ public class BirdScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-
+    public void SpawnFeathers(bool isDino)
+    {
+        if (isDino)
+        {
+            print("Need to add feathers");
+        } else
+        {
+            featherParticles.Play();
+        }
+    }
 }
