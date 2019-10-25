@@ -8,6 +8,7 @@ public class DinoAnimator : Animator
     public Sprite[] runningSprites;
     public float framesPerSecond = 20;
     public DinoColor dinoColor;
+    public bool isRunning = false;
 
     private SpriteRenderer spriteRenderer;
 
@@ -15,6 +16,14 @@ public class DinoAnimator : Animator
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        if(isRunning)
+        {
+            RunningAnimation();
+        }
     }
 
     //Helper method
