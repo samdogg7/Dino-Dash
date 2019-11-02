@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public LoadingScene loadingScene;
     public Button startButton;
     public Button settingsButton;
     //Add button listeners
@@ -18,16 +19,7 @@ public class MainMenu : MonoBehaviour
     //Start game scene
     void StartButtonClicked()
     {
-        //if(Settings.instance.isTutorial)
-        //{
-        //    SceneManager.LoadScene("TutorialScene");
-        //}
-        //else
-        //{
-        //    SceneManager.LoadScene("GameScene");
-        //}
-
-        SceneManager.LoadScene("GameScene");
+        loadingScene.LoadlLevel(2);
     }
     //Goto settings scene
     void SettingsButtonClicked()
