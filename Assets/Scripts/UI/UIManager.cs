@@ -96,7 +96,7 @@ public class UIManager : MonoBehaviour
     //Go back to the main menu
     void MainMenuClicked()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     //Restart the game

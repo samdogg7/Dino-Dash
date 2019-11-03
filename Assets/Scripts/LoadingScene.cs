@@ -8,6 +8,7 @@ public class LoadingScene : MonoBehaviour
 {
     public GameObject LoadingCanvas;
     public Slider slider;
+    public DinoAnimator dinoAnimator;
     public bool loadMainMenu = false;
     public float loadingWaitTime = 1f;
     private bool loading = false;
@@ -19,6 +20,9 @@ public class LoadingScene : MonoBehaviour
         if(loadMainMenu)
         {
             LoadlLevel(1);
+        } else
+        {
+            LoadingCanvas.SetActive(false);
         }
     }
 
@@ -55,6 +59,7 @@ public class LoadingScene : MonoBehaviour
         operation = SceneManager.LoadSceneAsync(sceneIndex);
         operation.allowSceneActivation = false;
         LoadingCanvas.SetActive(true);
+        dinoAnimator.RunningAnimation(Settings.instance.GetRunningSprites());
         loading = true;
         yield return null;
     }

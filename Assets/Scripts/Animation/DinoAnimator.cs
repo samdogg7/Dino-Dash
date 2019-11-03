@@ -6,6 +6,7 @@ public class DinoAnimator : Animator
 {
     public Sprite[] idleSprites;
     public Sprite[] runningSprites;
+
     public float framesPerSecond = 20;
     public DinoColor dinoColor;
     public bool isRunning = false;
@@ -32,8 +33,12 @@ public class DinoAnimator : Animator
         Animate(idleSprites, spriteRenderer, idleSprites.Length / framesPerSecond);
     }
     //Helper method
-    public void RunningAnimation()
+    public void RunningAnimation(Sprite[] newSprites = null)
     {
+        if(newSprites != null)
+        {
+            runningSprites = newSprites;
+        }
         Animate(runningSprites, spriteRenderer, runningSprites.Length / framesPerSecond);
     }
 }

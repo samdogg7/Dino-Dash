@@ -30,17 +30,8 @@ public class TextPulse : MonoBehaviour
 
         if (myText.fontSize < minSize)
         {
-            /*{ if (timer > waitTime)
-                {
-                    timer -= waitTime;
-                    myText.fontSize += 1;
-                }
-            }
-            */
             int newSize1 = (int)(Mathf.PingPong(Time.time * introBuild, minSize + 1));
             myText.fontSize = newSize1;
-
-
         }
         else
         {
