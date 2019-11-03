@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MarchingBytes;
 
 public class MeteorGenerator : MonoBehaviour
 {
@@ -8,14 +9,34 @@ public class MeteorGenerator : MonoBehaviour
     
     public GameObject targetObj;
     public GameObject meteorPre;
+    public string poolName = "AsteroidPool";
     public float meteorTime = 1;
     public float range = 10;
     public float minSize = 0.5f;
     public float maxSize = 0.75f;
+    private List<GameObject> asteroidList = new List<GameObject>();
 
     void Start()
     {
         StartCoroutine(MeteorGenerate());
+    }
+
+
+    public GameObject CreateFromPoolAction(Vector3 spawnLocation)
+    {
+        GameObject go = EasyObjectPool.instance.GetObjectFromPool(poolName, spawnLocation, Quaternion.identity);
+        if (go)
+        {
+            asteroidList.Add(go);
+        }
+
+        return go;
+    }
+
+    public void ReturnToPoolAction(GameObject asteroid)
+    {
+        EasyObjectPool.instance.ReturnObjectToPool(asteroid);
+        asteroidList.Remove(asteroid);
     }
 
     IEnumerator MeteorGenerate() {
@@ -23,7 +44,8 @@ public class MeteorGenerator : MonoBehaviour
         Vector3 spawnPosition = transform.position;
         spawnPosition += new Vector3(Random.Range(-range, range), 0, 0);
 
-        clone = Instantiate(meteorPre, spawnPosition, Quaternion.identity);
+        clone = CreateFromPoolAction(spawnPosition);
+        clone.GetComponent<Obstacle>().meteorGenerator = this;
         float randomScale = Random.Range(minSize, maxSize);
         clone.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
 
