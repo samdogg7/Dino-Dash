@@ -60,8 +60,7 @@ public class GameManager : MonoBehaviour
                 UIManager.instance.GameOver(0);
                 PlayerPrefs.SetInt("highscore", score);
             }
-            //Push to GameServices the score
-            GameServices.ReportScore(score, EM_GameServicesConstants.Leaderboard_DDLeaderboard);
+            LeaderboardManager.instance.AddScore(score);
         }
     }
 }
