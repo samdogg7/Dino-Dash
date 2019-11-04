@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     public float shakeTime = 0.25f;
     public float shakeMagnitude = 0.1f;
-    public MeteorGenerator meteorGenerator;
+    public ObjectPool objectPool;
     private GameManager gameManager;
     private Rigidbody2D rb;
     private CameraShake cameraShake;
@@ -19,7 +19,6 @@ public class Obstacle : MonoBehaviour
         }
         rb = GetComponent<Rigidbody2D>();
     }
-  
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,7 +37,7 @@ public class Obstacle : MonoBehaviour
             collidedObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         CameraShake.instance.Shake(shakeTime, shakeMagnitude);
-        meteorGenerator.ReturnToPoolAction(gameObject);
+        objectPool.ReturnToPoolAction(gameObject);
     }
 
 }

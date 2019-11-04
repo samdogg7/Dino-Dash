@@ -66,7 +66,6 @@ public class PlayerController : MonoBehaviour
         if(dinoHunger <= lowHunger && !pulsing)
         {
             pulsing = true;
-            Debug.Log("Pulse");
             StartCoroutine(PulseDinoColor());
         }
     }
@@ -158,7 +157,6 @@ public class PlayerController : MonoBehaviour
                 {
                     audioSource.Play();
                 }
-                Destroy(collision.gameObject);
                 GameManager.instance.score += 1;
                 if (dinoHunger + 35 > 100)
                 {
@@ -175,7 +173,6 @@ public class PlayerController : MonoBehaviour
                 {
                     audioSource.Play();
                 }
-                Destroy(collision.gameObject);
                 if (dinoHunger + 10 > 100)
                 {
                     dinoHunger = 100;
@@ -187,7 +184,10 @@ public class PlayerController : MonoBehaviour
                 
                 
             }
-            collisionObject.GetComponent<BirdScript>().SpawnFeathers(true);
+
+            BirdScript bird = collisionObject.GetComponent<BirdScript>();
+            bird.SpawnFeathers(true);
+            bird.ReturnBirdToPool();
         }
     }
 

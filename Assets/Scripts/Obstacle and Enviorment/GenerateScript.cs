@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using MarchingBytes;
 
 //This script generates the Tiles, Birds and Waves to create the platform and
 //food for the player to interact with.
@@ -13,6 +13,7 @@ public class GenerateScript : MonoBehaviour
     public GameObject BumpBox;
     public GameObject Bird;
     public GameObject UnderTile;
+    public ObjectPool birdPool;
 
     private bool wait = false;
     private bool WaveState = false;
@@ -25,7 +26,6 @@ public class GenerateScript : MonoBehaviour
     {
         //Generates a Bird right at the start
         height = Random.Range(5f, 10f) / 2;
-        Instantiate(Bird, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
         StartCoroutine(BirdGenerator());
 
         //Instantiating the intial flooring of the game
@@ -92,10 +92,15 @@ public class GenerateScript : MonoBehaviour
     //Generates Birds at random heights and intervals
     IEnumerator BirdGenerator()
     {
-        waitTime = Random.Range(5f, 8f);
-        height = Random.Range(5f, 10f)/2;
+        if(EasyObjectPool.instance != null)
+        {
+            waitTime = Random.Range(5f, 8f);
+            height = Random.Range(5f, 10f) / 2;
+            GameObject birdClone = birdPool.CreateFromPoolAction(transform.position + new Vector3(0f, height, 1f));
+            birdClone.GetComponent<BirdScript>().objectPool = birdPool;
+        }
+        
         yield return new WaitForSeconds(waitTime);
-        Instantiate(Bird, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
         StartCoroutine(BirdGenerator());
     }
 }

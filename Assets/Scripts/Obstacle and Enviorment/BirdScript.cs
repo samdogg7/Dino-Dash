@@ -5,6 +5,7 @@ using UnityEngine;
 public class BirdScript : MonoBehaviour
 {
     public ParticleSystem featherParticles;
+    public ObjectPool objectPool;
     private Rigidbody2D RB;
 
     void Start()
@@ -16,8 +17,13 @@ public class BirdScript : MonoBehaviour
 
     IEnumerator trash()
     {
-        yield return new WaitForSeconds(30f);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(22f);
+        objectPool.ReturnToPoolAction(gameObject);
+    }
+
+    public void ReturnBirdToPool()
+    {
+        objectPool.ReturnToPoolAction(gameObject);
     }
 
     public void SpawnFeathers(bool isDino)

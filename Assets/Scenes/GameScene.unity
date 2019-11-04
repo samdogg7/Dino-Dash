@@ -7182,7 +7182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -2.3867188, y: -251}
+  m_AnchoredPosition: {x: -2.3979492, y: -251}
   m_SizeDelta: {x: 12.628998, y: 0.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316996864
@@ -7545,7 +7545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470847320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -459.6867, y: -252.25, z: 0}
+  m_LocalPosition: {x: -459.69797, y: -252.25, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_Children:
   - {fileID: 1886282298}
@@ -8988,6 +8988,7 @@ GameObject:
   - component: {fileID: 1971120318}
   - component: {fileID: 1971120320}
   - component: {fileID: 1971120321}
+  - component: {fileID: 1971120319}
   m_Layer: 0
   m_Name: Generator
   m_TagString: Untagged
@@ -9009,6 +9010,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1971120319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971120317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b70dc8b2b5a2479eb40b92a2a1d8503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolName: BirdPool
 --- !u!61 &1971120320
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9053,6 +9067,7 @@ MonoBehaviour:
   Bird: {fileID: 9025059022450722032, guid: f8792e8339d4747bb9b1dcbe45882517, type: 3}
   UnderTile: {fileID: 3456940280849599879, guid: 2524a0d17d9133742ae185bada324ae8,
     type: 3}
+  birdPool: {fileID: 1971120319}
 --- !u!1 &1994679310
 GameObject:
   m_ObjectHideFlags: 0
@@ -9359,7 +9374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -445.11328, y: -251}
+  m_AnchoredPosition: {x: -445.10205, y: -251}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069944031
@@ -9742,6 +9757,7 @@ MonoBehaviour:
   targetObj: {fileID: 8345228911142975932}
   meteorPre: {fileID: 537417198165304161, guid: fe38b852ba9154139b33eb252db5cb25,
     type: 3}
+  objectPool: {fileID: 4008018315038585264}
   meteorTime: 1
   range: 8
   minSize: 0.6
@@ -9756,6 +9772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4008018315038585257}
   - component: {fileID: 4008018315038585262}
+  - component: {fileID: 4008018315038585264}
   m_Layer: 0
   m_Name: meteorGenerator
   m_TagString: Untagged
@@ -9763,6 +9780,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4008018315038585264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008018315038585263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b70dc8b2b5a2479eb40b92a2a1d8503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolName: AsteroidPool
 --- !u!1 &4406709654969042240
 GameObject:
   m_ObjectHideFlags: 0
@@ -9800,6 +9830,59 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!4 &7109784652058650688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109784652058650690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7109784652058650689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109784652058650690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd53aa52f082d402bbb1db7e3b67072a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolInfo:
+  - poolName: AsteroidPool
+    prefab: {fileID: 537417198165304161, guid: fe38b852ba9154139b33eb252db5cb25, type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: BirdPool
+    prefab: {fileID: 9025059022450722032, guid: f8792e8339d4747bb9b1dcbe45882517,
+      type: 3}
+    poolSize: 10
+    fixedSize: 0
+--- !u!1 &7109784652058650690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7109784652058650688}
+  - component: {fileID: 7109784652058650689}
+  m_Layer: 0
+  m_Name: EasyObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &7581826690621074291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9827,7 +9910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8984250643914888671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.026719, y: -3, z: 0}
+  m_LocalPosition: {x: -8.037959, y: -3, z: 0}
   m_LocalScale: {x: 1.75, y: 1.75, z: 1}
   m_Children:
   - {fileID: 1220456256}
@@ -10134,7 +10217,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b43a3f556caa94de1bcebfa70faff8e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e0a40ae6175c47b9a6ba750ab416100, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10281,7 +10364,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b43a3f556caa94de1bcebfa70faff8e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e0a40ae6175c47b9a6ba750ab416100, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10424,7 +10507,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: d04fae3882bc54af48ec4a7e79948bca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9e4fbc5524b2454b83ce14b30608635, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10562,7 +10645,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: db76c8500174444ccaddf752a47f9044, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56be7642cb0754ff1a6d26da3c7d11d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10671,7 +10754,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: db76c8500174444ccaddf752a47f9044, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56be7642cb0754ff1a6d26da3c7d11d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10849,7 +10932,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: d04fae3882bc54af48ec4a7e79948bca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9e4fbc5524b2454b83ce14b30608635, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
