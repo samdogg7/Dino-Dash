@@ -12,19 +12,19 @@ public class MeteorGenerator : MonoBehaviour
     public float range = 10;
     public float minSize = 0.5f;
     public float maxSize = 0.75f;
+    private Transform spawnTransform;
 
     void Start()
     {
+        spawnTransform = transform;
         StartCoroutine(MeteorGenerate());
     }
 
     IEnumerator MeteorGenerate() {
         if(EasyObjectPool.instance != null)
         {
-            Vector3 spawnPosition = transform.position;
-            spawnPosition += new Vector3(Random.Range(-range, range), 0, 0);
-
-            GameObject clone = objectPool.CreateFromPoolAction(spawnPosition);
+            GameObject clone = Instantiate(meteorPre, transform.position + new Vector3(Random.Range(-range, range), 0, 0), Quaternion.identity);
+            //GameObject clone = objectPool.CreateFromPoolAction(spawnPosition);
 
             float randomScale = Random.Range(minSize, maxSize);
             clone.transform.localScale = new Vector3(randomScale, randomScale, randomScale);

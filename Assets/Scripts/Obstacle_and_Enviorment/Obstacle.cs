@@ -37,7 +37,9 @@ public class Obstacle : MonoBehaviour
             collidedObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         CameraShake.instance.Shake(shakeTime, shakeMagnitude);
-        objectPool.ReturnToPoolAction(gameObject);
+
+        Destroy(gameObject);
+        //objectPool.ReturnToPoolAction(gameObject);
     }
 
 }

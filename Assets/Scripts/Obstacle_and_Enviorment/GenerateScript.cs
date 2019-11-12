@@ -14,6 +14,7 @@ public class GenerateScript : MonoBehaviour
     public GameObject Bird;
     public GameObject UnderTile;
     public ObjectPool birdPool;
+    public GameObject birdPrefab;
 
     private bool wait = false;
     private bool WaveState = false;
@@ -92,14 +93,12 @@ public class GenerateScript : MonoBehaviour
     //Generates Birds at random heights and intervals
     IEnumerator BirdGenerator()
     {
-        if(EasyObjectPool.instance != null)
-        {
-            waitTime = Random.Range(5f, 8f);
-            height = Random.Range(5f, 10f) / 2;
-            GameObject birdClone = birdPool.CreateFromPoolAction(transform.position + new Vector3(0f, height, 1f));
-            birdClone.GetComponent<BirdScript>().objectPool = birdPool;
-        }
-        
+        waitTime = Random.Range(5f, 8f);
+        height = Random.Range(5f, 10f) / 2;
+        //GameObject birdClone = birdPool.CreateFromPoolAction(transform.position + new Vector3(0f, height, 1f));
+        GameObject birdClone = Instantiate(birdPrefab, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
+        birdClone.GetComponent<BirdScript>().objectPool = birdPool;
+
         yield return new WaitForSeconds(waitTime);
         StartCoroutine(BirdGenerator());
     }
