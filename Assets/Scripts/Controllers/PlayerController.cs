@@ -28,23 +28,21 @@ public class PlayerController : MonoBehaviour
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
     {
-        SetupDino();
-    }
-
-    public void SetupDino()
-    {
-        startingHunger = dinoHunger;
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<DinoAnimator>();
-        audioSource = GetComponent<AudioSource>();
-        cameraShake = mainCam.GetComponent<CameraShake>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<DinoAnimator>();
 
         if (Settings.instance != null)
         {
             animator.runningSprites = Settings.instance.GetRunningSprites();
         }
+
         animator.RunningAnimation();
+
+        startingHunger = dinoHunger;
+
+        rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+        cameraShake = mainCam.GetComponent<CameraShake>();
 
         InvokeRepeating("HungerEnumerator", 0f, 0.25f);
     }
