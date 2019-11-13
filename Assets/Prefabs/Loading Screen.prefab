@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -194.9, y: -54}
+  m_AnchoredPosition: {x: -194.9, y: -27.8}
   m_SizeDelta: {x: 128.19, y: 140.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &209802491
@@ -194,7 +194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194, y: -54}
+  m_AnchoredPosition: {x: 194, y: -27.8}
   m_SizeDelta: {x: 128.19, y: 140.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1419602263
@@ -352,8 +352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.38}
-  m_SizeDelta: {x: 259.81, y: 26.5}
+  m_AnchoredPosition: {x: 2.22, y: -0.1699996}
+  m_SizeDelta: {x: 249.344, y: 27.663}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1683560161
 CanvasRenderer:
@@ -383,7 +383,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Eat Birds for energy
+  m_text: Eat     for energy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bee1b562f68f4793b6828758dc9f5d3, type: 2}
   m_sharedMaterial: {fileID: -69697028863175166, guid: 9bee1b562f68f4793b6828758dc9f5d3,
@@ -412,8 +412,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -453,10 +453,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1683560160}
-    characterCount: 20
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 4
+    spaceCount: 6
+    wordCount: 3
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -684,7 +684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1485108966814407216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -701,8 +701,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -102.6}
-  m_SizeDelta: {x: 150, y: 21}
+  m_AnchoredPosition: {x: 0, y: -94.899994}
+  m_SizeDelta: {x: 109.57, y: 27.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1485108966814407230
 CanvasRenderer:
@@ -761,8 +761,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -935,7 +935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -121.3}
+  m_AnchoredPosition: {x: 0, y: -117}
   m_SizeDelta: {x: 150, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485108967430705806
@@ -1098,8 +1098,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485108968008122779}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -23, z: 0}
-  m_LocalScale: {x: 68.55882, y: 68.55882, z: 30.470589}
+  m_LocalPosition: {x: 0, y: 4.899995, z: 0}
+  m_LocalScale: {x: 65, y: 65, z: 65}
   m_Children:
   - {fileID: 1485108968003637872}
   m_Father: {fileID: 1485108968276177408}
@@ -1143,15 +1143,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 999
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -3643998761827717319, guid: 56cce5cca30a74817955650c34731322,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5, y: 1.7}
+  m_Size: {x: 1.5, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1485108968008122791
@@ -1196,8 +1197,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.7}
-    newSize: {x: 1.5, y: 1.7}
+    oldSize: {x: 1.5, y: 1.6}
+    newSize: {x: 1.5, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1404,12 +1405,12 @@ PrefabInstance:
     - target: {fileID: 6103494565260108630, guid: f8792e8339d4747bb9b1dcbe45882517,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -50.4
       objectReference: {fileID: 0}
     - target: {fileID: 6103494565260108630, guid: f8792e8339d4747bb9b1dcbe45882517,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 122
+      value: 115.7
       objectReference: {fileID: 0}
     - target: {fileID: 6103494565260108630, guid: f8792e8339d4747bb9b1dcbe45882517,
         type: 3}
