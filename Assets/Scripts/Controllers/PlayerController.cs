@@ -7,39 +7,42 @@ using UnityEngine;
 //the dinosaur to be controlled by touch interaction.
 public class PlayerController : MonoBehaviour
 {
+    public Camera mainCam;
     public GenerateScript generate;
     public float movementSpeed = 3f;
     public float jumpVelocity = 14f;
     public int dinoHunger = 100;
-    public Camera mainCam;
+    public float pulseTime = 0.5f;
+    public float lowHunger = 33f;
 
-    private int startingHunger;
-    private bool jumping = false;
+    private CameraShake cameraShake;
     protected DinoAnimator animator;
+    private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     private AudioSource audioSource;
+    private bool jumping = false;
+    private bool pulsing = false;
     private string spriteName;
-    public CameraShake cameraShake;
+    private int startingHunger;
 
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
     {
-        SetupDino();
-    }
-
-    public void SetupDino()
-    {
-        startingHunger = dinoHunger;
-        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<DinoAnimator>();
-        audioSource = GetComponent<AudioSource>();
-        cameraShake = mainCam.GetComponent<CameraShake>();
 
         if (Settings.instance != null)
         {
             animator.runningSprites = Settings.instance.GetRunningSprites();
         }
+
         animator.RunningAnimation();
+
+        startingHunger = dinoHunger;
+
+        rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+        cameraShake = mainCam.GetComponent<CameraShake>();
 
         InvokeRepeating("HungerEnumerator", 0f, 0.25f);
     }
@@ -56,6 +59,29 @@ public class PlayerController : MonoBehaviour
         if(dinoHunger <= 0)
         {
             GameManager.instance.isAlive = false;
+        }
+
+        if(dinoHunger <= lowHunger && !pulsing)
+        {
+            pulsing = true;
+            StartCoroutine(PulseDinoColor());
+        }
+    }
+
+    private IEnumerator PulseDinoColor()
+    {
+        spriteRenderer.material.color = new Color(1f,1f,1f);
+        yield return new WaitForSeconds(pulseTime);
+        spriteRenderer.material.color = new Color(.5f, .5f, .5f);
+        yield return new WaitForSeconds(pulseTime);
+
+        if (dinoHunger <= lowHunger)
+        {
+            StartCoroutine(PulseDinoColor());
+        } else
+        {
+            pulsing = false;
+            spriteRenderer.material.color = new Color(1f, 1f, 1f);
         }
     }
 
@@ -114,6 +140,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = movement;
     }
 
+
     //Check for collisions with obstacles, and the ground
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -128,7 +155,6 @@ public class PlayerController : MonoBehaviour
                 {
                     audioSource.Play();
                 }
-                Destroy(collision.gameObject);
                 GameManager.instance.score += 1;
                 if (dinoHunger + 35 > 100)
                 {
@@ -145,8 +171,6 @@ public class PlayerController : MonoBehaviour
                 {
                     audioSource.Play();
                 }
-                Destroy(collision.gameObject);
-                print(dinoHunger);
                 if (dinoHunger + 10 > 100)
                 {
                     dinoHunger = 100;
@@ -158,6 +182,10 @@ public class PlayerController : MonoBehaviour
                 
                 
             }
+
+            BirdScript bird = collisionObject.GetComponent<BirdScript>();
+            bird.SpawnFeathers(true);
+            bird.ReturnBirdToPool();
         }
     }
 

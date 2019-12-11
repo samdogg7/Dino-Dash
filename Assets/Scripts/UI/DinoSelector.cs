@@ -13,9 +13,15 @@ public class DinoSelector : MonoBehaviour
     {
         foreach (GameObject dino in dinos)
         {
-            dino.GetComponent<DinoAnimator>().IdleAnimation();
+            if (dino.GetComponent<DinoAnimator>().dinoColor != Settings.instance.dinoColor)
+            {
+                dino.GetComponent<DinoAnimator>().IdleAnimation();
+            }
+            else
+            {
+                UpdateCharacter(dino);
+            }
         }
-        UpdateCharacter(dinos[Random.Range(0, dinos.Length)]);
     }
 
     //Check for user input selecting the dino

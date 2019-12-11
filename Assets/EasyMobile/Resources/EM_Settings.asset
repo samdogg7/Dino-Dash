@@ -211,7 +211,10 @@ MonoBehaviour:
     mAndroidMaxLoginRequests: 0
     mGpgsDebugLogEnabled: 0
     mGpgsPopupGravity: 0
-    mLeaderboards: []
+    mLeaderboards:
+    - _name: DDLeaderboard
+      _iosId: com.samdoggett.dinodashoutrunextinction
+      _androidId: 
     mAchievements: []
     mAndroidXmlResources: 
     mEnableMultiplayer: 0
@@ -320,8 +323,8 @@ MonoBehaviour:
         mValue: '[Your usage description]'
   mIsAdModuleEnable: 0
   mIsIAPModuleEnable: 0
-  mIsGameServiceModuleEnable: 0
+  mIsGameServiceModuleEnable: 1
   mIsNotificationModuleEnable: 0
   mIsSharingModuleEnable: 0
   mActiveModuleIndex: 1
-  mIsSelectingModule: 1
+  mIsSelectingModule: 0

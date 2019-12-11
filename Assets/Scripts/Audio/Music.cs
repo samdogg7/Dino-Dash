@@ -33,11 +33,5 @@ public class Music : MonoBehaviour
         {
             musicAudioSource.Stop();
         }
-
-        GameObject otherMusicPlayer = GameObject.FindGameObjectWithTag("Music");
-        if(otherMusicPlayer != gameObject)
-        {
-            Destroy(otherMusicPlayer);
-        }
     }
 }

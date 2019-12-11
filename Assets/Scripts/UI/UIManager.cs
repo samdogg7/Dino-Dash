@@ -94,7 +94,7 @@ public class UIManager : MonoBehaviour
     //Go back to the main menu
     void MainMenuClicked()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     //Restart the game
@@ -106,10 +106,11 @@ public class UIManager : MonoBehaviour
     //Update the gameover text
     public void GameOver(int highscore)
     {
-        if(highscore > 0)
+        if (highscore > 0)
         {
-            highscoreGameOver.text = "Your highscore: " + highscore;
-        } else
+            highscoreGameOver.text = "Personal highscore: " + highscore;
+        }
+        else
         {
             highscoreGameOver.text = "";
         }

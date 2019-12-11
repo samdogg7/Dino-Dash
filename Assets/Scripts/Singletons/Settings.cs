@@ -23,7 +23,7 @@ public class Settings : MonoBehaviour
     public Sprite[] yellowRunningSprites;
     public Sprite[] blueRunningSprites;
 
-    public DinoColor dinoColor = DinoColor.Green;
+    public DinoColor dinoColor;
 
     public bool music = true;
     public bool soundEffects = true;
@@ -39,6 +39,25 @@ public class Settings : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(transform.gameObject);
+        }
+
+        int rand = Random.Range(0, 4);
+        switch (rand)
+        {
+            case 1:
+                dinoColor = DinoColor.Blue;
+                break;
+            case 2:
+                dinoColor = DinoColor.Red;
+                break;
+
+            case 3:
+                dinoColor = DinoColor.Yellow;
+                break;
+
+            default:
+                dinoColor = DinoColor.Green;
+                break;
         }
     }
 
