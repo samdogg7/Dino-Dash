@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
     //Update score every frame
     void Update()
     {
-        inGameScore.text = "Score: " + GameManager.instance.score;
+        inGameScore.text = "Score " + GameManager.instance.score;
         scoreGameOver.text = "Score: " + GameManager.instance.score;
     }
 

@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
                     Move(true);
                     animator.framesPerSecond = 30f;
                 }
-                else if (touch.position.x > Screen.width / 2 && touch.position.y > 75f)
+                else if (touch.position.x > Screen.width / 2 && touch.position.y < (3 * Screen.height / 4))
                 {
                     CameraShake.instance.Shake(.1f, .1f);
                     generate.SpawnWave();
@@ -185,7 +185,8 @@ public class PlayerController : MonoBehaviour
 
             BirdScript bird = collisionObject.GetComponent<BirdScript>();
             bird.SpawnFeathers(true);
-            bird.ReturnBirdToPool();
+            //bird.ReturnBirdToPool();
+            Destroy(collisionObject);
         }
     }
 

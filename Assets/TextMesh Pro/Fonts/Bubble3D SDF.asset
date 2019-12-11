@@ -100,7 +100,7 @@ Material:
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.50980395}
+    - _UnderlayColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0.50980395}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
