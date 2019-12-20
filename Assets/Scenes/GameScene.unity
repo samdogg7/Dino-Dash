@@ -7183,7 +7183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -2.3937988, y: -251}
+  m_AnchoredPosition: {x: -2.38443, y: -251}
   m_SizeDelta: {x: 12.628998, y: 0.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316996864
@@ -8001,7 +8001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460.4038, y: -251.66}
+  m_AnchoredPosition: {x: -460.39444, y: -251.66}
   m_SizeDelta: {x: 3.069, y: 0.587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1634526441
@@ -9281,7 +9281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -445.1062, y: -251}
+  m_AnchoredPosition: {x: -445.11557, y: -251}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069944031
@@ -9416,7 +9416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -457.2938, y: -251.31}
+  m_AnchoredPosition: {x: -457.28442, y: -251.31}
   m_SizeDelta: {x: -896.703, y: -508.018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098325464
@@ -9754,11 +9754,11 @@ MonoBehaviour:
   targetObj: {fileID: 8345228911142975932}
   meteorPre: {fileID: 537417198165304161, guid: fe38b852ba9154139b33eb252db5cb25,
     type: 3}
-  objectPool: {fileID: 4008018315038585264}
   meteorTime: 1
   range: 8
   minSize: 0.6
   maxSize: 1
+  trackPercentage: 75
 --- !u!1 &4008018315038585263
 GameObject:
   m_ObjectHideFlags: 0
@@ -9907,7 +9907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8984250643914888671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.033806, y: -3, z: 0}
+  m_LocalPosition: {x: -8.02443, y: -3, z: 0}
   m_LocalScale: {x: 1.75, y: 1.75, z: 1}
   m_Children:
   - {fileID: 1220456256}

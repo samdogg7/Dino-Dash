@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     public float shakeTime = 0.25f;
     public float shakeMagnitude = 0.1f;
-    public ObjectPool objectPool;
+    public GameObject collisionParticles;
     private GameManager gameManager;
     private Rigidbody2D rb;
     private CameraShake cameraShake;
@@ -35,11 +35,14 @@ public class Obstacle : MonoBehaviour
         {
             collidedObject.GetComponent<BirdScript>().SpawnFeathers(false);
             collidedObject.GetComponent<SpriteRenderer>().color = Color.red;
+        } else
+        {
+            GameObject colParticles = Instantiate(collisionParticles, transform.position, Quaternion.identity);
+            Destroy(colParticles, 1f);
         }
         CameraShake.instance.Shake(shakeTime, shakeMagnitude);
 
         Destroy(gameObject);
-        //objectPool.ReturnToPoolAction(gameObject);
     }
 
 }

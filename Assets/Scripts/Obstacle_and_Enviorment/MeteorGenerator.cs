@@ -5,14 +5,13 @@ using MarchingBytes;
 
 public class MeteorGenerator : MonoBehaviour
 {
-
     public GameObject targetObj;
     public GameObject meteorPre;
     public float meteorTime;
     public float range;
     public float minSize;
     public float maxSize;
-    public float trackPercentage;
+    public float trackPercentage = 75f;
 
     void Start()
     {

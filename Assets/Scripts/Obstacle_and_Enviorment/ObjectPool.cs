@@ -15,11 +15,6 @@ public class ObjectPool : MonoBehaviour
 		{
 			goList.Add(go);
 		}
-
-        if(go.GetComponent<Obstacle>() != null)
-        {
-            go.GetComponent<Obstacle>().objectPool = this;
-        }
         return go;
 	}
 
