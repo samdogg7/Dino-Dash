@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -194.9, y: 24.493}
+  m_AnchoredPosition: {x: -194.9, y: 5.6}
   m_SizeDelta: {x: 128.19, y: 149.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &209802491
@@ -194,7 +194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194, y: 24.49}
+  m_AnchoredPosition: {x: 194, y: 5.6}
   m_SizeDelta: {x: 128.19, y: 149.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1419602263
@@ -1240,7 +1240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1485108968276177408
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1388,8 +1388,8 @@ MonoBehaviour:
   LoadingCanvas: {fileID: 1485108968276177412}
   slider: {fileID: 1485108967430705806}
   dinoAnimator: {fileID: 1485108968008122791}
-  loadMainMenu: 1
-  loadingWaitTime: 3
+  loadMainMenu: 0
+  loadingWaitTime: 2
 --- !u!1001 &7542454907036044530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1515,7 +1515,7 @@ PrefabInstance:
     - target: {fileID: 3164603882142093402, guid: b03d84e8bb3a547edb52b227116d0a50,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -57
+      value: -67.95
       objectReference: {fileID: 0}
     - target: {fileID: 3164603882142093402, guid: b03d84e8bb3a547edb52b227116d0a50,
         type: 3}
@@ -1610,7 +1610,7 @@ PrefabInstance:
     - target: {fileID: 3164603882142093402, guid: b03d84e8bb3a547edb52b227116d0a50,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -57
+      value: -67.95
       objectReference: {fileID: 0}
     - target: {fileID: 3164603882142093402, guid: b03d84e8bb3a547edb52b227116d0a50,
         type: 3}

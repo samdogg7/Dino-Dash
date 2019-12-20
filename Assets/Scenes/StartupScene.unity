@@ -240,6 +240,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7925771115332954802, guid: c34745e101f084604a0aca369a660105,
+        type: 3}
+      propertyPath: loadingWaitTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925771115332954802, guid: c34745e101f084604a0aca369a660105,
+        type: 3}
+      propertyPath: loadMainMenu
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c34745e101f084604a0aca369a660105, type: 3}
 --- !u!1 &1679366029
