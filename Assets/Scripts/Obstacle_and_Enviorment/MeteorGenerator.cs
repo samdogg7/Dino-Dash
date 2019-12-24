@@ -54,12 +54,10 @@ public class MeteorGenerator : MonoBehaviour
         if (!goDown)
         {
             meteorVector = (Vector2)targetObj.transform.position - rb.position;
-            Debug.Log("should track");
         }
         else
         {
             meteorVector.y = -1;
-            Debug.Log("should go down");
         }
 
         meteorVector.Normalize();

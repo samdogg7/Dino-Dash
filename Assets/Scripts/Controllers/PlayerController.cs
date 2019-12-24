@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool pulsing = false;
     private string spriteName;
     private int startingHunger;
+    private int numberOfBirdsConsumed = 0;
 
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
@@ -148,10 +149,11 @@ public class PlayerController : MonoBehaviour
 
         if (collisionObject.CompareTag("Bird"))
         {
+            numberOfBirdsConsumed++;
             //If the bird is red, it is cooked. Gives a bigger hunger boost
-            if(collisionObject.GetComponent<SpriteRenderer>().color == Color.red)
+            if (collisionObject.GetComponent<SpriteRenderer>().color == Color.red)
             {
-                if (Settings.instance.soundEffects)
+                if (Settings.instance != null && Settings.instance.soundEffects)
                 {
                     audioSource.Play();
                 }
@@ -167,7 +169,7 @@ public class PlayerController : MonoBehaviour
             }
             else //If you eat a normal bird, you gain a smaller amount of hunger
             {
-                if (Settings.instance.soundEffects)
+                if (Settings.instance != null && Settings.instance.soundEffects)
                 {
                     audioSource.Play();
                 }
@@ -179,8 +181,6 @@ public class PlayerController : MonoBehaviour
                 {
                     dinoHunger += 10;
                 }
-                
-                
             }
 
             BirdScript bird = collisionObject.GetComponent<BirdScript>();
@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour
         {
             dinoHunger = 0;
             //play charring sound also here
-            if(Settings.instance.soundEffects)
+            if(Settings.instance != null && Settings.instance.soundEffects)
             {
                 audioSource.Play();
             }
@@ -208,5 +208,10 @@ public class PlayerController : MonoBehaviour
         {
             jumping = true;
         }
+    }
+
+    public int GetNumberOfBirdsConsumed()
+    {
+        return numberOfBirdsConsumed;
     }
 }

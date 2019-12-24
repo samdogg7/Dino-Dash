@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public float tileMovementSpeed = 2f;
     //Score is located in game manager because it is easily accesible for all game objects
     public int score;
+    private bool submittedScore = false;
 
     private static GameManager _instance;
     public static GameManager instance { get { return _instance; } }
@@ -60,7 +61,11 @@ public class GameManager : MonoBehaviour
                 UIManager.instance.GameOver(0);
                 PlayerPrefs.SetInt("highscore", score);
             }
-            LeaderboardManager.instance.AddScore(score);
+            if(LeaderboardManager.instance != null && !submittedScore)
+            {
+                LeaderboardManager.instance.AddScore(score);
+                submittedScore = true;
+            }
         }
     }
 }

@@ -86,13 +86,6 @@ public class Settings : MonoBehaviour
                 soundEffects = true;
             }
         }
-
-        if (!PlayerPrefs.HasKey("isTutorial"))
-        {
-            isTutorial = true;
-            //fill with anything to make a key
-            PlayerPrefs.SetString("isTutorial", "true");
-        }
     }
 
     //Return the selected set of sprites, used to update game character
