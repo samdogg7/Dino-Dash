@@ -25,11 +25,8 @@ public class Obstacle : MonoBehaviour
         GameObject collidedObject = collision.gameObject;
         if (collidedObject.CompareTag("Dino"))
         {
-            //player lose health
-            //play charring sound
             gameManager.isAlive = false;
-            rb.velocity = Vector2.zero;
-            
+            rb.velocity = Vector2.zero;   
         }
         else if (collidedObject.CompareTag("Bird"))
         {
@@ -41,7 +38,6 @@ public class Obstacle : MonoBehaviour
             Destroy(colParticles, 1f);
         }
         CameraShake.instance.Shake(shakeTime, shakeMagnitude);
-
         Destroy(gameObject);
     }
 

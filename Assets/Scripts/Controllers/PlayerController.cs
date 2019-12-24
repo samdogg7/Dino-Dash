@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     protected DinoAnimator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
-    private AudioSource audioSource;
     private bool jumping = false;
     private bool pulsing = false;
     private string spriteName;
@@ -42,7 +41,6 @@ public class PlayerController : MonoBehaviour
         startingHunger = dinoHunger;
 
         rb = GetComponent<Rigidbody2D>();
-        audioSource = GetComponent<AudioSource>();
         cameraShake = mainCam.GetComponent<CameraShake>();
 
         InvokeRepeating("HungerEnumerator", 0f, 0.25f);
@@ -155,7 +153,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (Settings.instance != null && Settings.instance.soundEffects)
                 {
-                    audioSource.Play();
+                    AudioManager.instance.PlayMunchSound();
                 }
                 GameManager.instance.score += 1;
                 if (dinoHunger + 35 > 100)
@@ -171,7 +169,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (Settings.instance != null && Settings.instance.soundEffects)
                 {
-                    audioSource.Play();
+                    AudioManager.instance.PlayMunchSound();
                 }
                 if (dinoHunger + 10 > 100)
                 {
@@ -200,7 +198,7 @@ public class PlayerController : MonoBehaviour
             //play charring sound also here
             if(Settings.instance != null && Settings.instance.soundEffects)
             {
-                audioSource.Play();
+                AudioManager.instance.PlayCrispSound();
             }
         }
         //If the player triggers a bump, jump!

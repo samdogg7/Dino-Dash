@@ -2299,7 +2299,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 6.0104375
+  m_padding: 0
   m_canvasRenderer: {fileID: 1034016197}
   m_TextComponent: {fileID: 782346536}
   m_materialReferenceIndex: 1
@@ -9974,6 +9974,7 @@ GameObject:
   - component: {fileID: 1994679312}
   - component: {fileID: 1994679311}
   - component: {fileID: 1994679313}
+  - component: {fileID: 1994679314}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -10037,6 +10038,20 @@ MonoBehaviour:
   mainMenuButtonGameOver: {fileID: 375300202}
   restartButtonGameOver: {fileID: 1521766798}
   paused: 0
+--- !u!114 &1994679314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994679310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3df0b9a835eadd4eb0ecc04ca6a5c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  munchSound: {fileID: 0}
+  crispSound: {fileID: 0}
 --- !u!1 &1996134285
 GameObject:
   m_ObjectHideFlags: 0
