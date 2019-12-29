@@ -207,7 +207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -2.58}
+  m_AnchoredPosition: {x: -2, y: -1.1500001}
   m_SizeDelta: {x: 1.5, y: 1.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24785513
@@ -836,8 +836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -75.6}
-  m_SizeDelta: {x: 472, y: 132}
+  m_AnchoredPosition: {x: 0, y: -357}
+  m_SizeDelta: {x: 466.7, y: 89.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608549195
 MonoBehaviour:
@@ -1042,7 +1042,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.78125
+  orthographic size: 3.9254928
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1335,7 +1335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -2.58}
+  m_AnchoredPosition: {x: 6, y: -1.15}
   m_SizeDelta: {x: 1.5, y: 1.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853140938
@@ -1557,7 +1557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0200005, y: -2.58}
+  m_AnchoredPosition: {x: 2.0200005, y: -1.1500001}
   m_SizeDelta: {x: 1.5, y: 1.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1266333811
@@ -1915,7 +1915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: -2.58}
+  m_AnchoredPosition: {x: -6, y: -1.1500001}
   m_SizeDelta: {x: 1.5, y: 1.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746191025
@@ -2206,8 +2206,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 223.69499}
-  m_SizeDelta: {x: 879.4, y: 433.1}
+  m_AnchoredPosition: {x: 0, y: 192.3}
+  m_SizeDelta: {x: 879.4, y: 384.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901364366
 MonoBehaviour:
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 5
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
