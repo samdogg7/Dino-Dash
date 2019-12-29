@@ -15,7 +15,7 @@ public class TutorialManager : MonoBehaviour
     {
         if(Settings.instance.isTutorial)
         {
-            Time.timeScale = 0.75f;
+            Time.timeScale = 0.6f;
         }
     }
 

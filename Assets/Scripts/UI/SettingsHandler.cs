@@ -13,12 +13,15 @@ public class SettingsHandler : MonoBehaviour
     public Button soundEffectsButton;
     public TextMeshProUGUI soundEffectsText;
     public Button mainMenuButton;
+    public Button tutorialButton;
+
 
     void Start()
     {
         mainMenuButton.onClick.AddListener(ReturnToMainMenu);
         musicButton.onClick.AddListener(Music);
         soundEffectsButton.onClick.AddListener(SoundEffects);
+        tutorialButton.onClick.AddListener(Tutorial);
 
         if (Settings.instance != null)
         {
@@ -43,6 +46,12 @@ public class SettingsHandler : MonoBehaviour
             Settings.instance.soundEffects = !Settings.instance.soundEffects;
             UpdateSoundEffects(Settings.instance.soundEffects);
         }
+    }
+
+    private void Tutorial()
+    {
+        Settings.instance.isTutorial = true;
+        PlayerPrefs.DeleteKey("Tutorial");
     }
 
     private void ReturnToMainMenu()
