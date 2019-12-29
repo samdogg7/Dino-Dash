@@ -233,22 +233,35 @@ PrefabInstance:
     - target: {fileID: 1485108966458954752, guid: c34745e101f084604a0aca369a660105,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 1485108966458954752, guid: c34745e101f084604a0aca369a660105,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7925771115332954802, guid: c34745e101f084604a0aca369a660105,
         type: 3}
       propertyPath: loadingWaitTime
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7925771115332954802, guid: c34745e101f084604a0aca369a660105,
         type: 3}
       propertyPath: loadMainMenu
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485108968276177412, guid: c34745e101f084604a0aca369a660105,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209802488, guid: c34745e101f084604a0aca369a660105, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419602260, guid: c34745e101f084604a0aca369a660105, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c34745e101f084604a0aca369a660105, type: 3}
@@ -306,7 +319,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.7836494
+  orthographic size: 4.7844315
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -478,7 +491,7 @@ MonoBehaviour:
   dinoColor: 0
   music: 1
   soundEffects: 1
-  isTutorial: 0
+  isTutorial: 1
 --- !u!4 &3080775829109238173
 Transform:
   m_ObjectHideFlags: 0

@@ -33,7 +33,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("AddOneScore", 0f, 1f);
-        Time.timeScale = 1f;
+        if(!Settings.instance.isTutorial) {
+            Time.timeScale = 1f;
+        }
     }
 
     private void AddOneScore()

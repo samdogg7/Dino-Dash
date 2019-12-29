@@ -11,67 +11,79 @@ public class TutorialManager : MonoBehaviour
     private int hunger = 0;
     private bool calledIncrement = false;
 
+    private void Start()
+    {
+        if(Settings.instance.isTutorial)
+        {
+            Time.timeScale = 0.75f;
+        }
+    }
+
     void Update()
     {
-        for (int i = 0; i < tutorialPopups.Length; i++)
+        if(Settings.instance.isTutorial)
         {
-            if(i == popupIndex)
+            for (int i = 0; i < tutorialPopups.Length; i++)
             {
-                tutorialPopups[i].SetActive(true);
-            } else
-            {
-                tutorialPopups[i].SetActive(false);
-            }
-        }
-        
-        if(popupIndex == 0)
-        {
-            if (Input.touchCount > 0 && transform.position.x < 8f)
-            {
-                foreach (Touch touch in Input.touches)
+                if (i == popupIndex)
                 {
-                    if ((touch.position.x < Screen.width / 2) && !calledIncrement)
+                    tutorialPopups[i].SetActive(true);
+                }
+                else
+                {
+                    tutorialPopups[i].SetActive(false);
+                }
+            }
+
+            if (popupIndex == 0)
+            {
+                if (Input.touchCount > 0 && transform.position.x < 8f)
+                {
+                    foreach (Touch touch in Input.touches)
                     {
-                        calledIncrement = true;
-                        StartCoroutine(delayIndexIncrement(3));
+                        if ((touch.position.x < Screen.width / 2) && !calledIncrement)
+                        {
+                            calledIncrement = true;
+                            StartCoroutine(delayIndexIncrement(3));
+                        }
                     }
                 }
             }
-        }
 
-        if (popupIndex == 1)
-        {
-            if (Input.touchCount > 0 && transform.position.x < 8f)
+            if (popupIndex == 1)
             {
-                foreach (Touch touch in Input.touches)
+                if (Input.touchCount > 0 && transform.position.x < 8f)
                 {
-                    if (touch.position.x > Screen.width / 2 && touch.position.y < (3 * Screen.height / 4) && !calledIncrement)
+                    foreach (Touch touch in Input.touches)
                     {
-                        calledIncrement = true;
-                        StartCoroutine(delayIndexIncrement(2));
+                        if (touch.position.x > Screen.width / 2 && touch.position.y < (3 * Screen.height / 4) && !calledIncrement)
+                        {
+                            calledIncrement = true;
+                            StartCoroutine(delayIndexIncrement(2));
+                        }
                     }
                 }
             }
-        }
 
-        if (popupIndex == 2)
-        {
-            //Check if the player has consumed a bird
-            if (playerController.GetNumberOfBirdsConsumed() > 0 && !calledIncrement)
+            if (popupIndex == 2)
             {
-                popupIndex++;
-                calledIncrement = true;
+                //Check if the player has consumed a bird
+                if (playerController.GetNumberOfBirdsConsumed() > 0 && !calledIncrement)
+                {
+                    popupIndex++;
+                    calledIncrement = true;
+                }
             }
-        }
 
-        if(popupIndex == 3)
-        {
-            if (!PlayerPrefs.HasKey("isTutorial") && Settings.instance != null)
+            if (popupIndex == 3)
             {
-                Settings.instance.isTutorial = true;
-                PlayerPrefs.SetString("isTutorial", "true");
+                if (!PlayerPrefs.HasKey("isTutorial") && Settings.instance != null)
+                {
+                    Settings.instance.isTutorial = true;
+                    PlayerPrefs.SetString("isTutorial", "true");
+                }
+                StartCoroutine(finalTutorialPrompt());
             }
-            StartCoroutine(finalTutorialPrompt());
         }
     }
 
@@ -87,5 +99,6 @@ public class TutorialManager : MonoBehaviour
         finalTutorialPopup.SetActive(true);
         yield return new WaitForSeconds(3);
         finalTutorialPopup.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
