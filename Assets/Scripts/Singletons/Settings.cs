@@ -27,7 +27,7 @@ public class Settings : MonoBehaviour
 
     public bool music = true;
     public bool soundEffects = true;
-    public bool isTutorial = false;
+    public bool isTutorial = true;
 
     private void Awake()
     {
@@ -87,7 +87,7 @@ public class Settings : MonoBehaviour
             }
         }
 
-        if (PlayerPrefs.HasKey("isTutorial"))
+        if (PlayerPrefs.HasKey("Tutorial"))
         {
             isTutorial = false;
         } else

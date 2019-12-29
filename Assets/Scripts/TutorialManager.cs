@@ -77,10 +77,10 @@ public class TutorialManager : MonoBehaviour
 
             if (popupIndex == 3)
             {
-                if (!PlayerPrefs.HasKey("isTutorial") && Settings.instance != null)
+                if (!PlayerPrefs.HasKey("Tutorial") && Settings.instance != null)
                 {
-                    Settings.instance.isTutorial = true;
-                    PlayerPrefs.SetString("isTutorial", "true");
+                    Settings.instance.isTutorial = false;
+                    PlayerPrefs.SetString("Tutorial", "false");
                 }
                 StartCoroutine(finalTutorialPrompt());
             }
