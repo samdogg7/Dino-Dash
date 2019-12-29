@@ -1220,6 +1220,7 @@ MonoBehaviour:
   soundEffectsButton: {fileID: 481329275}
   soundEffectsText: {fileID: 202910613}
   mainMenuButton: {fileID: 281017761}
+  tutorialButton: {fileID: 439790597}
 --- !u!4 &1140157424
 Transform:
   m_ObjectHideFlags: 0
