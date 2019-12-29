@@ -98,6 +98,10 @@ public class TutorialManager : MonoBehaviour
 
     IEnumerator finalTutorialPrompt()
     {
+        foreach(GameObject popup in tutorialPopups)
+        {
+            popup.SetActive(false);
+        }
         finalTutorialPopup.SetActive(true);
         yield return new WaitForSeconds(3);
         finalTutorialPopup.SetActive(false);
