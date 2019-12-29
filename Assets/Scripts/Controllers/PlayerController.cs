@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public int dinoHunger = 100;
     public float pulseTime = 0.5f;
     public float lowHunger = 33f;
+    public bool hungerEnabled = true;
 
     private CameraShake cameraShake;
     protected DinoAnimator animator;
@@ -49,7 +50,11 @@ public class PlayerController : MonoBehaviour
     public void HungerEnumerator()
     {
         UIManager.instance.UpdateHunger(dinoHunger, startingHunger);
-        dinoHunger -= 1;
+        
+        if(hungerEnabled)
+        {
+            dinoHunger -= 1;
+        }
     }
 
     //Check if dino isAlive

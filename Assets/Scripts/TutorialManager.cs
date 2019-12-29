@@ -16,6 +16,7 @@ public class TutorialManager : MonoBehaviour
         if(Settings.instance.isTutorial)
         {
             Time.timeScale = 0.6f;
+            playerController.hungerEnabled = false;
         }
     }
 
@@ -60,6 +61,7 @@ public class TutorialManager : MonoBehaviour
                         {
                             calledIncrement = true;
                             StartCoroutine(delayIndexIncrement(2));
+                            playerController.hungerEnabled = true;
                         }
                     }
                 }
