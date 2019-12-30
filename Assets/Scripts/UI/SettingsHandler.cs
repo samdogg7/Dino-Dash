@@ -16,6 +16,7 @@ public class SettingsHandler : MonoBehaviour
     public TextMeshProUGUI soundEffectsText;
     public Button mainMenuButton;
     public Button tutorialButton;
+    public TextMeshProUGUI tutorialText;
     public Button creditButton;
     public Button backButton;
 
@@ -33,6 +34,15 @@ public class SettingsHandler : MonoBehaviour
         {
             UpdateMusic(Settings.instance.music);
             UpdateSoundEffects(Settings.instance.soundEffects);
+
+            if (!Settings.instance.isTutorial)
+            {
+                tutorialText.text = "Enable Tutorial";
+            }
+            else
+            {
+                tutorialText.text = "Disable Tutorial";
+            }
         }
     }
 
@@ -68,8 +78,18 @@ public class SettingsHandler : MonoBehaviour
 
     private void Tutorial()
     {
-        Settings.instance.isTutorial = true;
-        PlayerPrefs.DeleteKey("Tutorial");
+        if(!Settings.instance.isTutorial)
+        {
+            Settings.instance.isTutorial = true;
+            PlayerPrefs.DeleteKey("Tutorial");
+            tutorialText.text = "Disable Tutorial";
+        } else
+        {
+            Settings.instance.isTutorial = false;
+            PlayerPrefs.SetString("Tutorial", "true");
+            tutorialText.text = "Enable Tutorial";
+        }
+        
     }
 
     private void ReturnToMainMenu()
