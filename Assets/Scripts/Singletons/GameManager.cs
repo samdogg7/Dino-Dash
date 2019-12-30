@@ -45,7 +45,9 @@ public class GameManager : MonoBehaviour
 
     private void AddOneScore()
     {
-        score += 1;
+        if (!Settings.instance.isTutorial) {
+            score += 1;
+        }
     }
 
     //Handle player !isAlive, update player prefs with high score and update UI

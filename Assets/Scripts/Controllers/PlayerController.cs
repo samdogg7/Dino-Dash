@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float pulseTime = 0.5f;
     public float lowHunger = 33f;
     public bool hungerEnabled = true;
+    public int cookedValue = 65;
+    public int uncookedValue = 20;
 
     private CameraShake cameraShake;
     protected DinoAnimator animator;
@@ -153,22 +155,23 @@ public class PlayerController : MonoBehaviour
 
         if (collisionObject.CompareTag("Bird"))
         {
+            BirdScript bird = collisionObject.GetComponent<BirdScript>();
             numberOfBirdsConsumed++;
-            //If the bird is red, it is cooked. Gives a bigger hunger boost
-            if (collisionObject.GetComponent<SpriteRenderer>().color == Color.red)
+            //If the bird is chicken, it is cooked. Gives a bigger hunger boost
+            if (bird.isCooked == true)
             {
                 if (Settings.instance != null && Settings.instance.soundEffects)
                 {
                     AudioManager.instance.PlayMunchSound();
                 }
                 GameManager.instance.score += 1;
-                if (dinoHunger + 35 > 100)
+                if (dinoHunger + cookedValue > 100)
                 {
                     dinoHunger = 100;
                 }
                 else
                 {
-                    dinoHunger += 35;
+                    dinoHunger += cookedValue;
                 }              
             }
             else //If you eat a normal bird, you gain a smaller amount of hunger
@@ -177,17 +180,17 @@ public class PlayerController : MonoBehaviour
                 {
                     AudioManager.instance.PlayMunchSound();
                 }
-                if (dinoHunger + 10 > 100)
+                if (dinoHunger + uncookedValue > 100)
                 {
                     dinoHunger = 100;
                 }
                 else
                 {
-                    dinoHunger += 10;
+                    dinoHunger += uncookedValue;
                 }
             }
 
-            BirdScript bird = collisionObject.GetComponent<BirdScript>();
+            
             bird.SpawnFeathers(true);
             //bird.ReturnBirdToPool();
             Destroy(collisionObject);
