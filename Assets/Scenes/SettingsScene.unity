@@ -1118,7 +1118,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 703.125
+  orthographic size: 630.49854
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2864,7 +2864,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "Programming:\nSam Doggett\nCaleb Eurich\r\nKieran Bondy\r\nJasper Gordon\nBenno
-    Luders\n\nArt:\nScissorMarks\nLuis Zuno - ansimuz\nma9ici4n"
+    Luders\n\nArt:\nScissorMarks\nLuis Zuno - ansimuz\nma9ici4n\nMamaNeZakon"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bee1b562f68f4793b6828758dc9f5d3, type: 2}
   m_sharedMaterial: {fileID: -69697028863175166, guid: 9bee1b562f68f4793b6828758dc9f5d3,
@@ -2893,8 +2893,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 54
-  m_fontSizeBase: 54
+  m_fontSize: 52
+  m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
