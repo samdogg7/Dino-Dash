@@ -30,15 +30,29 @@ public class Obstacle : MonoBehaviour
         }
         else if (collidedObject.CompareTag("Bird"))
         {
-            collidedObject.GetComponent<BirdScript>().SpawnFeathers(false);
-            collidedObject.GetComponent<SpriteRenderer>().color = Color.red;
+            BirdScript birdScript = collidedObject.GetComponent<BirdScript>();
+            if(!birdScript.isCooked)
+            {
+                birdScript.isCooked = true;
+                collidedObject.GetComponent<BirdScript>().SpawnFeathers(false);
+            } else
+            {
+                Destroy(collidedObject);
+                SpawnColParticles();
+            }
+            collidedObject.GetComponent<BirdAnimation>().AnimateWing();
         } else
         {
-            GameObject colParticles = Instantiate(collisionParticles, transform.position, Quaternion.identity);
-            Destroy(colParticles, 1f);
+            SpawnColParticles();
         }
         CameraShake.instance.Shake(shakeTime, shakeMagnitude);
         Destroy(gameObject);
+    }
+
+    public void SpawnColParticles()
+    {
+        GameObject colParticles = Instantiate(collisionParticles, transform.position, Quaternion.identity);
+        Destroy(colParticles, 1f);
     }
 
 }

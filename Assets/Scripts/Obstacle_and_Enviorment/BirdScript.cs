@@ -6,6 +6,7 @@ public class BirdScript : MonoBehaviour
 {
     public ParticleSystem featherParticles;
     public ObjectPool objectPool;
+    public bool isCooked = false;
     private Rigidbody2D RB;
 
     void Start()

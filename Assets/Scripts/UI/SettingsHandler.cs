@@ -8,12 +8,16 @@ using TMPro;
 
 public class SettingsHandler : MonoBehaviour
 {
+    public GameObject settingsCanvas;
+    public GameObject creditCanvas;
     public Button musicButton;
     public TextMeshProUGUI musicText;
     public Button soundEffectsButton;
     public TextMeshProUGUI soundEffectsText;
     public Button mainMenuButton;
     public Button tutorialButton;
+    public Button creditButton;
+    public Button backButton;
 
 
     void Start()
@@ -22,6 +26,8 @@ public class SettingsHandler : MonoBehaviour
         musicButton.onClick.AddListener(Music);
         soundEffectsButton.onClick.AddListener(SoundEffects);
         tutorialButton.onClick.AddListener(Tutorial);
+        creditButton.onClick.AddListener(Credit);
+        backButton.onClick.AddListener(Back);
 
         if (Settings.instance != null)
         {
@@ -37,6 +43,18 @@ public class SettingsHandler : MonoBehaviour
             Settings.instance.music = !Settings.instance.music;
             UpdateMusic(Settings.instance.music);
         }
+    }
+
+    private void Credit()
+    {
+        settingsCanvas.SetActive(false);
+        creditCanvas.SetActive(true);
+    }
+
+    private void Back()
+    {
+        settingsCanvas.SetActive(true);
+        creditCanvas.SetActive(false);
     }
 
     private void SoundEffects()

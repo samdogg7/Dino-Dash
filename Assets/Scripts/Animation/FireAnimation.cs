@@ -16,6 +16,11 @@ public class FireAnimation : Animator
         AnimateFire();
     }
 
+    private void OnEnable()
+    {
+        AnimateFire();
+    }
+
     public void AnimateFire()
     {
         Animate(sprites, spriteRenderer, sprites.Length / framesPerSecond);

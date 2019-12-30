@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6103494565260108630}
   - component: {fileID: 3204338399235646000}
-  - component: {fileID: 8846821923651307830}
   - component: {fileID: -7073079522978559410}
   - component: {fileID: 9187272822593238624}
   - component: {fileID: 1880306163036968841}
+  - component: {fileID: 3516800062992250609}
   m_Layer: 9
   m_Name: Bird
   m_TagString: Bird
@@ -86,28 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8846821923651307830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9025059022450722032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa4c700497964ac29a85679f04f7c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: -1207841707077272702, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -56839117156836721, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -2966782557986119690, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -7547327171053007460, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -6712714386521412304, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -3027467885991443842, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -3724123321965674295, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -6726645932881956004, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  framesPerSecond: 0.5
 --- !u!50 &-7073079522978559410
 Rigidbody2D:
   serializedVersion: 4
@@ -142,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   featherParticles: {fileID: 1384893884296114325}
+  objectPool: {fileID: 0}
 --- !u!58 &1880306163036968841
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -158,6 +137,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.10143727}
   serializedVersion: 2
   m_Radius: 0.6985627
+--- !u!114 &3516800062992250609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9025059022450722032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93a85a921dd4d94e860b6bdf6ee8b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdSprites:
+  - {fileID: -1207841707077272702, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  - {fileID: -56839117156836721, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  - {fileID: -2966782557986119690, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  - {fileID: -7547327171053007460, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  - {fileID: -6712714386521412304, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  - {fileID: -3027467885991443842, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  - {fileID: -3724123321965674295, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  - {fileID: -6726645932881956004, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  wingSprites:
+  - {fileID: 21300000, guid: d13c4cd9539862742b866905f1ae607a, type: 3}
+  - {fileID: 21300000, guid: 0c301eef7e731314e99e149a92c01fab, type: 3}
+  - {fileID: 21300000, guid: 71ce6e5b02e749446804c70b9fe72fe2, type: 3}
+  - {fileID: 21300000, guid: 871c967fc3edf8c46a36235e7dba72ce, type: 3}
+  framesPerSecond: 0.5
 --- !u!1001 &5699983989747174958
 PrefabInstance:
   m_ObjectHideFlags: 0

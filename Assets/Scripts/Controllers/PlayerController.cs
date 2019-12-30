@@ -25,13 +25,14 @@ public class PlayerController : MonoBehaviour
     private string spriteName;
     private int startingHunger;
     private int numberOfBirdsConsumed = 0;
+    private float screenWidth;
 
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<DinoAnimator>();
-
+        screenWidth = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0.0f, 0.0f)).x - spriteRenderer.bounds.size.x/2;
         if (Settings.instance != null)
         {
             animator.runningSprites = Settings.instance.GetRunningSprites();
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour
     //Handle player touch input
     private void FixedUpdate()
     {
-        if (Input.touchCount > 0 && transform.position.x < 8f)
+        if (Input.touchCount > 0 && transform.position.x < screenWidth)
         {
             foreach (Touch touch in Input.touches)
             {

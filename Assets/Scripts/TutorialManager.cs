@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        if(Settings.instance.isTutorial)
+        if(Settings.instance != null && Settings.instance.isTutorial)
         {
             Time.timeScale = 0.6f;
             playerController.hungerEnabled = false;
@@ -22,7 +22,7 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-        if(Settings.instance.isTutorial)
+        if(Settings.instance != null && Settings.instance.isTutorial)
         {
             for (int i = 0; i < tutorialPopups.Length; i++)
             {
