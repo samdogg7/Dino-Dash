@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     public float pulseTime = 0.5f;
     public float lowHunger = 33f;
     public bool hungerEnabled = true;
-    public int cookedValue = 65;
-    public int uncookedValue = 20;
+    public int cookedValue = 70;
+    public int uncookedValue = 10;
 
     private CameraShake cameraShake;
     protected DinoAnimator animator;
