@@ -28,12 +28,18 @@ public class LeaderboardManager : MonoBehaviour
 
     public void DisplayNativeLeaderboard()
     {
-        GameServices.ShowLeaderboardUI(EM_GameServicesConstants.Leaderboard_DDLeaderboard);
+        if (GameServices.IsInitialized())
+        {
+            GameServices.ShowLeaderboardUI(EM_GameServicesConstants.Leaderboard_DDLeaderboard);
+        }
     }
 
     public void AddScore(int score)
     {
-        GameServices.ReportScore(score, EM_GameServicesConstants.Leaderboard_DDLeaderboard);
+        if(GameServices.IsInitialized())
+        {
+            GameServices.ReportScore(score, EM_GameServicesConstants.Leaderboard_DDLeaderboard);
+        }
     }
 
     public void GetLeaderboardValues(int startingFrom, int count)
