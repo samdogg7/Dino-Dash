@@ -7,11 +7,13 @@ public class MeteorGenerator : MonoBehaviour
 {
     public GameObject targetObj;
     public GameObject meteorPre;
-    public float meteorTime;
+    public float meteorSpawnRate;
     public float range;
     public float minSize;
     public float maxSize;
     public float trackPercentage = 75f;
+    public float trackingOffset = 15f;
+    public float speedMultiplier = 1.5f;
 
     void Start()
     {
@@ -45,6 +47,7 @@ public class MeteorGenerator : MonoBehaviour
         targ.y = targ.y - objectPos.y;
 
         float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
+        angle += Random.Range(-trackingOffset, trackingOffset);
         clone.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         clone.transform.Rotate(0, 0, 90, Space.World);
 
@@ -57,14 +60,14 @@ public class MeteorGenerator : MonoBehaviour
         }
         else
         {
-            meteorVector.y = -1;
+            meteorVector = new Vector2(rb.position.x + Random.Range(-90, 90), -90f);
         }
-
+        meteorVector *= Random.Range(1, speedMultiplier);
         meteorVector.Normalize();
         rb.velocity = meteorVector * (GameManager.instance.tileMovementSpeed);
 
 
-        yield return new WaitForSeconds(meteorTime);
+        yield return new WaitForSeconds(meteorSpawnRate);
         StartCoroutine(MeteorGenerate());
     }
 }

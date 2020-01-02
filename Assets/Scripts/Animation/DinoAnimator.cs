@@ -6,6 +6,7 @@ public class DinoAnimator : Animator
 {
     public Sprite[] idleSprites;
     public Sprite[] runningSprites;
+    public Sprite[] deathSprites;
 
     public float framesPerSecond = 20;
     public DinoColor dinoColor;
@@ -32,6 +33,24 @@ public class DinoAnimator : Animator
     {
         Animate(idleSprites, spriteRenderer, idleSprites.Length / framesPerSecond);
     }
+    public void DeathAnimation()
+    {
+        StopAllCoroutines();
+        StartCoroutine(AnimateDeath());
+    }
+
+    private IEnumerator AnimateDeath()
+    {
+        foreach (Sprite sprite in deathSprites)
+        {
+            spriteRenderer.sprite = sprite;
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 500);
+        gameObject.GetComponent<Collider2D>().enabled = false;
+    }
+
     //Helper method
     public void RunningAnimation(Sprite[] newSprites = null)
     {

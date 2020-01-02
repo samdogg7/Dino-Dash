@@ -5,7 +5,6 @@ using EasyMobile;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject selectedCharacter;
     public bool isAlive = true;
     //Tile movement speed
     public float tileMovementSpeed = 2f;
@@ -45,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void AddOneScore()
     {
-        if (!Settings.instance.isTutorial) {
+        if (!Settings.instance.isTutorial && isAlive) {
             score += 1;
         }
     }
@@ -55,7 +54,8 @@ public class GameManager : MonoBehaviour
     {
         if (!isAlive)
         {
-            Time.timeScale = 0f;
+            Time.timeScale = 0.5f;
+
             //Save locally the users highscore
             if(PlayerPrefs.HasKey("highscore"))
             {
@@ -64,10 +64,10 @@ public class GameManager : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("highscore", score);
                 }
-                UIManager.instance.GameOver(oldHighScore);
+                StartCoroutine(UIManager.instance.GameOver(oldHighScore));
             } else
             {
-                UIManager.instance.GameOver(0);
+                StartCoroutine(UIManager.instance.GameOver(0));
                 PlayerPrefs.SetInt("highscore", score);
             }
             if(LeaderboardManager.instance != null && !submittedScore)

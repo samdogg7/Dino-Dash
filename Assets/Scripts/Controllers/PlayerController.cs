@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public Camera mainCam;
     public GenerateScript generate;
+    public AudioSource gameoverSound;
     public float movementSpeed = 3f;
     public float jumpVelocity = 14f;
     public int dinoHunger = 100;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private int startingHunger;
     private int numberOfBirdsConsumed = 0;
     private float screenWidth;
+    private bool deathAnimated = false;
 
     //Gather required components, and if the player selected a dino in the main menu, set up the sprites, and finally invoke the hunger loss
     private void Start()
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour
         if (Settings.instance != null)
         {
             animator.runningSprites = Settings.instance.GetRunningSprites();
+            animator.deathSprites = Settings.instance.GetDeathSprites();
         }
 
         animator.RunningAnimation();
@@ -68,54 +71,70 @@ public class PlayerController : MonoBehaviour
             GameManager.instance.isAlive = false;
         }
 
-        if(dinoHunger <= lowHunger && !pulsing)
+        if(dinoHunger <= lowHunger && !pulsing && GameManager.instance.isAlive)
         {
             pulsing = true;
             StartCoroutine(PulseDinoColor());
+        }
+
+        if(!GameManager.instance.isAlive && !deathAnimated)
+        {
+            deathAnimated = true;
+            animator.DeathAnimation();
+            gameoverSound.Play();
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
     }
 
     private IEnumerator PulseDinoColor()
     {
-        spriteRenderer.material.color = new Color(1f,1f,1f);
-        yield return new WaitForSeconds(pulseTime);
-        spriteRenderer.material.color = new Color(.5f, .5f, .5f);
-        yield return new WaitForSeconds(pulseTime);
-
-        if (dinoHunger <= lowHunger)
+        if(GameManager.instance.isAlive)
         {
-            StartCoroutine(PulseDinoColor());
-        } else
-        {
-            pulsing = false;
             spriteRenderer.material.color = new Color(1f, 1f, 1f);
-        }
+            yield return new WaitForSeconds(pulseTime);
+            spriteRenderer.material.color = new Color(.5f, .5f, .5f);
+            yield return new WaitForSeconds(pulseTime);
+
+            if (dinoHunger <= lowHunger)
+            {
+                StartCoroutine(PulseDinoColor());
+            }
+            else
+            {
+                pulsing = false;
+                spriteRenderer.material.color = new Color(1f, 1f, 1f);
+            }
+        }  
     }
 
     //Handle player touch input
     private void FixedUpdate()
     {
-        if (Input.touchCount > 0 && transform.position.x < screenWidth)
+        if(GameManager.instance.isAlive)
         {
-            foreach (Touch touch in Input.touches)
+            if (Input.touchCount > 0 && transform.position.x < screenWidth)
             {
-                if ((touch.position.x < Screen.width / 2))
+                foreach (Touch touch in Input.touches)
                 {
-                    //Touch left side of screen
-                    Move(true);
-                    animator.framesPerSecond = 30f;
-                }
-                else if (touch.position.x > Screen.width / 2 && touch.position.y < (3 * Screen.height / 4))
-                {
-                    CameraShake.instance.Shake(.1f, .1f);
-                    generate.SpawnWave();
+                    if ((touch.position.x < Screen.width / 2))
+                    {
+                        //Touch left side of screen
+                        Move(true);
+                        animator.framesPerSecond = 30f;
+                    }
+                    else if (touch.position.x > Screen.width / 2 && touch.position.y < (3 * Screen.height / 4))
+                    {
+                        CameraShake.instance.Shake(.1f, .1f);
+                        generate.SpawnWave();
+                    }
                 }
             }
-        } else
-        {
-            animator.framesPerSecond = 20f;
-            Move(false);
-        }
+            else
+            {
+                animator.framesPerSecond = 20f;
+                Move(false);
+            }
+        }  
     }
 
     //Handles dino movement

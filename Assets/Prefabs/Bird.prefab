@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: -1207841707077272702, guid: 4cf8229d96b6346bbae623417770288c,
+  m_Sprite: {fileID: -1207841707077272702, guid: 4095f3d13b3728f42a2f47dcaae00ac4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   featherParticles: {fileID: 1384893884296114325}
   objectPool: {fileID: 0}
+  isCooked: 0
 --- !u!58 &1880306163036968841
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -150,14 +151,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdSprites:
-  - {fileID: -1207841707077272702, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -56839117156836721, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -2966782557986119690, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -7547327171053007460, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -6712714386521412304, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -3027467885991443842, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -3724123321965674295, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
-  - {fileID: -6726645932881956004, guid: 4cf8229d96b6346bbae623417770288c, type: 3}
+  - {fileID: -1207841707077272702, guid: 4095f3d13b3728f42a2f47dcaae00ac4, type: 3}
+  - {fileID: -56839117156836721, guid: 4095f3d13b3728f42a2f47dcaae00ac4, type: 3}
+  - {fileID: -2966782557986119690, guid: 4095f3d13b3728f42a2f47dcaae00ac4, type: 3}
+  - {fileID: -7547327171053007460, guid: 4095f3d13b3728f42a2f47dcaae00ac4, type: 3}
+  - {fileID: -6712714386521412304, guid: 4095f3d13b3728f42a2f47dcaae00ac4, type: 3}
+  - {fileID: -3027467885991443842, guid: 4095f3d13b3728f42a2f47dcaae00ac4, type: 3}
+  - {fileID: -3724123321965674295, guid: 4095f3d13b3728f42a2f47dcaae00ac4, type: 3}
+  - {fileID: -6726645932881956004, guid: 4095f3d13b3728f42a2f47dcaae00ac4, type: 3}
   wingSprites:
   - {fileID: 21300000, guid: d13c4cd9539862742b866905f1ae607a, type: 3}
   - {fileID: 21300000, guid: 0c301eef7e731314e99e149a92c01fab, type: 3}
@@ -175,6 +176,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Feather Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638948632854789819, guid: 049d8afb4444e43eeb89b515decd44ae,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638948632854789819, guid: 049d8afb4444e43eeb89b515decd44ae,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.06666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638948632854789819, guid: 049d8afb4444e43eeb89b515decd44ae,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638948632854789819, guid: 049d8afb4444e43eeb89b515decd44ae,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638948632854789819, guid: 049d8afb4444e43eeb89b515decd44ae,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638948632854789819, guid: 049d8afb4444e43eeb89b515decd44ae,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.37254903
       objectReference: {fileID: 0}
     - target: {fileID: 8117840997323175454, guid: 049d8afb4444e43eeb89b515decd44ae,
         type: 3}

@@ -104,8 +104,10 @@ public class UIManager : MonoBehaviour
     }
 
     //Update the gameover text
-    public void GameOver(int highscore)
+    public IEnumerator GameOver(int highscore)
     {
+        yield return new WaitForSeconds(1f);
+
         if (highscore > 0)
         {
             highscoreGameOver.text = "Personal highscore: " + highscore;

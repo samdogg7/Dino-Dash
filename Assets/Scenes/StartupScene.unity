@@ -255,6 +255,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 209802488, guid: c34745e101f084604a0aca369a660105, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419602260, guid: c34745e101f084604a0aca369a660105, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1485108966586901336, guid: c34745e101f084604a0aca369a660105,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -264,14 +272,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 123.49128
-      objectReference: {fileID: 0}
-    - target: {fileID: 209802488, guid: c34745e101f084604a0aca369a660105, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419602260, guid: c34745e101f084604a0aca369a660105, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c34745e101f084604a0aca369a660105, type: 3}
@@ -329,7 +329,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.6666665
+  orthographic size: 4.78125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -498,6 +498,22 @@ MonoBehaviour:
   - {fileID: -5594891616951461250, guid: 56cce5cca30a74817955650c34731322, type: 3}
   - {fileID: 2398275797733112376, guid: 56cce5cca30a74817955650c34731322, type: 3}
   - {fileID: -6865345740338609477, guid: 56cce5cca30a74817955650c34731322, type: 3}
+  greenDeathSprites:
+  - {fileID: 6991849013916550155, guid: 071ac2dbac4a0478b9d468513dcbc901, type: 3}
+  - {fileID: -276728812324164698, guid: 071ac2dbac4a0478b9d468513dcbc901, type: 3}
+  - {fileID: 3156895337291164288, guid: 071ac2dbac4a0478b9d468513dcbc901, type: 3}
+  redDeathSprites:
+  - {fileID: 6991849013916550155, guid: 0e24cd7bc8f7144dabb43bfa74accbef, type: 3}
+  - {fileID: -276728812324164698, guid: 0e24cd7bc8f7144dabb43bfa74accbef, type: 3}
+  - {fileID: 3156895337291164288, guid: 0e24cd7bc8f7144dabb43bfa74accbef, type: 3}
+  yellowDeathSprites:
+  - {fileID: 6991849013916550155, guid: 565f37c04f8bd42e38b48d3100e15bf5, type: 3}
+  - {fileID: -276728812324164698, guid: 565f37c04f8bd42e38b48d3100e15bf5, type: 3}
+  - {fileID: 3156895337291164288, guid: 565f37c04f8bd42e38b48d3100e15bf5, type: 3}
+  blueDeathSprites:
+  - {fileID: 6991849013916550155, guid: 56cce5cca30a74817955650c34731322, type: 3}
+  - {fileID: -276728812324164698, guid: 56cce5cca30a74817955650c34731322, type: 3}
+  - {fileID: 3156895337291164288, guid: 56cce5cca30a74817955650c34731322, type: 3}
   dinoColor: 0
   music: 1
   soundEffects: 1

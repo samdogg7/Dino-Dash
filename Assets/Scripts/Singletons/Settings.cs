@@ -23,6 +23,11 @@ public class Settings : MonoBehaviour
     public Sprite[] yellowRunningSprites;
     public Sprite[] blueRunningSprites;
 
+    public Sprite[] greenDeathSprites;
+    public Sprite[] redDeathSprites;
+    public Sprite[] yellowDeathSprites;
+    public Sprite[] blueDeathSprites;
+
     public DinoColor dinoColor;
 
     public bool music = true;
@@ -114,6 +119,26 @@ public class Settings : MonoBehaviour
         else
         {
             return greenRunningSprites;
+        }
+    }
+
+    public Sprite[] GetDeathSprites()
+    {
+        if (dinoColor == DinoColor.Blue)
+        {
+            return blueDeathSprites;
+        }
+        else if (dinoColor == DinoColor.Red)
+        {
+            return redDeathSprites;
+        }
+        else if (dinoColor == DinoColor.Yellow)
+        {
+            return yellowDeathSprites;
+        }
+        else
+        {
+            return greenDeathSprites;
         }
     }
 }
