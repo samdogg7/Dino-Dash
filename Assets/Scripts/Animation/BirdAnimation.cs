@@ -25,4 +25,10 @@ public class BirdAnimation : Animator
     {
         Animate(wingSprites, spriteRenderer, wingSprites.Length / framesPerSecond);
     }
+
+    public void StopAnimation(Sprite sprite)
+    {
+        StopAllCoroutines();
+        spriteRenderer.sprite = sprite;
+    }
 }

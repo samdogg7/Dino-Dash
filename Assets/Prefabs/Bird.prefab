@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &9187272822593238624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,8 +120,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   featherParticles: {fileID: 1384893884296114325}
-  objectPool: {fileID: 0}
-  isCooked: 0
+  burntSprite: {fileID: 21300000, guid: 53ab4129d626f2d48ae4b7b30e171f73, type: 3}
+  aliveEnergy: 30
+  cookedEnergy: 70
+  burntEnergy: 15
 --- !u!58 &1880306163036968841
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,9 +137,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.10143727}
+  m_Offset: {x: 0, y: -0.054820277}
   serializedVersion: 2
-  m_Radius: 0.6985627
+  m_Radius: 0.55871165
 --- !u!114 &3516800062992250609
 MonoBehaviour:
   m_ObjectHideFlags: 0

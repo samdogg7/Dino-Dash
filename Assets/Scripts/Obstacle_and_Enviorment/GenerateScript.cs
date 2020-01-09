@@ -96,8 +96,7 @@ public class GenerateScript : MonoBehaviour
         waitTime = Random.Range(5f, 8f);
         height = Random.Range(5f, 10f) / 2;
         //GameObject birdClone = birdPool.CreateFromPoolAction(transform.position + new Vector3(0f, height, 1f));
-        GameObject birdClone = Instantiate(birdPrefab, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
-        birdClone.GetComponent<BirdScript>().objectPool = birdPool;
+        Instantiate(birdPrefab, transform.position + new Vector3(0f, height, 1f), Quaternion.identity);
 
         yield return new WaitForSeconds(waitTime);
         StartCoroutine(BirdGenerator());

@@ -11157,8 +11157,6 @@ MonoBehaviour:
   pulseTime: 0.3
   lowHunger: 33
   hungerEnabled: 1
-  cookedValue: 70
-  uncookedValue: 10
 --- !u!114 &8345228911142975921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12413,6 +12411,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.1588893, y: -2.7}
+  m_AnchoredPosition: {x: -8.179443, y: -2.7}
   m_SizeDelta: {x: 2.0942857, y: 0.82285714}
   m_Pivot: {x: 0.5, y: 0.5}

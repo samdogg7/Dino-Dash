@@ -16,8 +16,6 @@ public class PlayerController : MonoBehaviour
     public float pulseTime = 0.5f;
     public float lowHunger = 33f;
     public bool hungerEnabled = true;
-    public int cookedValue = 70;
-    public int uncookedValue = 10;
 
     private CameraShake cameraShake;
     protected DinoAnimator animator;
@@ -57,7 +55,7 @@ public class PlayerController : MonoBehaviour
     {
         UIManager.instance.UpdateHunger(dinoHunger, startingHunger);
         
-        if(hungerEnabled)
+        if(hungerEnabled && GameManager.instance.isAlive)
         {
             dinoHunger -= 1;
         }
@@ -174,44 +172,26 @@ public class PlayerController : MonoBehaviour
 
         if (collisionObject.CompareTag("Bird"))
         {
-            BirdScript bird = collisionObject.GetComponent<BirdScript>();
+            BirdScript birdScript = collisionObject.GetComponent<BirdScript>();
             numberOfBirdsConsumed++;
-            //If the bird is chicken, it is cooked. Gives a bigger hunger boost
-            if (bird.isCooked == true)
+
+            if (Settings.instance != null && Settings.instance.soundEffects)
             {
-                if (Settings.instance != null && Settings.instance.soundEffects)
-                {
-                    AudioManager.instance.PlayMunchSound();
-                }
-                GameManager.instance.score += 1;
-                if (dinoHunger + cookedValue > 100)
-                {
-                    dinoHunger = 100;
-                }
-                else
-                {
-                    dinoHunger += cookedValue;
-                }              
-            }
-            else //If you eat a normal bird, you gain a smaller amount of hunger
-            {
-                if (Settings.instance != null && Settings.instance.soundEffects)
-                {
-                    AudioManager.instance.PlayMunchSound();
-                }
-                if (dinoHunger + uncookedValue > 100)
-                {
-                    dinoHunger = 100;
-                }
-                else
-                {
-                    dinoHunger += uncookedValue;
-                }
+                AudioManager.instance.PlayMunchSound();
             }
 
-            
-            bird.SpawnFeathers(true);
-            //bird.ReturnBirdToPool();
+            GameManager.instance.score += 1;
+
+            int birdEnergy = birdScript.GetEnergy();
+            if (dinoHunger + birdEnergy > 100)
+            {
+                dinoHunger = 100;
+            }
+            else
+            {
+                dinoHunger += birdEnergy;
+            }
+         
             Destroy(collisionObject);
         }
     }

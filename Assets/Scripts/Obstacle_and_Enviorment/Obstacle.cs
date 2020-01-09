@@ -30,18 +30,11 @@ public class Obstacle : MonoBehaviour
         }
         else if (collidedObject.CompareTag("Bird"))
         {
-            BirdScript birdScript = collidedObject.GetComponent<BirdScript>();
-            if(!birdScript.isCooked)
-            {
-                birdScript.isCooked = true;
-                collidedObject.GetComponent<BirdScript>().SpawnFeathers(false);
-            } else
-            {
-                Destroy(collidedObject);
-                SpawnColParticles();
-            }
-            collidedObject.GetComponent<BirdAnimation>().AnimateWing();
-        } else
+            collidedObject.GetComponent<BirdScript>().NextBirdState();
+
+            SpawnColParticles();
+        }
+        else
         {
             SpawnColParticles();
         }
