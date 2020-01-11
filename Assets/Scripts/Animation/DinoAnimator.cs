@@ -8,6 +8,7 @@ public class DinoAnimator : Animator
     public Sprite[] runningSprites;
     public Sprite[] deathSprites;
 
+    public PlayerController playerController;
     public float framesPerSecond = 20;
     public DinoColor dinoColor;
     public bool isRunning = false;
@@ -41,13 +42,18 @@ public class DinoAnimator : Animator
 
     private IEnumerator AnimateDeath()
     {
+        if(transform.position.y <= -1)
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 500);
+        }
+
         foreach (Sprite sprite in deathSprites)
         {
             spriteRenderer.sprite = sprite;
             yield return new WaitForSeconds(0.05f);
         }
 
-        gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 500);
+
         gameObject.GetComponent<Collider2D>().enabled = false;
     }
 

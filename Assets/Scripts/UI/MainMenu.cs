@@ -10,6 +10,9 @@ public class MainMenu : MonoBehaviour
     public Button startButton;
     public Button settingsButton;
     public Button leaderboardButton;
+
+    private bool isLoading = false;
+
     //Add button listeners
     void Start()
     {
@@ -17,16 +20,26 @@ public class MainMenu : MonoBehaviour
         settingsButton.onClick.AddListener(SettingsButtonClicked);
         leaderboardButton.onClick.AddListener(LeaderboardButtonClicked);
         Time.timeScale = 1f;
+        isLoading = false;
     }
+
     //Start game scene
     void StartButtonClicked()
     {
-        loadingScene.LoadlLevel(2);
+        if(!isLoading)
+        {
+            loadingScene.LoadlLevel(2);
+            isLoading = true;
+        }
     }
     //Goto settings scene
     void SettingsButtonClicked()
     {
-        SceneManager.LoadScene("SettingsScene");
+        if (!isLoading)
+        {
+            SceneManager.LoadScene("SettingsScene");
+            isLoading = true;
+        }
     }
     //Goto settings scene
     void LeaderboardButtonClicked()

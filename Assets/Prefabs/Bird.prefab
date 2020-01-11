@@ -121,9 +121,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   featherParticles: {fileID: 1384893884296114325}
   burntSprite: {fileID: 21300000, guid: 53ab4129d626f2d48ae4b7b30e171f73, type: 3}
-  aliveEnergy: 30
-  cookedEnergy: 70
-  burntEnergy: 15
+  aliveEnergy: 25
+  cookedEnergy: 75
+  burntEnergy: 10
 --- !u!58 &1880306163036968841
 CircleCollider2D:
   m_ObjectHideFlags: 0

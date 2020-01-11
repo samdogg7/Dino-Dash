@@ -285,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.5, y: 5.800049}
+  m_AnchoredPosition: {x: -3.5, y: 5.7998047}
   m_SizeDelta: {x: 7, y: -11.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &53613113
@@ -744,7 +744,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 450, y: 100}
+  m_SizeDelta: {x: 580, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302101371
 MonoBehaviour:
@@ -866,7 +866,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 450, y: 100}
+  m_SizeDelta: {x: 580, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &303549759
 MonoBehaviour:
@@ -1839,7 +1839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 3.2, y: 50.5}
+  m_AnchoredPosition: {x: 3.2, y: 65}
   m_SizeDelta: {x: 1912.5, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782346536
@@ -1862,7 +1862,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Avoid metoers/lava! Press the left side to move forward
+  m_text: Avoid meteors/lava! Press the left side to move forward
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bee1b562f68f4793b6828758dc9f5d3, type: 2}
   m_sharedMaterial: {fileID: -69697028863175166, guid: 9bee1b562f68f4793b6828758dc9f5d3,
@@ -2686,7 +2686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3.0002441}
+  m_AnchoredPosition: {x: 0, y: 3.0009766}
   m_SizeDelta: {x: -0.00012207, y: -6.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1212654313
@@ -7773,7 +7773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 3.2, y: 50.5}
+  m_AnchoredPosition: {x: 3.2, y: 65}
   m_SizeDelta: {x: 1912.5, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1316996862
@@ -8553,7 +8553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 3.2, y: 50.5}
+  m_AnchoredPosition: {x: 3.2, y: 62.5}
   m_SizeDelta: {x: 1912.5, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1557092162
@@ -8835,7 +8835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 3.2, y: 50.5}
+  m_AnchoredPosition: {x: 3.2, y: 65}
   m_SizeDelta: {x: 1912.5, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1621997985
@@ -10684,7 +10684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 448.19995, y: -108}
+  m_AnchoredPosition: {x: 448.19922, y: -108}
   m_SizeDelta: {x: 766.4, y: 141.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098325465
@@ -11012,7 +11012,7 @@ MonoBehaviour:
   range: 8
   minSize: 0.6
   maxSize: 1
-  trackPercentage: 65
+  trackPercentage: 55
   trackingOffset: 15
   speedMultiplier: 1.5
 --- !u!1 &4008018315038585263
@@ -11180,6 +11180,7 @@ MonoBehaviour:
   - {fileID: 2398275797733112376, guid: 56cce5cca30a74817955650c34731322, type: 3}
   - {fileID: -6865345740338609477, guid: 56cce5cca30a74817955650c34731322, type: 3}
   deathSprites: []
+  playerController: {fileID: 7581826690621074291}
   framesPerSecond: 0.5
   dinoColor: 0
   isRunning: 0
@@ -12411,6 +12412,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.179443, y: -2.7}
+  m_AnchoredPosition: {x: -7.1588893, y: -2.7}
   m_SizeDelta: {x: 2.0942857, y: 0.82285714}
   m_Pivot: {x: 0.5, y: 0.5}

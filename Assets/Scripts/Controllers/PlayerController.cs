@@ -191,7 +191,7 @@ public class PlayerController : MonoBehaviour
             {
                 dinoHunger += birdEnergy;
             }
-         
+                   
             Destroy(collisionObject);
         }
     }

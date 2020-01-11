@@ -10,12 +10,14 @@ public class TutorialManager : MonoBehaviour
     public int popupIndex = 0;
     private int hunger = 0;
     private bool calledIncrement = false;
+    private float slowMoScale = 0.6f;
+    private int pretutorialBirdConsumed = 0;
 
     private void Start()
     {
         if(Settings.instance != null && Settings.instance.isTutorial)
         {
-            Time.timeScale = 0.6f;
+            Time.timeScale = slowMoScale;
             playerController.hungerEnabled = false;
         }
     }
@@ -70,9 +72,9 @@ public class TutorialManager : MonoBehaviour
             if (popupIndex == 2)
             {
                 //Check if the player has consumed a bird
-                if (playerController.GetNumberOfBirdsConsumed() > 0 && !calledIncrement)
+                if (playerController.GetNumberOfBirdsConsumed() > pretutorialBirdConsumed && !calledIncrement)
                 {
-                    popupIndex++;
+                    StartCoroutine(delayIndexIncrement(2));
                     calledIncrement = true;
                 }
             }
@@ -91,8 +93,12 @@ public class TutorialManager : MonoBehaviour
 
     IEnumerator delayIndexIncrement(int waitTime)
     {
+        yield return new WaitForSeconds(.3f);
+        Time.timeScale = 1f;
         yield return new WaitForSeconds(waitTime);
+        Time.timeScale = slowMoScale;
         popupIndex++;
+        pretutorialBirdConsumed = playerController.GetNumberOfBirdsConsumed();
         calledIncrement = false;
     }
 

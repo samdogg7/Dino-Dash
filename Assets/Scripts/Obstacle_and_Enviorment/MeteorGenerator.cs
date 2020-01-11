@@ -66,8 +66,35 @@ public class MeteorGenerator : MonoBehaviour
         meteorVector.Normalize();
         rb.velocity = meteorVector * (GameManager.instance.tileMovementSpeed);
 
+        if (GameManager.instance.score >= 25)
+        {
+            yield return new WaitForSeconds(meteorSpawnRate / 1.1f);
+        }
+        else if (GameManager.instance.score >= 50)
+        {
+            yield return new WaitForSeconds(meteorSpawnRate/1.2f);
+        }
+        else if (GameManager.instance.score >= 100)
+        {
+            yield return new WaitForSeconds(meteorSpawnRate/1.3f);
+        }
+        else if (GameManager.instance.score >= 150)
+        {
+            yield return new WaitForSeconds(meteorSpawnRate / 1.4f);
+        }
+        else if (GameManager.instance.score >= 175)
+        {
+            yield return new WaitForSeconds(meteorSpawnRate / 1.5f);
+        }
+        else if (GameManager.instance.score >= 200)
+        {
+            yield return new WaitForSeconds(meteorSpawnRate / 1.6f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(meteorSpawnRate);
+        }
 
-        yield return new WaitForSeconds(meteorSpawnRate);
         StartCoroutine(MeteorGenerate());
     }
 }

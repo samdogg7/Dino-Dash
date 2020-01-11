@@ -11,7 +11,7 @@ public class BirdScript : MonoBehaviour
 {
     public ParticleSystem featherParticles;
     public Sprite burntSprite;
-    public int aliveEnergy = 30, cookedEnergy = 70, burntEnergy = 15;
+    public int aliveEnergy = 25, cookedEnergy = 75, burntEnergy = 10;
     private BirdState birdState = BirdState.Alive;
     private BirdAnimation birdAnimation;
     private Rigidbody2D rb;
