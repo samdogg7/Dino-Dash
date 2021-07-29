@@ -1,4 +1,7 @@
 # Dino-Dash
+
+![Dino Dash Screenshot](https://user-images.githubusercontent.com/1322743/127412714-9ec58e68-528f-49ae-a42a-1fbdb84c7dd2.png)
+
 A 2D platformer made in Unity
 
-Our reddit post looking for feedback: https://www.reddit.com/r/Unity3D/comments/dlz9xz/my_first_unity_mobile_game_dino_dash_wip_i_would/
+Appstore: https://apps.apple.com/us/app/dino-dash-outrun-extinction/id1484347115
